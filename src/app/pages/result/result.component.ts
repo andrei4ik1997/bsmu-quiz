@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/c
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
 import { ROUTER_LINKS } from '@shared/entities/shared.constants';
-import type { ModalQuestionData, TestResult } from '@shared/entities/shared.types';
+import type { ModalQuestionData, Question, TableConfig, TestResult } from '@shared/entities/shared.types';
 import { QuestionModalComponent } from '@shared/modals/question/question.component';
 import { StoreService } from '@shared/services/store.service';
 import { NzButtonModule } from 'ng-zorro-antd/button';
@@ -11,6 +11,11 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzModalModule, NzModalService } from 'ng-zorro-antd/modal';
 import { NzTableModule } from 'ng-zorro-antd/table';
+
+type TableData = Question & {
+	status: '-' | 'Без ответа' | 'Верно' | 'Неправильно' | 'Частично верно';
+	score: number | null;
+};
 
 @Component({
 	selector: 'app-result-page',
@@ -74,7 +79,7 @@ export default class ResultPageComponent {
 		const questions = this.questions();
 		const userAnswers = this.userAnswers();
 
-		const mappedResult = questions.map((question) => {
+		const mappedResult = questions.map<TableData>((question) => {
 			if (userAnswers === null) {
 				return {
 					...question,
@@ -135,6 +140,53 @@ export default class ResultPageComponent {
 		}, 0);
 	});
 
+	protected readonly tableConfig: Array<TableConfig<TableData>> = [
+		{
+			name: 'Номер вопроса',
+			dataProperty: 'id',
+			showSort: true,
+			sortDirections: ['ascend', 'descend'],
+			sortOrder: 'ascend',
+			sortFn: (a, b) => {
+				return a.id - b.id;
+			},
+		},
+		{
+			name: 'Состояние',
+			dataProperty: 'status',
+			showFilter: true,
+			filterMultiple: true,
+			filters: [
+				{ text: '-', value: '-' },
+				{ text: 'Без ответа', value: 'Без ответа' },
+				{ text: 'Верно', value: 'Верно' },
+				{ text: 'Неправильно', value: 'Неправильно' },
+				{ text: 'Частично верно', value: 'Частично верно' },
+			],
+			filterFn: (status: Array<TableData['status']> | TableData['status'], row) => {
+				if (Array.isArray(status)) {
+					return status.some((s) => {
+						return row.status === s;
+					});
+				}
+
+				return row.status === status;
+			},
+		},
+		{
+			name: 'Балл',
+			dataProperty: 'score',
+			showSort: true,
+			sortFn: (a, b) => {
+				return (a.score ?? 0) - (b.score ?? 0);
+			},
+		},
+		{
+			name: '',
+			cellType: 'action',
+		},
+	];
+
 	protected showQuestion(questionId: number): void {
 		const questions = this.questions();
 		const userAnswers = this.userAnswers();
@@ -155,7 +207,7 @@ export default class ResultPageComponent {
 			nzContent: QuestionModalComponent,
 			nzData: { question, questionUserAnswer },
 			nzFooter: null,
-			nzWidth: 'clamp(200px, 80vw, 700px)',
+			nzWidth: 'clamp(200px, 80vw, 1000px)',
 		});
 	}
 

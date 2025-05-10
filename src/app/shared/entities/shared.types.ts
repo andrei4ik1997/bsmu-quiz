@@ -1,3 +1,5 @@
+import type { NzTableFilterFn, NzTableFilterList, NzTableSortFn, NzTableSortOrder } from 'ng-zorro-antd/table';
+
 import type { ROUTER_LINKS } from './shared.constants';
 
 export type AppRouterLink = (typeof ROUTER_LINKS)[keyof typeof ROUTER_LINKS];
@@ -30,4 +32,20 @@ export type TestResult = {
 export type ModalQuestionData = {
 	question: Question | null;
 	questionUserAnswer: TestResult | null;
+};
+
+export type TableConfig<T> = {
+	name: string;
+	dataProperty?: keyof T;
+	width?: string;
+	showSort?: boolean;
+	sortPriority?: number | false;
+	sortDirections?: NzTableSortOrder[];
+	sortOrder?: NzTableSortOrder;
+	sortFn?: NzTableSortFn<T>;
+	showFilter?: boolean;
+	filterMultiple?: boolean;
+	filters?: NzTableFilterList;
+	filterFn?: NzTableFilterFn<T>;
+	cellType?: 'action';
 };

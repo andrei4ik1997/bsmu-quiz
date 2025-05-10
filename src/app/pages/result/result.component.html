@@ -26,41 +26,64 @@
 		<nz-table
 			#resultTable
 			nzSize="small"
+			nzTableLayout="fixed"
 			[nzBordered]="true"
 			[nzOuterBordered]="true"
 			[nzPageIndex]="1"
 			[nzPageSize]="50"
 			[nzShowSizeChanger]="true"
 			[nzPageSizeOptions]="[50, 100, 150, 200]"
-			[nzVirtualItemSize]="20"
 			[nzData]="tableData()"
 		>
 			<thead>
 				<tr>
-					<th>Номер вопроса</th>
-					<th>Состояние</th>
-					<th>Балл</th>
-					<th></th>
+					@for (column of tableConfig; track column) {
+						<th
+							[nzWidth]="column.width ?? null"
+							[nzColumnKey]="column.dataProperty"
+							[nzShowSort]="column.showSort ?? false"
+							[nzSortPriority]="column.sortPriority ?? false"
+							[nzSortOrder]="column.sortOrder ?? null"
+							[nzSortDirections]="column.sortDirections ?? [null, 'ascend', 'descend']"
+							[nzSortFn]="column.sortFn ?? null"
+							[nzShowFilter]="column.showFilter ?? false"
+							[nzFilterMultiple]="column.filterMultiple ?? false"
+							[nzFilters]="column.filters ?? []"
+							[nzFilterFn]="column.filterFn ?? null"
+						>
+							{{ column.name }}
+						</th>
+					}
 				</tr>
 			</thead>
 			<tbody>
-				@for (data of resultTable.data; track data) {
+				@for (data of resultTable.data; track $index) {
 					<tr>
-						<td>{{ data.id }}</td>
-						<td>{{ data.status }}</td>
-						<td>{{ data.score ?? '-' }}</td>
-						<td>
-							<button
-								nz-button
-								nzType="primary"
-								nzSize="small"
-								type="button"
-								(click)="showQuestion(data.id)"
-							>
-								<nz-icon nzType="eye" nzTheme="outline" />
-								Просмотреть вопрос
-							</button>
-						</td>
+						@for (column of tableConfig; track column.dataProperty) {
+							<td>
+								@switch (column.cellType) {
+									@case ('action') {
+										<button
+											nz-button
+											nzType="primary"
+											nzSize="small"
+											type="button"
+											(click)="showQuestion(data.id)"
+										>
+											<nz-icon nzType="eye" nzTheme="outline" />
+											Просмотреть вопрос
+										</button>
+									}
+									@default {
+										@if (column.dataProperty) {
+											@let value = data[column.dataProperty] ?? '-';
+
+											{{ value }}
+										}
+									}
+								}
+							</td>
+						}
 					</tr>
 				}
 			</tbody>
