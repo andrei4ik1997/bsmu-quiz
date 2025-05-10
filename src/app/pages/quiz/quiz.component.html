@@ -1,0 +1,80 @@
+@let selectedTest = selectedTestOption();
+@let questions = testQuestions() ?? [];
+
+@if (selectedTest && questions.length > 0) {
+	<h1 class="quiz-title">Тест: {{ selectedTest?.title }}</h1>
+	<h2 class="quiz-subtitle">Количество вопросов: {{ questions.length }}</h2>
+
+	<div class="quiz-container">
+		@let questionIndex = currentQuestionIndex();
+		@let currentQuestion = question();
+
+		<div class="quiz-container-left">
+			<div class="quiz-question">
+				@if (currentQuestion) {
+					<h2 class="quiz-question-title">Вопрос №{{ currentQuestion.id }}</h2>
+					<router-outlet />
+				}
+			</div>
+
+			@if (questionIndex !== null) {
+				<div class="quiz-navigation">
+					<button
+						nz-button
+						nzType="primary"
+						type="button"
+						[disabled]="questionIndex === 1"
+						(click)="changeCurrentQuestionIndex(questionIndex - 1)"
+					>
+						<nz-icon nzType="left" />
+						Предыдущий вопрос
+					</button>
+
+					<button
+						nz-button
+						nzType="primary"
+						type="button"
+						[disabled]="questionIndex === questions[questions.length - 1].id"
+						(click)="changeCurrentQuestionIndex(questionIndex + 1)"
+					>
+						Следующий вопрос
+						<nz-icon nzType="right" />
+					</button>
+				</div>
+			}
+
+			<button nz-button nzType="primary" type="button" (click)="completeQuiz(questions)">Сдать тест</button>
+		</div>
+
+		<div class="quiz-container-right">
+			<h3>Навигация по тесту</h3>
+			<div class="quiz-fast-navigation">
+				@for (question of questions; track question.id) {
+					@let isDisabled = question.id === currentQuestion?.id;
+					@let isHaveAnswer = isDisabled ? false : (question.id | isHaveAnswer: userAnswers());
+
+					<button
+						class="quiz-fast-navigation-question"
+						nz-button
+						type="button"
+						[nzType]="isDisabled ? 'primary' : 'default'"
+						[disabled]="isDisabled"
+						(click)="changeCurrentQuestionIndex(question.id)"
+					>
+						{{ question.id }}
+
+						@if (isHaveAnswer) {
+							<div class="quiz-fast-navigation-question-badge"></div>
+						}
+					</button>
+				}
+			</div>
+		</div>
+	</div>
+} @else {
+	<nz-empty class="quiz-empty" [nzNotFoundFooter]="footerTpl" />
+
+	<ng-template #footerTpl>
+		<button nz-button nzType="primary" type="button" (click)="goToMain()">На главную</button>
+	</ng-template>
+}

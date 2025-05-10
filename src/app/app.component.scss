@@ -1,0 +1,6 @@
+@use 'mixins';
+
+:host {
+	@include mixins.flex-column();
+	@include mixins.size(100%);
+}

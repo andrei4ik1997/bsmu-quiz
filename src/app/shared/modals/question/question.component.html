@@ -1,0 +1,37 @@
+@let data = nzModalData.question;
+
+@if (data === null) {
+	<nz-empty />
+} @else {
+	@if (data.isMultiple) {
+		<nz-checkbox-group class="question-answers" [formControl]="questionFormControl" [nzDisabled]="true">
+			@for (answer of data.answers; track answer.id) {
+				<label class="question-answers-answer" nz-checkbox [nzValue]="answer.id">
+					{{ answer.value }}
+					@if (answer.isCorrect) {
+						<nz-icon class="question-answers-answer-correct" nzType="check" nzTheme="outline" />
+					}
+
+					@if (!answer.isCorrect) {
+						<nz-icon class="question-answers-answer-incorrect" nzType="close" nzTheme="outline" />
+					}
+				</label>
+			}
+		</nz-checkbox-group>
+	} @else {
+		<nz-radio-group class="question-answers" [formControl]="questionFormControl" [nzDisabled]="true">
+			@for (answer of data.answers; track answer.id) {
+				<label class="question-answers-answer" nz-radio [nzValue]="answer.id">
+					{{ answer.value }}
+					@if (answer.isCorrect) {
+						<nz-icon class="question-answers-answer-correct" nzType="check" nzTheme="outline" />
+					}
+
+					@if (!answer.isCorrect) {
+						<nz-icon class="question-answers-answer-incorrect" nzType="close" nzTheme="outline" />
+					}
+				</label>
+			}
+		</nz-radio-group>
+	}
+}

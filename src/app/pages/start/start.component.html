@@ -1,0 +1,39 @@
+<h1 class="title">Добро пожаловать!</h1>
+
+<div class="chose-test">
+	<nz-select
+		class="chose-test-select"
+		nzMode="default"
+		nzPlaceHolder="Выберите тест"
+		nzSize="large"
+		[nzAllowClear]="true"
+		[nzShowArrow]="true"
+		[nzShowSearch]="false"
+		[nzBorderless]="false"
+		[nzDisabled]="tests.length === 0"
+		[ngModel]="selectedTest()?.value"
+		(ngModelChange)="changeTest($event)"
+	>
+		@for (test of tests; track test.value) {
+			<nz-option
+				class="chose-test-select-option"
+				[nzValue]="test.value"
+				[nzLabel]="test.label"
+				[nzDisabled]="test.disabled"
+				[nzTitle]="test.title"
+				[nzHide]="test.hide"
+			/>
+		}
+	</nz-select>
+
+	<button
+		class="chose-test-button"
+		nz-button
+		nzType="primary"
+		type="button"
+		[disabled]="selectedTest() === null"
+		(click)="startQuiz()"
+	>
+		Начать тестирование
+	</button>
+</div>

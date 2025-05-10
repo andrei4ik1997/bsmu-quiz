@@ -1,0 +1,64 @@
+@use 'mixins';
+
+:host {
+	@include mixins.flex-column(1rem);
+}
+
+.question {
+	@include mixins.flex-column(1rem);
+
+	padding: 0.75rem 1.25rem;
+	border: 1px solid transparent;
+	border-radius: 0.25rem;
+	box-sizing: border-box;
+	background-color: #e9f6f8;
+	border-color: #bee5eb;
+
+	&-title {
+		font-weight: bold;
+		font-size: 1.5rem;
+		line-height: 1.5rem;
+	}
+
+	&-divider {
+		margin: 0;
+	}
+
+	&-answers {
+		@include mixins.flex-column(0.5rem);
+
+		&-answer {
+			font-size: 1.25rem;
+
+			&-correct {
+				color: #28a745;
+				margin-left: 0.5rem;
+			}
+
+			&-incorrect {
+				color: #ff5a5f;
+				margin-left: 0.5rem;
+			}
+		}
+	}
+}
+
+.actions {
+	@include mixins.flex-row(1rem);
+}
+
+@media screen and (max-width: 400px) {
+	.actions {
+		.ant-btn {
+			&::ng-deep {
+				span {
+					display: none;
+				}
+
+				.anticon {
+					margin: 0;
+				}
+			}
+		}
+	}
+}

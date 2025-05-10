@@ -1,0 +1,27 @@
+@use 'mixins';
+
+.question {
+	&-answers {
+		@include mixins.flex-column(0.5rem);
+
+		&::ng-deep {
+			.ant-radio-disabled + span {
+				color: initial;
+			}
+		}
+
+		&-answer {
+			font-size: 1.25rem;
+
+			&-correct {
+				color: #28a745;
+				margin-left: 0.5rem;
+			}
+
+			&-incorrect {
+				color: #ff5a5f;
+				margin-left: 0.5rem;
+			}
+		}
+	}
+}

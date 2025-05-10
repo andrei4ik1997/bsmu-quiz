@@ -1,0 +1,28 @@
+@use 'mixins';
+
+:host {
+	@include mixins.flex-column();
+
+	flex: 1;
+}
+
+nz-layout nz-layout,
+nz-layout:last-child {
+	margin: 0;
+}
+
+nz-header,
+nz-footer {
+	color: #fff;
+}
+
+nz-content {
+	padding: 1rem;
+	box-sizing: border-box;
+	max-height: 100vh;
+}
+
+nz-footer {
+	background-color: #001529;
+	text-align: center;
+}

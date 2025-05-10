@@ -1,0 +1,66 @@
+@let data = question();
+
+@if (data) {
+	<div class="question">
+		@if (data.question.length === 0) {
+			<nz-empty />
+		} @else {
+			<div class="question-title">{{ data.question }}</div>
+
+			<nz-divider class="question-divider" />
+
+			@if (data.isMultiple) {
+				<nz-checkbox-group class="question-answers" [formControl]="questionFormControl">
+					@for (answer of data.answers; track answer.id) {
+						<label class="question-answers-answer" nz-checkbox [nzValue]="answer.id">
+							{{ answer.value }}
+							@if (isAnswerVisible() && answer.isCorrect) {
+								<nz-icon class="question-answers-answer-correct" nzType="check" nzTheme="outline" />
+							}
+
+							@if (isAnswerVisible() && !answer.isCorrect) {
+								<nz-icon class="question-answers-answer-incorrect" nzType="close" nzTheme="outline" />
+							}
+						</label>
+					}
+				</nz-checkbox-group>
+			} @else {
+				<nz-radio-group class="question-answers" [formControl]="questionFormControl">
+					@for (answer of data.answers; track answer.id) {
+						<label class="question-answers-answer" nz-radio [nzValue]="answer.id">
+							{{ answer.value }}
+							@if (isAnswerVisible() && answer.isCorrect) {
+								<nz-icon class="question-answers-answer-correct" nzType="check" nzTheme="outline" />
+							}
+
+							@if (isAnswerVisible() && !answer.isCorrect) {
+								<nz-icon class="question-answers-answer-incorrect" nzType="close" nzTheme="outline" />
+							}
+						</label>
+					}
+				</nz-radio-group>
+			}
+		}
+	</div>
+
+	<div class="actions">
+		@let isClearDisabled = questionFormControl.value | isDisabled;
+
+		<button nz-button nzType="primary" type="button" [disabled]="isClearDisabled" (click)="clearAnswers()">
+			<nz-icon nzType="clear" nzTheme="outline" />
+			Очистить ответы
+		</button>
+
+		@if (isAnswerVisible()) {
+			<button nz-button nzType="primary" type="button" (click)="changeAnswerVisibility()">
+				<nz-icon nzType="eye-invisible" nzTheme="outline" />
+				Скрыть ответы
+			</button>
+		} @else {
+			<button nz-button nzType="primary" type="button" (click)="changeAnswerVisibility()">
+				<nz-icon nzType="eye" nzTheme="outline" />
+				Показать ответы
+			</button>
+		}
+	</div>
+}
