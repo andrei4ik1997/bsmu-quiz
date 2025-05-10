@@ -5,6 +5,7 @@
 		@include mixins.flex-column(0.5rem);
 
 		&::ng-deep {
+			.ant-checkbox-disabled + span,
 			.ant-radio-disabled + span {
 				color: initial;
 			}

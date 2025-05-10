@@ -98,8 +98,8 @@
 					"builder": "angular-cli-ghpages:deploy",
 					"options": {
 						"buildTarget": "bsmu-quiz:build:production",
-						"noNotfound": true,
-						"noNojekyll": true,
+						"noNotfound": false,
+						"noNojekyll": false,
 						"baseHref": "https://andrei4ik1997.github.io/bsmu-quiz/",
 						"dir": "dist/bsmu-quiz/browser",
 						"name": "Andrei Shinkarev",
