@@ -2,7 +2,7 @@
 @let questions = testQuestions() ?? [];
 
 @if (selectedTest && questions.length > 0) {
-	<h1 class="quiz-title">Тест: {{ selectedTest?.title }}</h1>
+	<h1 class="quiz-title">Тест: {{ selectedTest?.label }}</h1>
 	<h2 class="quiz-subtitle">Количество вопросов: {{ questions.length }}</h2>
 
 	<div #quizContainer class="quiz-container">
