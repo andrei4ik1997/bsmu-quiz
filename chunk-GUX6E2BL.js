@@ -1,1 +1,0 @@
-import{d as t}from"./chunk-4CLCTAJ7.js";var o=[{path:"",loadComponent:()=>t(null,null,function*(){return yield import("./chunk-54ACRVTW.js")}),children:[{path:":id",title:"\u0422\u0435\u0441\u0442",loadComponent:()=>t(null,null,function*(){return import("./chunk-TAPGMEGF.js").then(e=>e.QuestionComponent)}),data:{noReuse:!0}}]}],n=o;export{n as default};

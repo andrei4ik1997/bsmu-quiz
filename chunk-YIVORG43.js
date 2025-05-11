@@ -1,0 +1,1 @@
+import{Bc as n}from"./chunk-JHZPYHNQ.js";var r={isTestMode:!1};var t={},i="[NG-ZORRO]:";function a(...o){let e=o.reduce((s,c)=>s+c.toString(),"");return t[e]?!1:(t[e]=!0,!0)}function d(o,...e){(r.isTestMode||n()&&a(...e))&&o(...e)}var m=(...o)=>d((...e)=>console.warn(i,...e),...o);export{m as a};
