@@ -1,5 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import type { OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { StoreService } from '@shared/services/store.service';
 
 @Component({
 	selector: 'app-root',
@@ -8,4 +10,10 @@ import { RouterOutlet } from '@angular/router';
 	styleUrl: './app.component.scss',
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {}
+export class AppComponent implements OnInit {
+	private readonly storeService = inject(StoreService);
+
+	public ngOnInit(): void {
+		this.storeService.restoreData();
+	}
+}

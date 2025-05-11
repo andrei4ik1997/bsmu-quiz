@@ -1,11 +1,15 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { commonQuestions } from '@shared/db/common.questions';
 import { nurseAnesthetistQuestions } from '@shared/db/nurse-anesthetist.questions';
 import type { Question, TestOption, TestResult } from '@shared/entities/shared.types';
 import { BehaviorSubject } from 'rxjs';
 
+import { LocalStorageService } from './local-storage.service';
+
 @Injectable()
 export class StoreService {
+	private readonly localStorageService = inject(LocalStorageService);
+
 	private readonly selectedTestSubject$ = new BehaviorSubject<TestOption | null>(null);
 	private readonly testQuestionsSubject$ = new BehaviorSubject<Question[] | null>(null);
 	private readonly testResultsSubject$ = new BehaviorSubject(new Map<number, TestResult>());
@@ -16,6 +20,8 @@ export class StoreService {
 
 	public setSelectedTest(test: TestOption | null): void {
 		this.selectedTestSubject$.next(test);
+		this.localStorageService.set('selectedTest', this.selectedTestSubject$.value);
+
 		this.setTestQuestions(test);
 	}
 
@@ -28,35 +34,56 @@ export class StoreService {
 			testName: testResult.testName,
 			questionId: testResult.questionId,
 			testQuestions: testResult.testQuestions,
+			selectedTest: testResult.selectedTest,
 		});
 
 		this.testResultsSubject$.next(testResults);
+		this.localStorageService.set('testResults', this.testResultsSubject$.value);
 	}
 
 	public clearTestResults(): void {
 		this.testResultsSubject$.next(new Map<number, TestResult>());
+		this.localStorageService.set('testResults', this.testResultsSubject$.value);
 	}
 
 	private setTestQuestions(test: TestOption | null): void {
 		if (test === null) {
 			this.testQuestionsSubject$.next(null);
+		} else {
+			switch (test.value) {
+				case 'common':
+					this.testQuestionsSubject$.next(commonQuestions);
 
-			return;
+					break;
+
+				case 'nurseAnesthetist':
+					this.testQuestionsSubject$.next(nurseAnesthetistQuestions);
+
+					break;
+
+				default:
+					break;
+			}
 		}
 
-		switch (test.value) {
-			case 'common':
-				this.testQuestionsSubject$.next(commonQuestions);
+		this.localStorageService.set('testQuestions', this.testQuestionsSubject$.value);
+	}
 
-				break;
+	public restoreData(): void {
+		const selectedTest = this.localStorageService.get<TestOption>('selectedTest');
+		const testQuestions = this.localStorageService.get<Question[]>('testQuestions');
+		const testResults = this.localStorageService.get<Map<number, TestResult>>('testResults');
 
-			case 'nurseAnesthetist':
-				this.testQuestionsSubject$.next(nurseAnesthetistQuestions);
+		if (selectedTest !== null) {
+			this.selectedTestSubject$.next(selectedTest);
+		}
 
-				break;
+		if (testQuestions !== null) {
+			this.testQuestionsSubject$.next(testQuestions);
+		}
 
-			default:
-				break;
+		if (testResults !== null) {
+			this.testResultsSubject$.next(testResults);
 		}
 	}
 }

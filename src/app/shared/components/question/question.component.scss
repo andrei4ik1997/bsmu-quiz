@@ -46,19 +46,3 @@
 .actions {
 	@include mixins.flex-row(1rem);
 }
-
-@media screen and (max-width: 400px) {
-	.actions {
-		.ant-btn {
-			&::ng-deep {
-				span {
-					display: none;
-				}
-
-				.anticon {
-					margin: 0;
-				}
-			}
-		}
-	}
-}

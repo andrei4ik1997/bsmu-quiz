@@ -30,6 +30,10 @@
 	},
 	"devDependencies": {
 		"@angular-devkit/build-angular": "19.2.11",
+		"@angular-devkit/core": "19.2.11",
+		"@angular-devkit/schematics": "19.2.11",
+		"@angular-eslint/builder": "19.4.0",
+		"@angular/build": "19.2.11",
 		"@angular/cli": "19.2.11",
 		"@angular/compiler-cli": "19.2.10",
 		"@eslint-community/eslint-plugin-eslint-comments": "4.5.0",
@@ -50,6 +54,7 @@
 		"eslint-plugin-sonarjs": "3.0.2",
 		"eslint-plugin-unicorn": "59.0.1",
 		"globals": "16.1.0",
+		"prettier": "3.5.3",
 		"prettier-plugin-organize-attributes": "1.0.0",
 		"typescript": "5.8.3",
 		"typescript-eslint": "8.32.0"

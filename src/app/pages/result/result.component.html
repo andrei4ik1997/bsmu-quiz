@@ -3,7 +3,7 @@
 @if (result !== null) {
 	@let questionsCount = questions().length;
 
-	<h1 class="result-testName">{{ testName() }}</h1>
+	<h1 class="result-testName">{{ testName() ?? '-' }}</h1>
 	<nz-divider class="result-divider" />
 	<h2 class="result-title">Результаты тестирования</h2>
 
@@ -18,6 +18,10 @@
 		<span>({{ (myScore() / questionsCount) * 100 | number }}%)</span>
 	</div>
 
+	<button class="result-toQuiz-button" nz-button nzType="primary" type="button" (click)="toQuiz()">
+		К тестировнию
+	</button>
+
 	<button class="result-finish-button" nz-button nzType="primary" type="button" (click)="finishQuiz()">
 		Завершить тестирование
 	</button>
@@ -26,7 +30,6 @@
 		<nz-table
 			#resultTable
 			nzSize="small"
-			nzTableLayout="fixed"
 			[nzBordered]="true"
 			[nzOuterBordered]="true"
 			[nzPageIndex]="1"
@@ -50,6 +53,7 @@
 							[nzFilterMultiple]="column.filterMultiple ?? false"
 							[nzFilters]="column.filters ?? []"
 							[nzFilterFn]="column.filterFn ?? null"
+							[nzAlign]="column.align ?? 'left'"
 						>
 							{{ column.name }}
 						</th>
@@ -60,7 +64,7 @@
 				@for (data of resultTable.data; track $index) {
 					<tr>
 						@for (column of tableConfig; track column.dataProperty) {
-							<td>
+							<td [nzAlign]="column.align ?? 'left'">
 								@switch (column.cellType) {
 									@case ('action') {
 										<button

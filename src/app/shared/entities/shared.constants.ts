@@ -4,3 +4,9 @@ export const ROUTER_LINKS = {
 	quiz: 'quiz',
 	result: 'result',
 } as const;
+
+export const LOCAL_STORAGE_KEYS = {
+	selectedTest: 'selectedTest',
+	testQuestions: 'testQuestions',
+	testResults: 'testResults',
+} as const;

@@ -11,6 +11,7 @@ import {
 	withViewTransitions,
 } from '@angular/router';
 import { CustomRouteReuseStrategy } from '@shared/services/custom-route-reuse-strategy';
+import { LocalStorageService } from '@shared/services/local-storage.service';
 import { provideNzI18n, ru_RU } from 'ng-zorro-antd/i18n';
 
 import { routes } from './app.routes';
@@ -48,7 +49,7 @@ export function provideAppHttpClient(): EnvironmentProviders {
 }
 
 export function provideServices(): EnvironmentProviders {
-	return makeEnvironmentProviders([StoreService]);
+	return makeEnvironmentProviders([LocalStorageService, StoreService]);
 }
 
 export function provideNgZorro(): EnvironmentProviders {

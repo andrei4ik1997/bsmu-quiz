@@ -10,6 +10,7 @@
 		[nzShowArrow]="true"
 		[nzShowSearch]="false"
 		[nzBorderless]="false"
+		[nzOptionHeightPx]="54"
 		[nzDisabled]="tests.length === 0"
 		[ngModel]="selectedTest()?.value"
 		(ngModelChange)="changeTest($event)"
@@ -19,9 +20,7 @@
 				class="chose-test-select-option"
 				[nzValue]="test.value"
 				[nzLabel]="test.label"
-				[nzDisabled]="test.disabled"
-				[nzTitle]="test.title"
-				[nzHide]="test.hide"
+				[nzTitle]="test.label"
 			/>
 		}
 	</nz-select>

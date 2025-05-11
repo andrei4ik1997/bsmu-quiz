@@ -1,15 +1,20 @@
-import type { NzTableFilterFn, NzTableFilterList, NzTableSortFn, NzTableSortOrder } from 'ng-zorro-antd/table';
+import type {
+	NzCellAlignDirective,
+	NzTableFilterFn,
+	NzTableFilterList,
+	NzTableSortFn,
+	NzTableSortOrder,
+} from 'ng-zorro-antd/table';
 
-import type { ROUTER_LINKS } from './shared.constants';
+import type { LOCAL_STORAGE_KEYS, ROUTER_LINKS } from './shared.constants';
 
 export type AppRouterLink = (typeof ROUTER_LINKS)[keyof typeof ROUTER_LINKS];
+
+export type LocalStorageKeys = (typeof LOCAL_STORAGE_KEYS)[keyof typeof LOCAL_STORAGE_KEYS];
 
 export type TestOption = {
 	value: 'common' | 'nurseAnesthetist';
 	label: string;
-	disabled: boolean;
-	title: string;
-	hide: boolean;
 };
 
 export type Question = {
@@ -22,7 +27,8 @@ export type Question = {
 
 export type QuestionAnswer = { id: number; value: string; isCorrect: boolean };
 export type TestResult = {
-	testName: TestOption['title'];
+	selectedTest: TestOption | null;
+	testName: TestOption['label'];
 	testQuestions: Question[];
 	questionId: Question['id'];
 	userAnswers: Array<QuestionAnswer & { userChoice: boolean }>;
@@ -48,4 +54,5 @@ export type TableConfig<T> = {
 	filters?: NzTableFilterList;
 	filterFn?: NzTableFilterFn<T>;
 	cellType?: 'action';
+	align?: NzCellAlignDirective['nzAlign'];
 };

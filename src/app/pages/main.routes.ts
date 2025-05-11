@@ -1,4 +1,4 @@
-import type { Routes } from '@angular/router';
+import { type Routes } from '@angular/router';
 import { ROUTER_LINKS } from '@shared/entities/shared.constants';
 import { quizGuard } from '@shared/guards/quiz.guard';
 import { resultGuard } from '@shared/guards/result.guard';

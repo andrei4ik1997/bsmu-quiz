@@ -5,7 +5,7 @@
 	<h1 class="quiz-title">Тест: {{ selectedTest?.title }}</h1>
 	<h2 class="quiz-subtitle">Количество вопросов: {{ questions.length }}</h2>
 
-	<div class="quiz-container">
+	<div #quizContainer class="quiz-container">
 		@let questionIndex = currentQuestionIndex();
 		@let currentQuestion = question();
 
@@ -43,7 +43,15 @@
 				</div>
 			}
 
-			<button nz-button nzType="primary" type="button" (click)="completeQuiz(questions)">Сдать тест</button>
+			<button
+				nz-button
+				nzType="primary"
+				type="button"
+				[disabled]="!currentQuestion"
+				(click)="completeQuiz(questions)"
+			>
+				Сдать тест
+			</button>
 		</div>
 
 		<div class="quiz-container-right">

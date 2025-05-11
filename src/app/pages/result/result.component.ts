@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { ROUTER_LINKS } from '@shared/entities/shared.constants';
 import type { ModalQuestionData, Question, TableConfig, TestResult } from '@shared/entities/shared.types';
 import { QuestionModalComponent } from '@shared/modals/question/question.component';
+import { LocalStorageService } from '@shared/services/local-storage.service';
 import { StoreService } from '@shared/services/store.service';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
@@ -25,36 +26,33 @@ type TableData = Question & {
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class ResultPageComponent {
-	private readonly storeService = inject(StoreService);
-	private readonly nzModalService = inject(NzModalService);
 	private readonly router = inject(Router);
+	private readonly nzModalService = inject(NzModalService);
+	private readonly storeService = inject(StoreService);
+	private readonly localStorageService = inject(LocalStorageService);
 
 	protected readonly userAnswers = toSignal(this.storeService.testResults$, {
 		initialValue: null,
 	});
 
-	protected readonly testName = computed(() => {
+	private readonly getFirstAnswer = computed(() => {
 		const userAnswers = this.userAnswers();
 
 		if (userAnswers === null) {
-			return '';
+			return null;
 		}
 
 		const values = [...userAnswers.values()];
 
-		return values[0].testName;
+		return values.at(0) ?? null;
+	});
+
+	protected readonly testName = computed(() => {
+		return this.getFirstAnswer()?.testName ?? null;
 	});
 
 	protected readonly questions = computed(() => {
-		const userAnswers = this.userAnswers();
-
-		if (userAnswers === null) {
-			return [];
-		}
-
-		const values = [...userAnswers.values()];
-
-		return values[0].testQuestions;
+		return this.getFirstAnswer()?.testQuestions ?? [];
 	});
 
 	protected readonly userCountAnswers = computed(() => {
@@ -103,7 +101,7 @@ export default class ResultPageComponent {
 			});
 
 			const isPartiallyCorrect = userResult.userAnswers.some((a) => {
-				return a.userChoice === a.isCorrect;
+				return a.userChoice && a.isCorrect;
 			});
 
 			return {
@@ -150,6 +148,7 @@ export default class ResultPageComponent {
 			sortFn: (a, b) => {
 				return a.id - b.id;
 			},
+			width: '150px',
 		},
 		{
 			name: 'Состояние',
@@ -176,14 +175,14 @@ export default class ResultPageComponent {
 		{
 			name: 'Балл',
 			dataProperty: 'score',
-			showSort: true,
-			sortFn: (a, b) => {
-				return (a.score ?? 0) - (b.score ?? 0);
-			},
+			width: '70px',
+			align: 'center',
 		},
 		{
 			name: '',
 			cellType: 'action',
+			align: 'center',
+			width: '0',
 		},
 	];
 
@@ -216,6 +215,16 @@ export default class ResultPageComponent {
 		this.storeService.clearTestResults();
 	}
 
+	protected toQuiz(): void {
+		const firstQuestion = this.questions().at(0) ?? null;
+
+		this.storeService.setSelectedTest(this.getFirstAnswer()?.selectedTest ?? null);
+
+		if (firstQuestion !== null) {
+			void this.router.navigateByUrl(`/${ROUTER_LINKS.quiz}/${firstQuestion.id}`);
+		}
+	}
+
 	private calculateCorrectScore(answers: TestResult['userAnswers']): number {
 		if (!Array.isArray(answers) || answers.length === 0) {
 			return 0;
@@ -224,9 +233,13 @@ export default class ResultPageComponent {
 		let correctCount = 0;
 
 		for (const answer of answers) {
-			if (answer.userChoice === answer.isCorrect) {
-				correctCount++;
+			if (answer.userChoice && answer.isCorrect) {
+				correctCount += 1;
 			}
+		}
+
+		if (correctCount === 0) {
+			return 0;
 		}
 
 		const score = correctCount / answers.length;

@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+import type { ElementRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, signal, viewChild } from '@angular/core';
 import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { ROUTER_LINKS } from '@shared/entities/shared.constants';
@@ -31,6 +32,8 @@ export default class QuizPageComponent {
 
 	protected readonly currentQuestionIndex = signal<number | null>(null);
 
+	private readonly quizContainerElement = viewChild<ElementRef<HTMLDivElement>>('quizContainer');
+
 	protected readonly question = computed(() => {
 		const questions = this.testQuestions() ?? [];
 		const question = questions.find((q) => {
@@ -41,6 +44,8 @@ export default class QuizPageComponent {
 	});
 
 	constructor() {
+		this.handleRouteChange(this.router.url);
+
 		this.router.events
 			.pipe(
 				filter((event) => {
@@ -49,9 +54,7 @@ export default class QuizPageComponent {
 				takeUntilDestroyed()
 			)
 			.subscribe((event) => {
-				const [, , questionId] = event.url.split('/');
-
-				this.currentQuestionIndex.set(Number(questionId));
+				this.handleRouteChange(event.url);
 			});
 	}
 
@@ -83,5 +86,17 @@ export default class QuizPageComponent {
 
 	protected goToMain(): void {
 		void this.router.navigateByUrl(`/${ROUTER_LINKS.start}`);
+	}
+
+	private handleRouteChange(url: string): void {
+		const [, , questionId] = url.split('/');
+
+		this.currentQuestionIndex.set(Number(questionId));
+
+		const quizContainerElement = this.quizContainerElement() ?? null;
+
+		if (quizContainerElement !== null) {
+			quizContainerElement.nativeElement.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+		}
 	}
 }

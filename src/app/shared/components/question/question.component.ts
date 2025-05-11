@@ -111,8 +111,9 @@ export class QuestionComponent implements OnDestroy {
 					};
 				}),
 				answers: userAnswers,
-				testName: this.selectedTestOption()?.title ?? '',
+				testName: this.selectedTestOption()?.label ?? '',
 				testQuestions: this.testQuestions() ?? [],
+				selectedTest: this.selectedTestOption(),
 			};
 
 			this.storeService.setTestResult(userAnswer);
