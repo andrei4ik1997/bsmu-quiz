@@ -94,6 +94,19 @@
 	}
 }
 
+@media screen and (max-width: 700px) {
+	.quiz-title,
+	.quiz-subtitle,
+	.quiz-question-title {
+		line-height: 1.5rem;
+		margin-bottom: 8px;
+	}
+
+	.quiz-title {
+		font-size: 1.5rem;
+	}
+}
+
 @media screen and (max-width: 500px) {
 	.quiz-navigation {
 		.ant-btn {

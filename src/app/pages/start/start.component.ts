@@ -55,10 +55,6 @@ export default class StartPageComponent implements OnInit {
 	}
 
 	private navigateToQuiz(): void {
-		const testQuestions = this.testQuestions();
-
-		if (testQuestions !== null) {
-			void this.router.navigateByUrl(`/${ROUTER_LINKS.quiz}/${testQuestions[0].id}`);
-		}
+		void this.router.navigateByUrl(`/${ROUTER_LINKS.quiz}`);
 	}
 }

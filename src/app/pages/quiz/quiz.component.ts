@@ -1,7 +1,8 @@
 import type { ElementRef } from '@angular/core';
-import { ChangeDetectionStrategy, Component, computed, inject, signal, viewChild } from '@angular/core';
-import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
-import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { ChangeDetectionStrategy, Component, computed, inject, linkedSignal, viewChild } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { Router } from '@angular/router';
+import { QuestionComponent } from '@shared/components/question/question.component';
 import { ROUTER_LINKS } from '@shared/entities/shared.constants';
 import type { Question, TestResult } from '@shared/entities/shared.types';
 import { IsHaveAnswerPipe } from '@shared/pipes/is-have-answer.pipe';
@@ -10,13 +11,12 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzEmptyModule } from 'ng-zorro-antd/empty';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzModalModule, NzModalService } from 'ng-zorro-antd/modal';
-import { filter } from 'rxjs';
 
 @Component({
 	selector: 'app-quiz-page',
 	templateUrl: './quiz.component.html',
 	styleUrl: './quiz.component.scss',
-	imports: [NzButtonModule, NzEmptyModule, NzIconModule, NzModalModule, RouterOutlet, IsHaveAnswerPipe],
+	imports: [NzButtonModule, NzEmptyModule, NzIconModule, NzModalModule, IsHaveAnswerPipe, QuestionComponent],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class QuizPageComponent {
@@ -30,7 +30,15 @@ export default class QuizPageComponent {
 		initialValue: new Map<number, TestResult>(),
 	});
 
-	protected readonly currentQuestionIndex = signal<number | null>(null);
+	protected readonly currentQuestionIndex = linkedSignal<number>(() => {
+		const testQuestions = this.testQuestions();
+
+		if (testQuestions !== null) {
+			return testQuestions[0].id;
+		}
+
+		return 0;
+	});
 
 	private readonly quizContainerElement = viewChild<ElementRef<HTMLDivElement>>('quizContainer');
 
@@ -43,23 +51,9 @@ export default class QuizPageComponent {
 		return question ?? null;
 	});
 
-	constructor() {
-		this.handleRouteChange(this.router.url);
-
-		this.router.events
-			.pipe(
-				filter((event) => {
-					return event instanceof NavigationEnd;
-				}),
-				takeUntilDestroyed()
-			)
-			.subscribe((event) => {
-				this.handleRouteChange(event.url);
-			});
-	}
-
 	protected changeCurrentQuestionIndex(index: number): void {
-		void this.router.navigateByUrl(`/${ROUTER_LINKS.quiz}/${index}`);
+		this.currentQuestionIndex.set(index);
+		this.scroll();
 	}
 
 	protected completeQuiz(questions: Question[]): void {
@@ -88,11 +82,7 @@ export default class QuizPageComponent {
 		void this.router.navigateByUrl(`/${ROUTER_LINKS.start}`);
 	}
 
-	private handleRouteChange(url: string): void {
-		const [, , questionId] = url.split('/');
-
-		this.currentQuestionIndex.set(Number(questionId));
-
+	private scroll(): void {
 		const quizContainerElement = this.quizContainerElement() ?? null;
 
 		if (quizContainerElement !== null) {

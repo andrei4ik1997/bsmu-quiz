@@ -1,4 +1,3 @@
-import type { OnDestroy } from '@angular/core';
 import { ChangeDetectionStrategy, Component, computed, effect, inject, input, signal } from '@angular/core';
 import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
@@ -28,10 +27,10 @@ import { NzRadioModule } from 'ng-zorro-antd/radio';
 	],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class QuestionComponent implements OnDestroy {
+export class QuestionComponent {
 	private readonly storeService = inject(StoreService);
 
-	public readonly questionId = input<string | undefined>(undefined, { alias: 'id' }); // router id
+	public readonly questionId = input.required<number>();
 
 	protected readonly selectedTestOption = toSignal(this.storeService.selectedTest$, { initialValue: null });
 	protected readonly testQuestions = toSignal(this.storeService.testQuestions$, { initialValue: null });
@@ -43,14 +42,10 @@ export class QuestionComponent implements OnDestroy {
 
 	protected readonly question = computed(() => {
 		const questionId = this.questionId();
-
-		if (questionId === undefined) {
-			return null;
-		}
-
 		const questions = this.testQuestions() ?? [];
+
 		const question = questions.find((q) => {
-			return String(q.id) === questionId;
+			return q.id === questionId;
 		});
 
 		return question ?? null;
@@ -118,9 +113,5 @@ export class QuestionComponent implements OnDestroy {
 
 			this.storeService.setTestResult(userAnswer);
 		}
-	}
-
-	public ngOnDestroy(): void {
-		this.addAnswerToStore();
 	}
 }

@@ -13,35 +13,33 @@
 			<div class="quiz-question">
 				@if (currentQuestion) {
 					<h2 class="quiz-question-title">Вопрос №{{ currentQuestion.id }}</h2>
-					<router-outlet />
+					<app-question [questionId]="currentQuestion.id" />
 				}
 			</div>
 
-			@if (questionIndex !== null) {
-				<div class="quiz-navigation">
-					<button
-						nz-button
-						nzType="primary"
-						type="button"
-						[disabled]="questionIndex === 1"
-						(click)="changeCurrentQuestionIndex(questionIndex - 1)"
-					>
-						<nz-icon nzType="left" />
-						Предыдущий вопрос
-					</button>
+			<div class="quiz-navigation">
+				<button
+					nz-button
+					nzType="primary"
+					type="button"
+					[disabled]="questionIndex === questions[0].id"
+					(click)="changeCurrentQuestionIndex(questionIndex - 1)"
+				>
+					<nz-icon nzType="left" />
+					Предыдущий вопрос
+				</button>
 
-					<button
-						nz-button
-						nzType="primary"
-						type="button"
-						[disabled]="questionIndex === questions[questions.length - 1].id"
-						(click)="changeCurrentQuestionIndex(questionIndex + 1)"
-					>
-						Следующий вопрос
-						<nz-icon nzType="right" />
-					</button>
-				</div>
-			}
+				<button
+					nz-button
+					nzType="primary"
+					type="button"
+					[disabled]="questionIndex === questions[questions.length - 1].id"
+					(click)="changeCurrentQuestionIndex(questionIndex + 1)"
+				>
+					Следующий вопрос
+					<nz-icon nzType="right" />
+				</button>
+			</div>
 
 			<button
 				nz-button

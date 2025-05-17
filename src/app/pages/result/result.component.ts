@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 import { ROUTER_LINKS } from '@shared/entities/shared.constants';
 import type { ModalQuestionData, Question, TableConfig, TestResult } from '@shared/entities/shared.types';
 import { QuestionModalComponent } from '@shared/modals/question/question.component';
-import { LocalStorageService } from '@shared/services/local-storage.service';
 import { StoreService } from '@shared/services/store.service';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
@@ -29,7 +28,6 @@ export default class ResultPageComponent {
 	private readonly router = inject(Router);
 	private readonly nzModalService = inject(NzModalService);
 	private readonly storeService = inject(StoreService);
-	private readonly localStorageService = inject(LocalStorageService);
 
 	protected readonly userAnswers = toSignal(this.storeService.testResults$, {
 		initialValue: null,
@@ -148,7 +146,7 @@ export default class ResultPageComponent {
 			sortFn: (a, b) => {
 				return a.id - b.id;
 			},
-			width: '150px',
+			width: '100px',
 		},
 		{
 			name: 'Состояние',
@@ -221,7 +219,7 @@ export default class ResultPageComponent {
 		this.storeService.setSelectedTest(this.getFirstAnswer()?.selectedTest ?? null);
 
 		if (firstQuestion !== null) {
-			void this.router.navigateByUrl(`/${ROUTER_LINKS.quiz}/${firstQuestion.id}`);
+			void this.router.navigateByUrl(`/${ROUTER_LINKS.quiz}`);
 		}
 	}
 

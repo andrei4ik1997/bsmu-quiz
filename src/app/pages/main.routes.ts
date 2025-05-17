@@ -23,8 +23,8 @@ const mainRoutes: Routes = [
 				path: ROUTER_LINKS.quiz,
 				title: 'Тестирование',
 				canMatch: [quizGuard],
-				loadChildren: async () => {
-					return import('@pages/quiz/quiz.routes');
+				loadComponent: async () => {
+					return import('@pages/quiz/quiz.component');
 				},
 			},
 			{

@@ -3,14 +3,7 @@ import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import type { EnvironmentProviders } from '@angular/core';
 import { inject, makeEnvironmentProviders } from '@angular/core';
 import type { IsActiveMatchOptions, ViewTransitionsFeatureOptions } from '@angular/router';
-import {
-	provideRouter,
-	Router,
-	RouteReuseStrategy,
-	withComponentInputBinding,
-	withViewTransitions,
-} from '@angular/router';
-import { CustomRouteReuseStrategy } from '@shared/services/custom-route-reuse-strategy';
+import { provideRouter, Router, withComponentInputBinding, withViewTransitions } from '@angular/router';
 import { LocalStorageService } from '@shared/services/local-storage.service';
 import { provideNzI18n, ru_RU } from 'ng-zorro-antd/i18n';
 
@@ -54,8 +47,4 @@ export function provideServices(): EnvironmentProviders {
 
 export function provideNgZorro(): EnvironmentProviders {
 	return makeEnvironmentProviders([provideNzI18n(ru_RU)]);
-}
-
-export function provideRouteReuseStrategy(): EnvironmentProviders {
-	return makeEnvironmentProviders([{ provide: RouteReuseStrategy, useClass: CustomRouteReuseStrategy }]);
 }

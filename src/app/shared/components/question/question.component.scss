@@ -46,3 +46,19 @@
 .actions {
 	@include mixins.flex-row(1rem);
 }
+
+@media screen and (max-width: 700px) {
+	.question {
+		gap: 0.5rem;
+	}
+
+	.question-title {
+		font-size: 1rem;
+		line-height: 1rem;
+	}
+
+	.question-answers-answer {
+		font-size: 1rem;
+		line-height: 1rem;
+	}
+}
