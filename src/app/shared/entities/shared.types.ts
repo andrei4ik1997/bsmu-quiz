@@ -25,18 +25,16 @@ export type Question = {
 	rightAnswer: string;
 };
 
+export type MappedQuestion = Question & { index: number };
+
 export type QuestionAnswer = { id: number; value: string; isCorrect: boolean };
 export type TestResult = {
-	selectedTest: TestOption | null;
-	testName: TestOption['label'];
-	testQuestions: Question[];
-	questionId: Question['id'];
-	userAnswers: Array<QuestionAnswer & { userChoice: boolean }>;
+	userAnswers: Array<{ id: number; isCorrect: boolean; isUserChoiceCorrect: boolean }>;
 	answers: Array<QuestionAnswer['id']>;
 };
 
 export type ModalQuestionData = {
-	question: Question | null;
+	question: MappedQuestion | null;
 	questionUserAnswer: TestResult | null;
 };
 
@@ -55,4 +53,5 @@ export type TableConfig<T> = {
 	filterFn?: NzTableFilterFn<T>;
 	cellType?: 'action';
 	align?: NzCellAlignDirective['nzAlign'];
+	customFormatter?(row: T): string;
 };

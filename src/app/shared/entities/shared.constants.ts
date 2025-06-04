@@ -9,4 +9,5 @@ export const LOCAL_STORAGE_KEYS = {
 	selectedTest: 'selectedTest',
 	testQuestions: 'testQuestions',
 	testResults: 'testResults',
+	currentQuestionIndex: 'currentQuestionIndex',
 } as const;

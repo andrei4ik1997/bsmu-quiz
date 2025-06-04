@@ -12,7 +12,7 @@
 		<div class="quiz-container-left">
 			<div class="quiz-question">
 				@if (currentQuestion) {
-					<h2 class="quiz-question-title">Вопрос №{{ currentQuestion.id }}</h2>
+					<h2 class="quiz-question-title">Вопрос №{{ currentQuestion.index + 1 }}</h2>
 					<app-question [questionId]="currentQuestion.id" />
 				}
 			</div>
@@ -22,7 +22,7 @@
 					nz-button
 					nzType="primary"
 					type="button"
-					[disabled]="questionIndex === questions[0].id"
+					[disabled]="questionIndex === questions[0].index"
 					(click)="changeCurrentQuestionIndex(questionIndex - 1)"
 				>
 					<nz-icon nzType="left" />
@@ -33,7 +33,7 @@
 					nz-button
 					nzType="primary"
 					type="button"
-					[disabled]="questionIndex === questions[questions.length - 1].id"
+					[disabled]="questionIndex === questions[questions.length - 1].index"
 					(click)="changeCurrentQuestionIndex(questionIndex + 1)"
 				>
 					Следующий вопрос
@@ -65,9 +65,9 @@
 						type="button"
 						[nzType]="isDisabled ? 'primary' : 'default'"
 						[disabled]="isDisabled"
-						(click)="changeCurrentQuestionIndex(question.id)"
+						(click)="changeCurrentQuestionIndex(question.index)"
 					>
-						{{ question.id }}
+						{{ question.index + 1 }}
 
 						@if (isHaveAnswer) {
 							<div class="quiz-fast-navigation-question-badge"></div>

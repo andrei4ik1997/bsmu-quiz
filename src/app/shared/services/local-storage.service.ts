@@ -1,5 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { inject, Injectable } from '@angular/core';
+import { LOCAL_STORAGE_KEYS } from '@shared/entities/shared.constants';
 import type { LocalStorageKeys } from '@shared/entities/shared.types';
 
 @Injectable()
@@ -13,8 +14,8 @@ export class LocalStorageService {
 			return null;
 		}
 
-		if (key === 'testResults') {
-			const parsed = JSON.parse(item);
+		if (key === LOCAL_STORAGE_KEYS.testResults) {
+			const parsed = JSON.parse(item) as unknown;
 
 			return (Array.isArray(parsed) ? new Map(parsed) : new Map()) as T;
 		}

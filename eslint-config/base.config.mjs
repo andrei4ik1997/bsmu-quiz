@@ -4,6 +4,7 @@ import globals from 'globals';
 import eslintTs from 'typescript-eslint';
 
 import comments from '@eslint-community/eslint-plugin-eslint-comments/configs';
+import stylistic from '@stylistic/eslint-plugin';
 import angular from 'angular-eslint';
 import eslintPluginPrettier from 'eslint-plugin-prettier';
 import pluginPromise from 'eslint-plugin-promise';
@@ -13,17 +14,13 @@ import simpleImportSortPlugin from 'eslint-plugin-simple-import-sort';
 import sonarjsPlugin from 'eslint-plugin-sonarjs';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 
-import stylisticJs from '@stylistic/eslint-plugin-js';
-import stylisticTs from '@stylistic/eslint-plugin-ts';
-
 import { angularRules } from './rules/angular-rules.mjs';
 import { eslintRules } from './rules/eslint-rules.mjs';
 import { miscellaneousRules } from './rules/miscellaneous-rules.mjs';
 import { namingRules } from './rules/naming-rules.mjs';
 import { rxjsAngularRules } from './rules/rxjs-angular-rules.mjs';
 import { rxjsRules } from './rules/rxjs-rules.mjs';
-import { stylisticJsRules } from './rules/stylistic-js-rules.mjs';
-import { stylisticTsRules } from './rules/stylistic-ts-rules.mjs';
+import { stylisticRules } from './rules/stylistic-rules.mjs';
 import { testsRules } from './rules/tests-rules.mjs';
 import { typescriptRules } from './rules/typescript-rules.mjs';
 
@@ -50,8 +47,7 @@ export const baseConfig = eslintTs.config(
 			'simple-import-sort': simpleImportSortPlugin,
 			unicorn: eslintPluginUnicorn,
 			'rxjs-angular': rxjsAngular,
-			'@stylistic/js': stylisticJs,
-			'@stylistic/ts': stylisticTs,
+			'@stylistic': stylistic,
 		},
 	},
 	{
@@ -112,9 +108,8 @@ export const baseConfig = eslintTs.config(
 			...rxjsRules,
 			...rxjsAngularRules,
 			...angularRules.classFiles,
-			...stylisticJsRules,
+			...stylisticRules,
 			...typescriptRules,
-			...stylisticTsRules,
 		},
 	},
 	{

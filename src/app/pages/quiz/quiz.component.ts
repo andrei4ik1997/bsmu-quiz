@@ -1,10 +1,10 @@
 import type { ElementRef } from '@angular/core';
-import { ChangeDetectionStrategy, Component, computed, inject, linkedSignal, viewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, viewChild } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
 import { QuestionComponent } from '@shared/components/question/question.component';
 import { ROUTER_LINKS } from '@shared/entities/shared.constants';
-import type { Question, TestResult } from '@shared/entities/shared.types';
+import type { MappedQuestion, TestResult } from '@shared/entities/shared.types';
 import { IsHaveAnswerPipe } from '@shared/pipes/is-have-answer.pipe';
 import { StoreService } from '@shared/services/store.service';
 import { NzButtonModule } from 'ng-zorro-antd/button';
@@ -30,14 +30,8 @@ export default class QuizPageComponent {
 		initialValue: new Map<number, TestResult>(),
 	});
 
-	protected readonly currentQuestionIndex = linkedSignal<number>(() => {
-		const testQuestions = this.testQuestions();
-
-		if (testQuestions !== null) {
-			return testQuestions[0].id;
-		}
-
-		return 0;
+	protected readonly currentQuestionIndex = toSignal(this.storeService.currentQuestionIndex$, {
+		initialValue: 0,
 	});
 
 	private readonly quizContainerElement = viewChild<ElementRef<HTMLDivElement>>('quizContainer');
@@ -45,18 +39,18 @@ export default class QuizPageComponent {
 	protected readonly question = computed(() => {
 		const questions = this.testQuestions() ?? [];
 		const question = questions.find((q) => {
-			return q.id === this.currentQuestionIndex();
+			return q.index === this.currentQuestionIndex();
 		});
 
 		return question ?? null;
 	});
 
 	protected changeCurrentQuestionIndex(index: number): void {
-		this.currentQuestionIndex.set(index);
+		this.storeService.setCurrentQuestionIndex(index);
 		this.scroll();
 	}
 
-	protected completeQuiz(questions: Question[]): void {
+	protected completeQuiz(questions: MappedQuestion[]): void {
 		const userAnswers: number[] = [];
 
 		for (const [key, value] of this.userAnswers()) {
@@ -73,7 +67,6 @@ export default class QuizPageComponent {
 			nzMaskClosable: true,
 			nzOnOk: () => {
 				void this.router.navigateByUrl(`/${ROUTER_LINKS.result}`);
-				this.storeService.setSelectedTest(null);
 			},
 		});
 	}

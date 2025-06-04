@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, effect, inject, input, signal } from '@angular/core';
 import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import type { Question, TestResult } from '@shared/entities/shared.types';
+import type { MappedQuestion, TestResult } from '@shared/entities/shared.types';
 import { IsDisabledPipe } from '@shared/pipes/is-disabled.pipe';
 import { StoreService } from '@shared/services/store.service';
 import { NzButtonModule } from 'ng-zorro-antd/button';
@@ -60,6 +60,8 @@ export class QuestionComponent {
 			if (question !== null) {
 				this.addInitFormControlValue(question);
 			}
+
+			this.isAnswerVisible.set(false);
 		});
 
 		this.questionFormControl.valueChanges.pipe(takeUntilDestroyed()).subscribe(() => {
@@ -75,7 +77,7 @@ export class QuestionComponent {
 		this.questionFormControl.setValue(null);
 	}
 
-	private addInitFormControlValue(question: Question): void {
+	private addInitFormControlValue(question: MappedQuestion): void {
 		const userAnswers = this.userAnswers().get(question.id) ?? null;
 
 		if (userAnswers === null) {
@@ -98,20 +100,17 @@ export class QuestionComponent {
 
 		if (question !== null) {
 			const userAnswer: TestResult = {
-				questionId: question.id,
 				userAnswers: question.answers.map((answer) => {
 					return {
-						...answer,
-						userChoice: userAnswers.includes(answer.id),
+						id: answer.id,
+						isCorrect: answer.isCorrect,
+						isUserChoiceCorrect: userAnswers.includes(answer.id),
 					};
 				}),
 				answers: userAnswers,
-				testName: this.selectedTestOption()?.label ?? '',
-				testQuestions: this.testQuestions() ?? [],
-				selectedTest: this.selectedTestOption(),
 			};
 
-			this.storeService.setTestResult(userAnswer);
+			this.storeService.setTestResult(question.id, userAnswer);
 		}
 	}
 }

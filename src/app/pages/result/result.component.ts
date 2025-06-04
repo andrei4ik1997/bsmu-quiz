@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/c
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
 import { ROUTER_LINKS } from '@shared/entities/shared.constants';
-import type { ModalQuestionData, Question, TableConfig, TestResult } from '@shared/entities/shared.types';
+import type { MappedQuestion, ModalQuestionData, TableConfig, TestResult } from '@shared/entities/shared.types';
 import { QuestionModalComponent } from '@shared/modals/question/question.component';
 import { StoreService } from '@shared/services/store.service';
 import { NzButtonModule } from 'ng-zorro-antd/button';
@@ -12,7 +12,7 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzModalModule, NzModalService } from 'ng-zorro-antd/modal';
 import { NzTableModule } from 'ng-zorro-antd/table';
 
-type TableData = Question & {
+type TableData = MappedQuestion & {
 	status: '-' | 'Без ответа' | 'Верно' | 'Неправильно' | 'Частично верно';
 	score: number | null;
 };
@@ -33,24 +33,20 @@ export default class ResultPageComponent {
 		initialValue: null,
 	});
 
-	private readonly getFirstAnswer = computed(() => {
-		const userAnswers = this.userAnswers();
+	private readonly testQuestions = toSignal(this.storeService.testQuestions$, {
+		initialValue: null,
+	});
 
-		if (userAnswers === null) {
-			return null;
-		}
-
-		const values = [...userAnswers.values()];
-
-		return values.at(0) ?? null;
+	private readonly selectedTest = toSignal(this.storeService.selectedTest$, {
+		initialValue: null,
 	});
 
 	protected readonly testName = computed(() => {
-		return this.getFirstAnswer()?.testName ?? null;
+		return this.selectedTest()?.label ?? '-';
 	});
 
 	protected readonly questions = computed(() => {
-		return this.getFirstAnswer()?.testQuestions ?? [];
+		return this.testQuestions() ?? [];
 	});
 
 	protected readonly userCountAnswers = computed(() => {
@@ -95,11 +91,11 @@ export default class ResultPageComponent {
 			}
 
 			const isAllCorrect = userResult.userAnswers.every((a) => {
-				return a.userChoice === a.isCorrect;
+				return a.isUserChoiceCorrect === a.isCorrect;
 			});
 
 			const isPartiallyCorrect = userResult.userAnswers.some((a) => {
-				return a.userChoice && a.isCorrect;
+				return a.isUserChoiceCorrect && a.isCorrect;
 			});
 
 			return {
@@ -139,14 +135,17 @@ export default class ResultPageComponent {
 	protected readonly tableConfig: Array<TableConfig<TableData>> = [
 		{
 			name: 'Номер вопроса',
-			dataProperty: 'id',
+			dataProperty: 'index',
 			showSort: true,
 			sortDirections: ['ascend', 'descend'],
 			sortOrder: 'ascend',
 			sortFn: (a, b) => {
-				return a.id - b.id;
+				return a.index - b.index;
 			},
 			width: '100px',
+			customFormatter: (row) => {
+				return String(row.index + 1);
+			},
 		},
 		{
 			name: 'Состояние',
@@ -184,23 +183,17 @@ export default class ResultPageComponent {
 		},
 	];
 
-	protected showQuestion(questionId: number): void {
-		const questions = this.questions();
+	protected showQuestion(question: MappedQuestion): void {
 		const userAnswers = this.userAnswers();
-
-		const question =
-			questions.find((q) => {
-				return q.id === questionId;
-			}) ?? null;
 
 		let questionUserAnswer: TestResult | null = null;
 
-		if (userAnswers !== null && question !== null) {
+		if (userAnswers !== null) {
 			questionUserAnswer = userAnswers.get(question.id) ?? null;
 		}
 
 		this.nzModalService.create<QuestionModalComponent, ModalQuestionData, void>({
-			nzTitle: `№${questionId} ${question?.question ?? ''}`,
+			nzTitle: `№${question.index + 1} ${question.question}`,
 			nzContent: QuestionModalComponent,
 			nzData: { question, questionUserAnswer },
 			nzFooter: null,
@@ -210,17 +203,11 @@ export default class ResultPageComponent {
 
 	protected finishQuiz(): void {
 		void this.router.navigateByUrl(`/${ROUTER_LINKS.start}`);
-		this.storeService.clearTestResults();
+		this.storeService.clearData();
 	}
 
 	protected toQuiz(): void {
-		const firstQuestion = this.questions().at(0) ?? null;
-
-		this.storeService.setSelectedTest(this.getFirstAnswer()?.selectedTest ?? null);
-
-		if (firstQuestion !== null) {
-			void this.router.navigateByUrl(`/${ROUTER_LINKS.quiz}`);
-		}
+		void this.router.navigateByUrl(`/${ROUTER_LINKS.quiz}`);
 	}
 
 	private calculateCorrectScore(answers: TestResult['userAnswers']): number {
@@ -231,7 +218,7 @@ export default class ResultPageComponent {
 		let correctCount = 0;
 
 		for (const answer of answers) {
-			if (answer.userChoice && answer.isCorrect) {
+			if (answer.isUserChoiceCorrect && answer.isCorrect) {
 				correctCount += 1;
 			}
 		}

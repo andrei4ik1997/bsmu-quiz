@@ -3,7 +3,7 @@
 @if (result !== null) {
 	@let questionsCount = questions().length;
 
-	<h1 class="result-testName">{{ testName() ?? '-' }}</h1>
+	<h1 class="result-testName">{{ testName() }}</h1>
 	<nz-divider class="result-divider" />
 	<h2 class="result-title">Результаты тестирования</h2>
 
@@ -72,7 +72,7 @@
 											nzType="primary"
 											nzSize="small"
 											type="button"
-											(click)="showQuestion(data.id)"
+											(click)="showQuestion(data)"
 										>
 											<nz-icon nzType="eye" nzTheme="outline" />
 											Просмотреть вопрос
@@ -80,9 +80,15 @@
 									}
 									@default {
 										@if (column.dataProperty) {
-											@let value = data[column.dataProperty] ?? '-';
+											@if (column.customFormatter) {
+												@let value = column.customFormatter(data);
 
-											{{ value }}
+												{{ value }}
+											} @else {
+												@let value = data[column.dataProperty] ?? '-';
+
+												{{ value }}
+											}
 										}
 									}
 								}
