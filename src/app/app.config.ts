@@ -4,7 +4,13 @@ import type { ApplicationConfig } from '@angular/core';
 import { provideZoneChangeDetection } from '@angular/core';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
-import { provideAppHttpClient, provideAppRouter, provideNgZorro, provideServices } from './app.providers';
+import {
+	provideAppHttpClient,
+	provideAppRouter,
+	provideNgswWorker,
+	provideNgZorro,
+	provideServices,
+} from './app.providers';
 
 registerLocaleData(en);
 
@@ -16,5 +22,6 @@ export const appConfig: ApplicationConfig = {
 		provideAnimationsAsync(),
 		provideServices(),
 		provideNgZorro(),
+		provideNgswWorker(),
 	],
 };

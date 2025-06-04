@@ -1,9 +1,10 @@
 import type { HttpInterceptorFn } from '@angular/common/http';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import type { EnvironmentProviders } from '@angular/core';
-import { inject, makeEnvironmentProviders } from '@angular/core';
+import { inject, isDevMode, makeEnvironmentProviders } from '@angular/core';
 import type { IsActiveMatchOptions, ViewTransitionsFeatureOptions } from '@angular/router';
 import { provideRouter, Router, withComponentInputBinding, withViewTransitions } from '@angular/router';
+import { provideServiceWorker } from '@angular/service-worker';
 import { LocalStorageService } from '@shared/services/local-storage.service';
 import { provideNzI18n, ru_RU } from 'ng-zorro-antd/i18n';
 
@@ -47,4 +48,13 @@ export function provideServices(): EnvironmentProviders {
 
 export function provideNgZorro(): EnvironmentProviders {
 	return makeEnvironmentProviders([provideNzI18n(ru_RU)]);
+}
+
+export function provideNgswWorker(): EnvironmentProviders {
+	return makeEnvironmentProviders([
+		provideServiceWorker('ngsw-worker.js', {
+			enabled: !isDevMode(),
+			registrationStrategy: 'registerWhenStable:30000',
+		}),
+	]);
 }
