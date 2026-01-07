@@ -1,5 +1,6 @@
 import { inject, Injectable } from '@angular/core';
-import { commonQuestions } from '@shared/db/common.questions';
+import { common_07_01_2026_Questions } from '@shared/db/common_07_01_2026.questions';
+import { common_2025_Questions } from '@shared/db/common_2025.questions';
 import { nurseAnesthetistQuestions } from '@shared/db/nurse-anesthetist.questions';
 import { LOCAL_STORAGE_KEYS } from '@shared/entities/shared.constants';
 import type { MappedQuestion, Question, TestOption, TestResult } from '@shared/entities/shared.types';
@@ -50,8 +51,13 @@ export class StoreService {
 			this.testQuestionsSubject$.next(null);
 		} else {
 			switch (test.value) {
-				case 'common':
-					this.testQuestionsSubject$.next(this.randomizeQuestions(commonQuestions));
+				case 'common_2025':
+					this.testQuestionsSubject$.next(this.randomizeQuestions(common_2025_Questions));
+
+					break;
+
+				case 'common_07_01_2026':
+					this.testQuestionsSubject$.next(this.randomizeQuestions(common_07_01_2026_Questions));
 
 					break;
 

@@ -13,7 +13,7 @@ export type AppRouterLink = (typeof ROUTER_LINKS)[keyof typeof ROUTER_LINKS];
 export type LocalStorageKeys = (typeof LOCAL_STORAGE_KEYS)[keyof typeof LOCAL_STORAGE_KEYS];
 
 export type TestOption = {
-	value: 'common' | 'nurseAnesthetist';
+	value: 'common_2025' | 'common_07_01_2026' | 'nurseAnesthetist';
 	label: string;
 };
 

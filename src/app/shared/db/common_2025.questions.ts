@@ -1,6 +1,6 @@
 import type { Question } from '@shared/entities/shared.types';
 
-export const commonQuestions: Question[] = [
+export const common_2025_Questions: Question[] = [
 	{
 		id: 1,
 		question: 'Когда сформировалась биоэтика?',

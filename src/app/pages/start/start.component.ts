@@ -22,8 +22,12 @@ export default class StartPageComponent implements OnInit {
 
 	protected readonly tests: TestOption[] = [
 		{
-			value: 'common',
-			label: 'Вопросы по общепрофессиональным дисциплинам (дополнительные) СCО ',
+			value: 'common_2025',
+			label: 'Вопросы по общепрофессиональным дисциплинам (дополнительные) СCО 2025',
+		},
+		{
+			value: 'common_07_01_2026',
+			label: 'Вопросы по общепрофессиональным дисциплинам (дополнительные) СCО 07-01-2026',
 		},
 		{
 			value: 'nurseAnesthetist',
