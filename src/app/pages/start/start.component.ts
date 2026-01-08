@@ -1,6 +1,5 @@
 import type { OnInit } from '@angular/core';
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
-import { toSignal } from '@angular/core/rxjs-interop';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ROUTER_LINKS } from '@shared/entities/shared.constants';
@@ -36,7 +35,7 @@ export default class StartPageComponent implements OnInit {
 	];
 
 	protected readonly selectedTest = signal<TestOption | null>(null);
-	protected readonly testQuestions = toSignal(this.storeService.testQuestions$, { initialValue: null });
+	protected readonly testQuestions = this.storeService.testQuestions;
 
 	public ngOnInit(): void {
 		this.navigateToQuiz();

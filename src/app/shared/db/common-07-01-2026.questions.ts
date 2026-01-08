@@ -1,18 +1,18 @@
 import type { Question } from '@shared/entities/shared.types';
 
-export const common_2025_Questions: Question[] = [
+export const COMMON_07_01_2026_QUESTIONS: Question[] = [
 	{
 		id: 1,
 		question: 'Когда сформировалась биоэтика?',
 		answers: [
 			{
 				id: 0,
-				value: '2-я половина ХХ века',
-				isCorrect: true,
+				value: 'В 2018 г.',
+				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'В 2018 г.',
+				value: 'В эпоху античности',
 				isCorrect: false,
 			},
 			{
@@ -22,8 +22,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'В эпоху античности',
-				isCorrect: false,
+				value: '2-я половина ХХ века',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -36,7 +36,7 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Женевская декларация Всемирной Медицинской Ассоциации',
+				value: 'Всеобщая декларация прав человека',
 				isCorrect: false,
 			},
 			{
@@ -46,22 +46,22 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Декларация о защите прав пациентов в Европе (ВОЗ, 1994)',
+				value: 'Европейская конвенция по правам человека',
 				isCorrect: false,
 			},
 			{
 				id: 3,
+				value: 'Женевская декларация Всемирной Медицинской Ассоциации',
+				isCorrect: false,
+			},
+			{
+				id: 4,
 				value: 'Конвенция о правах человека и биомедицине (Конвенция Овьедо)',
 				isCorrect: true,
 			},
 			{
-				id: 4,
-				value: 'Всеобщая декларация прав человека',
-				isCorrect: false,
-			},
-			{
 				id: 5,
-				value: 'Европейская конвенция по правам человека',
+				value: 'Декларация о защите прав пациентов в Европе (ВОЗ, 1994)',
 				isCorrect: false,
 			},
 		],
@@ -79,8 +79,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'Не навреди',
-				isCorrect: true,
+				value: 'Принцип защиты пациента',
+				isCorrect: false,
 			},
 			{
 				id: 2,
@@ -89,27 +89,27 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Принцип конфиденциальности',
-				isCorrect: false,
-			},
-			{
-				id: 4,
-				value: 'Принцип защиты пациента',
-				isCorrect: false,
-			},
-			{
-				id: 5,
-				value: 'Принцип учитывать права меньшинств',
-				isCorrect: false,
-			},
-			{
-				id: 6,
 				value: 'Принцип автономии личности',
 				isCorrect: true,
 			},
 			{
-				id: 7,
+				id: 4,
 				value: 'Принцип «делай добро»',
+				isCorrect: true,
+			},
+			{
+				id: 5,
+				value: 'Принцип конфиденциальности',
+				isCorrect: false,
+			},
+			{
+				id: 6,
+				value: 'Принцип учитывать права меньшинств',
+				isCorrect: false,
+			},
+			{
+				id: 7,
+				value: 'Не навреди',
 				isCorrect: true,
 			},
 		],
@@ -122,12 +122,12 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Правило Конфиденциальности',
+				value: 'Правило информированного согласия',
 				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'Правило информированного согласия',
+				value: 'Правило правдивости',
 				isCorrect: true,
 			},
 			{
@@ -137,8 +137,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Правило правдивости',
-				isCorrect: true,
+				value: 'Правило трех «Д»',
+				isCorrect: false,
 			},
 			{
 				id: 4,
@@ -147,8 +147,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 5,
-				value: 'Правило трех «Д»',
-				isCorrect: false,
+				value: 'Правило Конфиденциальности',
+				isCorrect: true,
 			},
 		],
 		isMultiple: true,
@@ -160,32 +160,32 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Комитет по биоэтике Республики Беларусь',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'Комиссия по медицинской этике организации здравоохранения',
-				isCorrect: true,
-			},
-			{
-				id: 2,
-				value: 'Комитет по науке и технологиям',
+				value: 'Биоэтический комитет при Академии наук',
 				isCorrect: false,
 			},
 			{
-				id: 3,
-				value: 'Независимый этический комитет лечебного/ образовательного учреждения',
-				isCorrect: true,
-			},
-			{
-				id: 4,
+				id: 1,
 				value: 'Этический комитет профессиональной медицинской ассоциации',
 				isCorrect: false,
 			},
 			{
+				id: 2,
+				value: 'Комитет по биоэтике Республики Беларусь',
+				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'Комиссия по медицинской этике организации здравоохранения',
+				isCorrect: true,
+			},
+			{
+				id: 4,
+				value: 'Независимый этический комитет лечебного/ образовательного учреждения',
+				isCorrect: true,
+			},
+			{
 				id: 5,
-				value: 'Биоэтический комитет при Академии наук',
+				value: 'Комитет по науке и технологиям',
 				isCorrect: false,
 			},
 		],
@@ -199,18 +199,18 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'междисциплинарное научное направление, ориентированное на изучение и разрешение моральных проблем, порожденных современными достижениями биомедицинской науки и технологий',
-				isCorrect: true,
-			},
-			{
-				id: 1,
 				value: 'новое междисциплинарное научное направление, занимающееся исследовательской этикой в биомедицине, изучающее права участников исследований и испытаний',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'юридическая дисциплина, созданная для решения вопросов соблюдения соматических прав человека',
 				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'междисциплинарное научное направление, ориентированное на изучение и разрешение моральных проблем, порожденных современными достижениями биомедицинской науки и технологий',
+				isCorrect: true,
 			},
 			{
 				id: 3,
@@ -228,7 +228,7 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'И.Кант',
+				value: 'Аристотель',
 				isCorrect: false,
 			},
 			{
@@ -238,22 +238,22 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Мать Тереза',
-				isCorrect: false,
-			},
-			{
-				id: 3,
-				value: 'Аристотель',
-				isCorrect: false,
-			},
-			{
-				id: 4,
 				value: 'Р. Витч',
 				isCorrect: false,
 			},
 			{
-				id: 5,
+				id: 3,
+				value: 'Мать Тереза',
+				isCorrect: false,
+			},
+			{
+				id: 4,
 				value: 'Н. Семашко',
+				isCorrect: false,
+			},
+			{
+				id: 5,
+				value: 'И.Кант',
 				isCorrect: false,
 			},
 		],
@@ -266,13 +266,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Гуманно-правовую',
-				isCorrect: false,
+				value: 'Технологическую',
+				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'Коллегиальную',
-				isCorrect: true,
+				value: 'Гуманно-правовую',
+				isCorrect: false,
 			},
 			{
 				id: 2,
@@ -281,12 +281,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Контрактную',
+				value: 'Коллегиальную',
 				isCorrect: true,
 			},
 			{
 				id: 4,
-				value: 'Технологическую',
+				value: 'Контрактную',
 				isCorrect: true,
 			},
 			{
@@ -304,18 +304,18 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'не навреди',
-				isCorrect: true,
-			},
-			{
-				id: 1,
 				value: 'соблюдай законы государства',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'соблюдай автономию личности',
 				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'не навреди',
+				isCorrect: true,
 			},
 			{
 				id: 3,
@@ -332,22 +332,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'не укради',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'соблюдай права уязвимых',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'делай добро',
 				isCorrect: true,
 			},
 			{
-				id: 3,
+				id: 1,
 				value: 'не лжесвидетельствуй',
+				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'не укради',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'соблюдай права уязвимых',
 				isCorrect: false,
 			},
 		],
@@ -360,8 +360,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'тип неравноправных взаимоотношений между медицинским работником и пациентом (его родственниками), при которых медицинские работники играют доминирующую роль, поучают и принимают решение',
-				isCorrect: true,
+				value: 'тип взаимоотношений, который предполагает наличие конфликта интересов и запрет на информирование пациента',
+				isCorrect: false,
 			},
 			{
 				id: 1,
@@ -370,8 +370,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'тип взаимоотношений, который предполагает наличие конфликта интересов и запрет на информирование пациента',
-				isCorrect: false,
+				value: 'тип неравноправных взаимоотношений между медицинским работником и пациентом (его родственниками), при которых медицинские работники играют доминирующую роль, поучают и принимают решение',
+				isCorrect: true,
 			},
 			{
 				id: 3,
@@ -394,22 +394,22 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'возможные альтернативы проводимому вмешательству/лечению',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'Возможные и вероятные последствия вмешательства',
 				isCorrect: true,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'Какие меры предпринимает учреждение для предоставления гарантий проведения заявленного вмешательства',
 				isCorrect: false,
 			},
 			{
-				id: 4,
+				id: 3,
 				value: 'Возможность предоставления (анонимно или не анонимно) медицинских данных пациента, фото/видео съемки во время медицинского вмешательства для обсуждения в профессиональной среде/ публикации научных материалов и т.д.',
+				isCorrect: true,
+			},
+			{
+				id: 4,
+				value: 'возможные альтернативы проводимому вмешательству/лечению',
 				isCorrect: true,
 			},
 		],
@@ -424,22 +424,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'религиозный выбор',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'рутинный забор органов',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'презумпция несогласия',
 				isCorrect: true,
 			},
 			{
-				id: 3,
+				id: 1,
+				value: 'религиозный выбор',
+				isCorrect: false,
+			},
+			{
+				id: 2,
 				value: 'презумпция согласия',
+				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'рутинный забор органов',
 				isCorrect: true,
 			},
 		],
@@ -458,8 +458,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'презумпция несогласия',
-				isCorrect: false,
+				value: 'презумпция согласия',
+				isCorrect: true,
 			},
 			{
 				id: 2,
@@ -468,8 +468,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'презумпция согласия',
-				isCorrect: true,
+				value: 'презумпция несогласия',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -481,17 +481,17 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
+				value: 'бездействие, ускоряющее наступление смерти пациента',
+				isCorrect: true,
+			},
+			{
+				id: 1,
 				value: 'смерть пациента после отключения его от аппарата ИВЛ в связи с улучшением его состояния на основании данных инструментальных исследований и по решению консилиума врачей',
 				isCorrect: false,
 			},
 			{
-				id: 1,
-				value: 'действие, ускоряющее наступление смерти пациента',
-				isCorrect: true,
-			},
-			{
 				id: 2,
-				value: 'бездействие, ускоряющее наступление смерти пациента',
+				value: 'действие, ускоряющее наступление смерти пациента',
 				isCorrect: true,
 			},
 			{
@@ -510,13 +510,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'цель хосписа – собрать вместе тяжелобольных пациентов для создания их сообщества',
-				isCorrect: false,
+				value: 'хоспис – дом для жизни, а не дом для смерти',
+				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'хоспис – дом для жизни, а не дом для смерти',
-				isCorrect: true,
+				value: 'цель хосписа – собрать вместе тяжелобольных пациентов для создания их сообщества',
+				isCorrect: false,
 			},
 			{
 				id: 2,
@@ -539,27 +539,27 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'суррогатное материнство',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'экстракорпоральное оплодотворение',
-				isCorrect: true,
-			},
-			{
-				id: 2,
-				value: 'пренатальная диагностика',
-				isCorrect: false,
-			},
-			{
-				id: 3,
 				value: 'искусственное прерывание беременности',
 				isCorrect: false,
 			},
 			{
-				id: 4,
+				id: 1,
+				value: 'пренатальная диагностика',
+				isCorrect: false,
+			},
+			{
+				id: 2,
 				value: 'искусственная инсеминация',
+				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'суррогатное материнство',
+				isCorrect: true,
+			},
+			{
+				id: 4,
+				value: 'экстракорпоральное оплодотворение',
 				isCorrect: true,
 			},
 		],
@@ -573,32 +573,32 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'выявленные генетические аномалии развития плода',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'наличие решения суда о лишении женщины родительских прав',
 				isCorrect: true,
 			},
 			{
-				id: 2,
-				value: 'беременность, наступившая в результате изнасилования женщины',
-				isCorrect: true,
-			},
-			{
-				id: 3,
+				id: 1,
 				value: 'наличие у женщины статуса беженца',
 				isCorrect: false,
 			},
 			{
+				id: 2,
+				value: 'тюремное заключение женщины',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'беременность, наступившая в результате изнасилования женщины',
+				isCorrect: true,
+			},
+			{
 				id: 4,
-				value: 'необходимость для женщины закончить учебу/рабочий проект и т.д.',
+				value: 'выявленные генетические аномалии развития плода',
 				isCorrect: false,
 			},
 			{
 				id: 5,
-				value: 'тюремное заключение женщины',
+				value: 'необходимость для женщины закончить учебу/рабочий проект и т.д.',
 				isCorrect: false,
 			},
 			{
@@ -617,12 +617,12 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Постановлением Минздрава',
+				value: 'Законом «О вспомогательных репродуктивных технологиях»',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'Законом «О вспомогательных репродуктивных технологиях»',
+				value: 'Уголовным Кодексом',
 				isCorrect: false,
 			},
 			{
@@ -632,13 +632,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Постановлением Совета Министров',
-				isCorrect: true,
+				value: 'Постановлением Минздрава',
+				isCorrect: false,
 			},
 			{
 				id: 4,
-				value: 'Уголовным Кодексом',
-				isCorrect: false,
+				value: 'Постановлением Совета Министров',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -650,23 +650,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'сложностью изолировать и ограничить в правах пациентов с психиатрической патологией',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'сложностью согласования с пациентом и его опекуном (если применимо) процесса лечения (в том числе сопутствующих заболеваний)',
+				value: 'диагнозом психического расстройства, который несет в себе негативную морально-психологическую нагрузку и социальное неприятие в обществе',
 				isCorrect: true,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'конфликтом между принципом уважения автономии пациента и ограничением этой автономии в связи со спецификой заболевания',
 				isCorrect: true,
 			},
 			{
-				id: 3,
-				value: 'диагнозом психического расстройства, который несет в себе негативную морально-психологическую нагрузку и социальное неприятие в обществе',
+				id: 2,
+				value: 'сложностью согласования с пациентом и его опекуном (если применимо) процесса лечения (в том числе сопутствующих заболеваний)',
 				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'сложностью изолировать и ограничить в правах пациентов с психиатрической патологией',
+				isCorrect: false,
 			},
 		],
 		isMultiple: true,
@@ -679,18 +679,18 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
+				value: 'возможным конфликтом ожиданий участника исследования между применением нового интенсивного метода лечения и отсутствием лечения (плацебо-эффект)',
+				isCorrect: true,
+			},
+			{
+				id: 1,
 				value: 'конфликтом интересов',
 				isCorrect: false,
 			},
 			{
-				id: 1,
+				id: 2,
 				value: 'плагиатом при оформлении результатов исследования',
 				isCorrect: false,
-			},
-			{
-				id: 2,
-				value: 'возможным конфликтом ожиданий участника исследования между применением нового интенсивного метода лечения и отсутствием лечения (плацебо-эффект)',
-				isCorrect: true,
 			},
 			{
 				id: 3,
@@ -714,8 +714,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'детей-сирот и детей, оставшихся без попечения родителей',
-				isCorrect: true,
+				value: 'инвалидов 1 и 2 группы',
+				isCorrect: false,
 			},
 			{
 				id: 2,
@@ -729,8 +729,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 4,
-				value: 'инвалидов 1 и 2 группы',
-				isCorrect: false,
+				value: 'детей-сирот и детей, оставшихся без попечения родителей',
+				isCorrect: true,
 			},
 		],
 		isMultiple: true,
@@ -743,13 +743,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Нет, Исследователь может обращаться в НЭК по окончании проведения исследования для получения соответствующей выписки',
+				value: 'Нет. Не обязательно',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'Да, необходимо',
-				isCorrect: true,
+				value: 'Нет, Исследователь может обращаться в НЭК по окончании проведения исследования для получения соответствующей выписки',
+				isCorrect: false,
 			},
 			{
 				id: 2,
@@ -758,8 +758,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Нет. Не обязательно',
-				isCorrect: false,
+				value: 'Да, необходимо',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -776,12 +776,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'в эксперимент вовлекать как можно меньшее количество животных',
+				value: 'замещать экспериментальных животных, проводя исследования не на них, а на заимствованных у них тканях, либо на математических или компьютерных моделях',
 				isCorrect: true,
 			},
 			{
 				id: 2,
-				value: 'замещать экспериментальных животных, проводя исследования не на них, а на заимствованных у них тканях, либо на математических или компьютерных моделях',
+				value: 'в эксперимент вовлекать как можно меньшее количество животных',
 				isCorrect: true,
 			},
 			{
@@ -801,23 +801,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Да, имеет, при условии, что согласие касается простого медицинского вмешательства',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'Нет, не имеет, т.к. уже подписал официальное согласие',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'Да, имеет, если согласовал вопрос с руководством медицинского учреждения',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
 				value: 'Да, имеет, в любой момент до начала проведения вмешательства',
 				isCorrect: true,
+			},
+			{
+				id: 2,
+				value: 'Нет, не имеет, т.к. уже подписал официальное согласие',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Да, имеет, при условии, что согласие касается простого медицинского вмешательства',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -830,8 +830,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Да, в любой момент',
-				isCorrect: true,
+				value: 'Да, если отказ от дальнейшего участия произведен на 1-м этапе исследований (испытаний)',
+				isCorrect: false,
 			},
 			{
 				id: 1,
@@ -840,13 +840,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Да, если отказ от дальнейшего участия произведен на 1-м этапе исследований (испытаний)',
+				value: 'Нет, данное согласие отозвать невозможно (только в случаен смерти участника исследований (испытаний))',
 				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: 'Нет, данное согласие отозвать невозможно (только в случаен смерти участника исследований (испытаний))',
-				isCorrect: false,
+				value: 'Да, в любой момент',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -864,18 +864,18 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'Нет, ни при каких обстоятельствах',
+				value: 'Да, по решению консилиума врачей',
 				isCorrect: false,
 			},
 			{
 				id: 2,
-				value: 'Да, если это необходимо для лечения и согласовано с дееспособным (автономным) пациентом и/или его законными представителями',
-				isCorrect: true,
+				value: 'Нет, ни при каких обстоятельствах',
+				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: 'Да, по решению консилиума врачей',
-				isCorrect: false,
+				value: 'Да, если это необходимо для лечения и согласовано с дееспособным (автономным) пациентом и/или его законными представителями',
+				isCorrect: true,
 			},
 			{
 				id: 4,
@@ -893,27 +893,27 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'информированным согласием, на основании полученной информации, ее обдумывания и принятия добровольного решения',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'добровольным информированным согласием',
-				isCorrect: true,
-			},
-			{
-				id: 2,
-				value: 'обдуманным, что предполагает не менее 24 часов на осмысление информации и принятие решения',
-				isCorrect: false,
-			},
-			{
-				id: 3,
 				value: 'обязательно письменным согласием',
 				isCorrect: false,
 			},
 			{
-				id: 4,
+				id: 1,
+				value: 'обдуманным, что предполагает не менее 24 часов на осмысление информации и принятие решения',
+				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'добровольным информированным согласием',
+				isCorrect: true,
+			},
+			{
+				id: 3,
 				value: 'письменным при проведении сложных медицинских вмешательств',
+				isCorrect: true,
+			},
+			{
+				id: 4,
+				value: 'информированным согласием, на основании полученной информации, ее обдумывания и принятия добровольного решения',
 				isCorrect: true,
 			},
 		],
@@ -927,22 +927,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Медицинский работник делает отметку в медицинских документах о согласии пациента на ПМВ',
-				isCorrect: true,
-			},
-			{
-				id: 1,
 				value: 'Дается пациентом письменно',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'Отметка в медицинской документации о согласии пациента на ПМВ не требуется',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'Дается пациентом устно',
+				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'Медицинский работник делает отметку в медицинских документах о согласии пациента на ПМВ',
 				isCorrect: true,
 			},
 		],
@@ -979,13 +979,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Разрешено при определенных обстоятельствах',
-				isCorrect: false,
+				value: 'Запрещено',
+				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'Запрещено',
-				isCorrect: true,
+				value: 'Разрешено при определенных обстоятельствах',
+				isCorrect: false,
 			},
 			{
 				id: 2,
@@ -1002,47 +1002,47 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'усыновленные (удочеренные) совершеннолетние дети',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'усыновители (удочерители)',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'родные дяди и тети',
 				isCorrect: false,
 			},
 			{
-				id: 3,
-				value: 'дед и бабка',
-				isCorrect: true,
-			},
-			{
-				id: 4,
+				id: 1,
 				value: 'родители',
 				isCorrect: true,
 			},
 			{
-				id: 5,
-				value: 'племянники',
-				isCorrect: false,
-			},
-			{
-				id: 6,
+				id: 2,
 				value: 'совершеннолетние дети',
 				isCorrect: true,
 			},
 			{
+				id: 3,
+				value: 'усыновители (удочерители)',
+				isCorrect: true,
+			},
+			{
+				id: 4,
+				value: 'племянники',
+				isCorrect: false,
+			},
+			{
+				id: 5,
+				value: 'усыновленные (удочеренные) совершеннолетние дети',
+				isCorrect: true,
+			},
+			{
+				id: 6,
+				value: 'дед и бабка',
+				isCorrect: true,
+			},
+			{
 				id: 7,
-				value: 'родные братья и сестры',
+				value: 'совершеннолетние внуки',
 				isCorrect: true,
 			},
 			{
 				id: 8,
-				value: 'совершеннолетние внуки',
+				value: 'родные братья и сестры',
 				isCorrect: true,
 			},
 		],
@@ -1056,12 +1056,12 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'биомедицинским правам человека',
+				value: 'экономическим правам человека',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'экономическим правам человека',
+				value: 'биомедицинским правам человека',
 				isCorrect: false,
 			},
 			{
@@ -1079,7 +1079,7 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'иметь счета в иностранных банках',
+				value: 'заниматься предпринимательской деятельностью лично либо через доверенных лиц',
 				isCorrect: true,
 			},
 			{
@@ -1089,12 +1089,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'заниматься предпринимательской деятельностью лично либо через доверенных лиц',
+				value: 'выполнять имеющие отношение к служебной (трудовой) деятельности указания и поручения политической партии, иного общественного объединения, членом которой (которого) они являются',
 				isCorrect: true,
 			},
 			{
 				id: 3,
-				value: 'выполнять имеющие отношение к служебной (трудовой) деятельности указания и поручения политической партии, иного общественного объединения, членом которой (которого) они являются',
+				value: 'иметь счета в иностранных банках',
 				isCorrect: true,
 			},
 		],
@@ -1118,12 +1118,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'принятие государственным должностным лицом подарков в связи с исполнением служебных (трудовых) обязанностей',
+				value: 'вымогательство государственным должностным лицом имущества для себя или для третьих лиц в обмен на любое действие или бездействие при исполнении служебных (трудовых) обязанностей',
 				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: 'вымогательство государственным должностным лицом имущества для себя или для третьих лиц в обмен на любое действие или бездействие при исполнении служебных (трудовых) обязанностей',
+				value: 'принятие государственным должностным лицом подарков в связи с исполнением служебных (трудовых) обязанностей',
 				isCorrect: false,
 			},
 		],
@@ -1161,13 +1161,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'нематериальные преимущества',
-				isCorrect: false,
+				value: 'выгоды имущественного характера',
+				isCorrect: true,
 			},
 			{
 				id: 2,
-				value: 'выгоды имущественного характера',
-				isCorrect: true,
+				value: 'нематериальные преимущества',
+				isCorrect: false,
 			},
 		],
 		isMultiple: true,
@@ -1179,12 +1179,12 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'взятку',
-				isCorrect: false,
+				value: 'угощение в ресторане',
+				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'угощение в ресторане',
+				value: 'предоставление бесплатно санаторной путевки, проездных документов',
 				isCorrect: true,
 			},
 			{
@@ -1194,8 +1194,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'предоставление бесплатно санаторной путевки, проездных документов',
-				isCorrect: true,
+				value: 'взятку',
+				isCorrect: false,
 			},
 		],
 		isMultiple: true,
@@ -1208,23 +1208,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'штраф',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'временное отстранение от работы',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'увольнение',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
 				value: 'наказание в соответствии со статьей Уголовного кодекса',
 				isCorrect: true,
+			},
+			{
+				id: 2,
+				value: 'штраф',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'временное отстранение от работы',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -1236,7 +1236,7 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'работа правоохранительных органов на выявлении системных проявлений коррупции в экономической и управленческой деятельности',
+				value: 'представление декларации о доходах и имуществе и об источниках денежных средств',
 				isCorrect: true,
 			},
 			{
@@ -1246,7 +1246,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'представление декларации о доходах и имуществе и об источниках денежных средств',
+				value: 'работа правоохранительных органов на выявлении системных проявлений коррупции в экономической и управленческой деятельности',
 				isCorrect: true,
 			},
 		],
@@ -1260,18 +1260,18 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'моральная',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'административная',
 				isCorrect: true,
 			},
 			{
-				id: 2,
-				value: 'уголовная',
+				id: 1,
+				value: 'дисциплинарная',
 				isCorrect: true,
+			},
+			{
+				id: 2,
+				value: 'моральная',
+				isCorrect: false,
 			},
 			{
 				id: 3,
@@ -1280,7 +1280,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 4,
-				value: 'дисциплинарная',
+				value: 'уголовная',
 				isCorrect: true,
 			},
 		],
@@ -1321,13 +1321,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'совокупность системно упорядоченных взглядов, выражающая интересы различных социальных классов и социальных групп',
-				isCorrect: true,
+				value: 'наука о развитии политических течений и партий',
+				isCorrect: false,
 			},
 			{
 				id: 2,
-				value: 'наука о развитии политических течений и партий',
-				isCorrect: false,
+				value: 'совокупность системно упорядоченных взглядов, выражающая интересы различных социальных классов и социальных групп',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -1340,17 +1340,17 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'национальная основа',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'социально-политическая основа',
 				isCorrect: false,
 			},
 			{
+				id: 1,
+				value: 'национальная основа',
+				isCorrect: false,
+			},
+			{
 				id: 2,
-				value: 'мировоззренческая основа',
+				value: 'экономическая основа',
 				isCorrect: true,
 			},
 			{
@@ -1360,7 +1360,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 4,
-				value: 'экономическая основа',
+				value: 'мировоззренческая основа',
 				isCorrect: true,
 			},
 			{
@@ -1378,13 +1378,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Карл Маркс',
-				isCorrect: false,
+				value: 'Антуан де Траси',
+				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'Антуан де Траси',
-				isCorrect: true,
+				value: 'Карл Маркс',
+				isCorrect: false,
 			},
 			{
 				id: 2,
@@ -1398,12 +1398,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 4,
-				value: 'Аристотель',
+				value: 'Наполеон Бонапарт',
 				isCorrect: false,
 			},
 			{
 				id: 5,
-				value: 'Наполеон Бонапарт',
+				value: 'Аристотель',
 				isCorrect: false,
 			},
 		],
@@ -1416,18 +1416,18 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Реидеологизация',
-				isCorrect: true,
-			},
-			{
-				id: 1,
 				value: 'Деидеологизация',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'Нострификация',
 				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'Реидеологизация',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -1439,13 +1439,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'демократическое государство',
-				isCorrect: true,
+				value: 'федеративное государство',
+				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'социальное государство',
-				isCorrect: true,
+				value: 'социально ориентированное государство',
+				isCorrect: false,
 			},
 			{
 				id: 2,
@@ -1454,17 +1454,17 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'социально ориентированное государство',
-				isCorrect: false,
+				value: 'правовое государство',
+				isCorrect: true,
 			},
 			{
 				id: 4,
-				value: 'федеративное государство',
-				isCorrect: false,
+				value: 'демократическое государство',
+				isCorrect: true,
 			},
 			{
 				id: 5,
-				value: 'правовое государство',
+				value: 'социальное государство',
 				isCorrect: true,
 			},
 		],
@@ -1482,12 +1482,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'многообразия политических институтов, идеологий и мнений',
+				value: 'Многопартийности',
 				isCorrect: false,
 			},
 			{
 				id: 2,
-				value: 'Многопартийности',
+				value: 'многообразия политических институтов, идеологий и мнений',
 				isCorrect: false,
 			},
 		],
@@ -1501,17 +1501,17 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
+				value: 'Консерватизм',
+				isCorrect: false,
+			},
+			{
+				id: 1,
 				value: 'Либерализм',
 				isCorrect: true,
 			},
 			{
-				id: 1,
-				value: 'Социализм',
-				isCorrect: false,
-			},
-			{
 				id: 2,
-				value: 'Консерватизм',
+				value: 'Социализм',
 				isCorrect: false,
 			},
 		],
@@ -1530,12 +1530,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'Социализм',
+				value: 'Либерализм',
 				isCorrect: false,
 			},
 			{
 				id: 2,
-				value: 'Либерализм',
+				value: 'Социализм',
 				isCorrect: false,
 			},
 		],
@@ -1549,17 +1549,17 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Консерватизм',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'Социализм',
 				isCorrect: true,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'Либерализм',
+				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'Консерватизм',
 				isCorrect: false,
 			},
 		],
@@ -1572,7 +1572,7 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '4 ветви власти',
+				value: '2 ветви власти',
 				isCorrect: false,
 			},
 			{
@@ -1582,7 +1582,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: '2 ветви власти',
+				value: '4 ветви власти',
 				isCorrect: false,
 			},
 		],
@@ -1613,27 +1613,27 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Палата представителей',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'Совет Министров',
 				isCorrect: false,
 			},
 			{
-				id: 2,
-				value: 'Национальное Собрание',
-				isCorrect: true,
-			},
-			{
-				id: 3,
+				id: 1,
 				value: 'Совет Республики',
 				isCorrect: false,
 			},
 			{
-				id: 4,
+				id: 2,
 				value: 'Верховный Совет',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Национальное Собрание',
+				isCorrect: true,
+			},
+			{
+				id: 4,
+				value: 'Палата представителей',
 				isCorrect: false,
 			},
 		],
@@ -1664,33 +1664,33 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Государственный герб',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'социальные гарантии гражданам Республики Беларусь',
-				isCorrect: false,
-			},
-			{
-				id: 2,
-				value: 'Конституция Республики Беларусь',
-				isCorrect: false,
-			},
-			{
-				id: 3,
-				value: 'Государственный флаг',
-				isCorrect: true,
-			},
-			{
-				id: 4,
 				value: 'Штандарт Президента Республики Беларусь',
 				isCorrect: false,
 			},
 			{
-				id: 5,
+				id: 1,
 				value: 'Государственный гимн',
 				isCorrect: true,
+			},
+			{
+				id: 2,
+				value: 'Государственный флаг',
+				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'Государственный герб',
+				isCorrect: true,
+			},
+			{
+				id: 4,
+				value: 'социальные гарантии гражданам Республики Беларусь',
+				isCorrect: false,
+			},
+			{
+				id: 5,
+				value: 'Конституция Республики Беларусь',
+				isCorrect: false,
 			},
 		],
 		isMultiple: true,
@@ -1702,22 +1702,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'опосредованными',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'прямыми',
 				isCorrect: true,
 			},
 			{
+				id: 1,
+				value: 'непосредственными',
+				isCorrect: false,
+			},
+			{
 				id: 2,
-				value: 'делегированными',
+				value: 'опосредованными',
 				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: 'непосредственными',
+				value: 'делегированными',
 				isCorrect: false,
 			},
 		],
@@ -1730,7 +1730,7 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Орган исполнительной власти',
+				value: 'Орган законодательной власти',
 				isCorrect: false,
 			},
 			{
@@ -1745,7 +1745,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Орган законодательной власти',
+				value: 'Орган исполнительной власти',
 				isCorrect: false,
 			},
 		],
@@ -1758,18 +1758,18 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
+				value: 'Указом Президента Республики Беларусь',
+				isCorrect: false,
+			},
+			{
+				id: 1,
 				value: 'Законом',
 				isCorrect: true,
 			},
 			{
-				id: 1,
+				id: 2,
 				value: 'Конституцией и Законом',
 				isCorrect: true,
-			},
-			{
-				id: 2,
-				value: 'Указом Президента Республики Беларусь',
-				isCorrect: false,
 			},
 			{
 				id: 3,
@@ -1786,17 +1786,17 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Национальным собранием',
+				value: 'Конституционным судом',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'Палатой представителей',
+				value: 'Национальным собранием',
 				isCorrect: false,
 			},
 			{
 				id: 2,
-				value: 'Конституционным судом',
+				value: 'Палатой представителей',
 				isCorrect: false,
 			},
 			{
@@ -1820,13 +1820,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'Законом «О здравоохранении»',
-				isCorrect: false,
+				value: 'Конституцией',
+				isCorrect: true,
 			},
 			{
 				id: 2,
-				value: 'Конституцией',
-				isCorrect: true,
+				value: 'Законом «О здравоохранении»',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -1838,32 +1838,32 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'счастливая семья',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'государство-партнер',
-				isCorrect: true,
-			},
-			{
-				id: 2,
-				value: 'активная здоровая жизнь',
-				isCorrect: false,
-			},
-			{
-				id: 3,
 				value: 'сильный центр',
 				isCorrect: false,
 			},
 			{
-				id: 4,
+				id: 1,
+				value: 'счастливая семья',
+				isCorrect: true,
+			},
+			{
+				id: 2,
 				value: 'сильные регионы',
 				isCorrect: true,
 			},
 			{
-				id: 5,
+				id: 3,
 				value: 'интеллектуальная страна',
+				isCorrect: true,
+			},
+			{
+				id: 4,
+				value: 'активная здоровая жизнь',
+				isCorrect: false,
+			},
+			{
+				id: 5,
+				value: 'государство-партнер',
 				isCorrect: true,
 			},
 		],
@@ -1876,27 +1876,27 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Совет Министров Республики Беларусь',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'Национальное собрание Республики Беларусь',
-				isCorrect: false,
-			},
-			{
-				id: 2,
-				value: 'Министерство здравоохранения Республики Беларусь',
-				isCorrect: false,
-			},
-			{
-				id: 3,
 				value: 'Президент Республики Беларусь',
 				isCorrect: true,
 			},
 			{
-				id: 4,
+				id: 1,
 				value: 'Комиссия по здравоохранению, физической культуре, семейной и молодежной политике Палаты представителей национального Собрания Республики Беларусь',
+				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'Национальное собрание Республики Беларусь',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Министерство здравоохранения Республики Беларусь',
+				isCorrect: false,
+			},
+			{
+				id: 4,
+				value: 'Совет Министров Республики Беларусь',
 				isCorrect: false,
 			},
 		],
@@ -1910,23 +1910,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '81 год',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: '75 лет',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: '78 лет',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: '76,5 года',
 				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: '81 год',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -1938,32 +1938,32 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'либеральный',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'инновационный',
-				isCorrect: false,
-			},
-			{
-				id: 2,
-				value: 'социал-демократический',
-				isCorrect: true,
-			},
-			{
-				id: 3,
-				value: 'социалистический',
-				isCorrect: true,
-			},
-			{
-				id: 4,
 				value: 'постиндустриальный',
 				isCorrect: false,
 			},
 			{
-				id: 5,
+				id: 1,
 				value: 'консервативный',
+				isCorrect: true,
+			},
+			{
+				id: 2,
+				value: 'социалистический',
+				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'либеральный',
+				isCorrect: true,
+			},
+			{
+				id: 4,
+				value: 'инновационный',
+				isCorrect: false,
+			},
+			{
+				id: 5,
+				value: 'социал-демократический',
 				isCorrect: true,
 			},
 		],
@@ -1976,28 +1976,28 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'проведение эффективной социальной политики',
+				value: 'сильная и эффективная государственная власть',
 				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'отказ от поддержки социальных проектов',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'обеспечение равноправия всех форм собственности',
 				isCorrect: true,
 			},
 			{
+				id: 2,
+				value: 'проведение эффективной социальной политики',
+				isCorrect: true,
+			},
+			{
 				id: 3,
-				value: 'полный переход к рыночной системе хозяйствования',
+				value: 'отказ от поддержки социальных проектов',
 				isCorrect: false,
 			},
 			{
 				id: 4,
-				value: 'сильная и эффективная государственная власть',
-				isCorrect: true,
+				value: 'полный переход к рыночной системе хозяйствования',
+				isCorrect: false,
 			},
 		],
 		isMultiple: true,
@@ -2010,17 +2010,17 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
+				value: '8 глобальных целей',
+				isCorrect: false,
+			},
+			{
+				id: 1,
 				value: '17 глобальных целей',
 				isCorrect: true,
 			},
 			{
-				id: 1,
-				value: '25 глобальных целей',
-				isCorrect: false,
-			},
-			{
 				id: 2,
-				value: '8 глобальных целей',
+				value: '25 глобальных целей',
 				isCorrect: false,
 			},
 			{
@@ -2043,22 +2043,22 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'Советом Министров Республики Беларусь',
-				isCorrect: false,
-			},
-			{
-				id: 2,
-				value: 'Всемирной организацией здравоохранения',
-				isCorrect: false,
-			},
-			{
-				id: 3,
 				value: 'на саммите глав государств СНГ',
 				isCorrect: false,
 			},
 			{
-				id: 4,
+				id: 2,
 				value: 'Всемирным банком',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Всемирной организацией здравоохранения',
+				isCorrect: false,
+			},
+			{
+				id: 4,
+				value: 'Советом Министров Республики Беларусь',
 				isCorrect: false,
 			},
 		],
@@ -2071,28 +2071,28 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'снижение смертности населения трудоспособного возраста',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'увеличение продолжительности здоровой жизни населения',
-				isCorrect: true,
-			},
-			{
-				id: 2,
-				value: 'обеспечение всех граждан независимо от места их проживания качественной медицинской помощью',
-				isCorrect: true,
-			},
-			{
-				id: 3,
 				value: 'увеличение ожидаемой продолжительности жизни',
 				isCorrect: false,
 			},
 			{
-				id: 4,
+				id: 1,
 				value: 'снижение смертности населения',
 				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'снижение смертности населения трудоспособного возраста',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'обеспечение всех граждан независимо от места их проживания качественной медицинской помощью',
+				isCorrect: true,
+			},
+			{
+				id: 4,
+				value: 'увеличение продолжительности здоровой жизни населения',
+				isCorrect: true,
 			},
 			{
 				id: 5,
@@ -2110,32 +2110,32 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Сократ',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'Карл Маркс',
 				isCorrect: false,
 			},
 			{
-				id: 2,
-				value: 'В.И.Ленин',
-				isCorrect: false,
-			},
-			{
-				id: 3,
+				id: 1,
 				value: 'Антуан де Траси',
 				isCorrect: true,
 			},
 			{
-				id: 4,
+				id: 2,
+				value: 'Сократ',
+				isCorrect: false,
+			},
+			{
+				id: 3,
 				value: 'Аристотель',
 				isCorrect: false,
 			},
 			{
-				id: 5,
+				id: 4,
 				value: 'Наполеон Бонапарт',
+				isCorrect: false,
+			},
+			{
+				id: 5,
+				value: 'В.И.Ленин',
 				isCorrect: false,
 			},
 		],
@@ -2149,8 +2149,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Консерватизм',
-				isCorrect: false,
+				value: 'Нацизм',
+				isCorrect: true,
 			},
 			{
 				id: 1,
@@ -2159,8 +2159,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Нацизм',
-				isCorrect: true,
+				value: 'Консерватизм',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -2178,27 +2178,27 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'увеличение численности населения',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'преодоление депопуляции',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'создание условий для улучшения здоровья населения с охватом всех этапов жизни',
 				isCorrect: true,
 			},
 			{
+				id: 3,
+				value: 'увеличение численности населения',
+				isCorrect: false,
+			},
+			{
 				id: 4,
-				value: 'увеличение рождаемости',
+				value: 'снижение смертности',
 				isCorrect: false,
 			},
 			{
 				id: 5,
-				value: 'снижение смертности',
+				value: 'увеличение рождаемости',
 				isCorrect: false,
 			},
 		],
@@ -2212,17 +2212,17 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Социальной адаптации инвалидов',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'Социальной интеграции инвалидов',
 				isCorrect: true,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'Социальной защиты инвалидов',
+				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'Социальной адаптации инвалидов',
 				isCorrect: false,
 			},
 		],
@@ -2258,17 +2258,17 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '5 раз',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: '4 раза',
 				isCorrect: true,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: '3 раза',
+				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: '5 раз',
 				isCorrect: false,
 			},
 		],
@@ -2299,18 +2299,18 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Конституцией Республики Беларусь',
-				isCorrect: true,
-			},
-			{
-				id: 1,
 				value: 'Законом Республики Беларусь «О санитарно-эпидемиологическом благополучии населения»',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'Законом Республики Беларусь «О здравоохранении»',
 				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'Конституцией Республики Беларусь',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -2322,13 +2322,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'лечащим врачом',
-				isCorrect: true,
+				value: 'заведующим отделением организации здравоохранения',
+				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'заведующим отделением организации здравоохранения',
-				isCorrect: false,
+				value: 'лечащим врачом',
+				isCorrect: true,
 			},
 			{
 				id: 2,
@@ -2356,7 +2356,7 @@ export const common_2025_Questions: Question[] = [
 			{
 				id: 2,
 				value: 'да',
-				isCorrect: false,
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -2430,17 +2430,17 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'работнику, занятому на работах с вредными и опасными условиями труда',
-				isCorrect: false,
+				value: 'по просьбе женщины, имеющей ребенка в возрасте до четырнадцати лет',
+				isCorrect: true,
 			},
 			{
 				id: 2,
-				value: 'по просьбе работника, которому не исполнилось 18 лет',
-				isCorrect: false,
+				value: 'по просьбе беременной женщины',
+				isCorrect: true,
 			},
 			{
 				id: 3,
-				value: 'по просьбе женщины, имеющей ребенка в возрасте до четырнадцати лет',
+				value: 'инвалиду в соответствии с индивидуальной программой реабилитации',
 				isCorrect: true,
 			},
 			{
@@ -2450,13 +2450,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 5,
-				value: 'инвалиду в соответствии с индивидуальной программой реабилитации',
-				isCorrect: true,
+				value: 'работнику, занятому на работах с вредными и опасными условиями труда',
+				isCorrect: false,
 			},
 			{
 				id: 6,
-				value: 'по просьбе беременной женщины',
-				isCorrect: true,
+				value: 'по просьбе работника, которому не исполнилось 18 лет',
+				isCorrect: false,
 			},
 		],
 		isMultiple: true,
@@ -2469,8 +2469,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'инвалидам I и II групп',
-				isCorrect: true,
+				value: 'работнику, работающему по совместительству',
+				isCorrect: false,
 			},
 			{
 				id: 1,
@@ -2479,27 +2479,27 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'беременным женщинам',
-				isCorrect: false,
-			},
-			{
-				id: 3,
 				value: 'работнику, занятому на работах с вредными и опасными условиями труда',
 				isCorrect: true,
 			},
 			{
+				id: 3,
+				value: 'инвалидам вне зависимости от имеющейся группы',
+				isCorrect: false,
+			},
+			{
 				id: 4,
-				value: 'отдельным категориям работников по решению Правительства или уполномоченного им органом',
+				value: 'инвалидам I и II групп',
 				isCorrect: true,
 			},
 			{
 				id: 5,
-				value: 'работнику, работающему по совместительству',
-				isCorrect: false,
+				value: 'отдельным категориям работников по решению Правительства или уполномоченного им органом',
+				isCorrect: true,
 			},
 			{
 				id: 6,
-				value: 'инвалидам вне зависимости от имеющейся группы',
+				value: 'беременным женщинам',
 				isCorrect: false,
 			},
 		],
@@ -2514,18 +2514,18 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'по запросу адвокатов',
+				value: 'по письменному запросу родственников пациента',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'органов внутренних дел о явке (неявке) лица, обязанного возмещать расходы',
+				value: 'по запросу организаций здравоохранения при угрозе распространения инфекционных заболеваний',
 				isCorrect: true,
 			},
 			{
 				id: 2,
-				value: 'по запросу организаций здравоохранения при угрозе распространения инфекционных заболеваний',
-				isCorrect: true,
+				value: 'по запросу адвокатов',
+				isCorrect: false,
 			},
 			{
 				id: 3,
@@ -2534,18 +2534,18 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 4,
-				value: 'по запросу Министерства здравоохранения, главных управлений по здравоохранению, организаций здравоохранения в целях организации оказания медицинской помощи пациенту',
-				isCorrect: true,
-			},
-			{
-				id: 5,
 				value: 'по запросу страховых организаций',
 				isCorrect: false,
 			},
 			{
+				id: 5,
+				value: 'по запросу Министерства здравоохранения, главных управлений по здравоохранению, организаций здравоохранения в целях организации оказания медицинской помощи пациенту',
+				isCorrect: true,
+			},
+			{
 				id: 6,
-				value: 'по письменному запросу родственников пациента',
-				isCorrect: false,
+				value: 'органов внутренних дел о явке (неявке) лица, обязанного возмещать расходы',
+				isCorrect: true,
 			},
 		],
 		isMultiple: true,
@@ -2582,18 +2582,18 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
+				value: 'нет',
+				isCorrect: false,
+			},
+			{
+				id: 1,
 				value: 'да, но должны быть соблюдены определенные ограничения',
 				isCorrect: true,
 			},
 			{
-				id: 1,
+				id: 2,
 				value: 'да',
 				isCorrect: true,
-			},
-			{
-				id: 2,
-				value: 'нет',
-				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -2605,18 +2605,18 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'с 16 лет',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'несовершеннолетний не имеет права давать согласие на простое медицинское вмешательство',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'с 14 лет',
 				isCorrect: true,
+			},
+			{
+				id: 2,
+				value: 'с 16 лет',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -2628,43 +2628,43 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'детях-сиротах и детях, оставшихся без попечения родителей',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'медицинских работниках',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'лицах, в отношении которых проводится судебная экспертиза',
 				isCorrect: true,
 			},
 			{
-				id: 3,
-				value: 'недееспособных',
-				isCorrect: true,
+				id: 1,
+				value: 'детях до достижения ими 14 лет',
+				isCorrect: false,
 			},
 			{
-				id: 4,
+				id: 2,
 				value: 'осужденных и лицах, содержащихся под стражей',
 				isCorrect: true,
 			},
 			{
-				id: 5,
-				value: 'детях',
-				isCorrect: true,
-			},
-			{
-				id: 6,
+				id: 3,
 				value: 'военнослужащих',
 				isCorrect: true,
 			},
 			{
-				id: 7,
-				value: 'детях до достижения ими 14 лет',
+				id: 4,
+				value: 'детях',
+				isCorrect: true,
+			},
+			{
+				id: 5,
+				value: 'недееспособных',
+				isCorrect: true,
+			},
+			{
+				id: 6,
+				value: 'медицинских работниках',
 				isCorrect: false,
+			},
+			{
+				id: 7,
+				value: 'детях-сиротах и детях, оставшихся без попечения родителей',
+				isCorrect: true,
 			},
 		],
 		isMultiple: true,
@@ -2678,13 +2678,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'условия для дополнительного ухода и питание за счет средств республиканского (местного) бюджета',
-				isCorrect: false,
+				value: 'условия для дополнительного ухода',
+				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'условия для дополнительного ухода',
-				isCorrect: true,
+				value: 'условия для дополнительного ухода и питание за счет средств республиканского (местного) бюджета',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -2696,43 +2696,43 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'медико-социальная помощь',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'специализированная медицинская помощь',
-				isCorrect: true,
-			},
-			{
-				id: 2,
-				value: 'скорая медицинская помощь',
-				isCorrect: false,
-			},
-			{
-				id: 3,
-				value: 'высокотехнологичная медицинская помощь',
-				isCorrect: true,
-			},
-			{
-				id: 4,
-				value: 'первичная медико-санитарная помощь',
-				isCorrect: false,
-			},
-			{
-				id: 5,
-				value: 'паллиативная медицинская помощь',
-				isCorrect: true,
-			},
-			{
-				id: 6,
 				value: 'первичная медицинская помощь',
 				isCorrect: true,
 			},
 			{
-				id: 7,
+				id: 1,
+				value: 'скорая медицинская помощь',
+				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'первичная медико-санитарная помощь',
+				isCorrect: false,
+			},
+			{
+				id: 3,
 				value: 'плановая медицинская помощь',
 				isCorrect: false,
+			},
+			{
+				id: 4,
+				value: 'медико-социальная помощь',
+				isCorrect: true,
+			},
+			{
+				id: 5,
+				value: 'высокотехнологичная медицинская помощь',
+				isCorrect: true,
+			},
+			{
+				id: 6,
+				value: 'паллиативная медицинская помощь',
+				isCorrect: true,
+			},
+			{
+				id: 7,
+				value: 'специализированная медицинская помощь',
+				isCorrect: true,
 			},
 		],
 		isMultiple: true,
@@ -2746,12 +2746,12 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'не имеет',
+				value: 'имеет только работник государственной организации здравоохранения',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'имеет только работник государственной организации здравоохранения',
+				value: 'не имеет',
 				isCorrect: false,
 			},
 			{
@@ -2792,13 +2792,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'дает самостоятельно',
-				isCorrect: true,
+				value: 'решение о медицинском вмешательстве принимается лечащим врачом',
+				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'решение о медицинском вмешательстве принимается лечащим врачом',
-				isCorrect: false,
+				value: 'дает самостоятельно',
+				isCorrect: true,
 			},
 			{
 				id: 2,
@@ -2816,17 +2816,17 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'просьба родственников',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'возможность причинения существенного вреда своему здоровью вследствие ухудшения состояния психического здоровья, если такое лицо будет оставлено без психиатрической помощи',
 				isCorrect: true,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'наличие хронического психического расстройства',
+				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'просьба родственников',
 				isCorrect: false,
 			},
 			{
@@ -2855,13 +2855,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'не имеет',
-				isCorrect: false,
+				value: 'имеет, с разрешения руководителя организации здравоохранения, если это не угрожает жизни пациента или здоровью окружающих',
+				isCorrect: true,
 			},
 			{
 				id: 2,
-				value: 'имеет, с разрешения руководителя организации здравоохранения, если это не угрожает жизни пациента или здоровью окружающих',
-				isCorrect: true,
+				value: 'не имеет',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -2892,13 +2892,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'нельзя',
-				isCorrect: true,
+				value: 'можно',
+				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'можно',
-				isCorrect: false,
+				value: 'нельзя',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -2910,8 +2910,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'в связи с изменением условий трудового договора',
-				isCorrect: false,
+				value: 'в случае производственной необходимости или простоя',
+				isCorrect: true,
 			},
 			{
 				id: 1,
@@ -2920,8 +2920,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'в случае производственной необходимости или простоя',
-				isCorrect: true,
+				value: 'в связи с изменением условий трудового договора',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -2933,12 +2933,12 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'оплата труда',
+				value: 'режим рабочего времени',
 				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'гарантии',
+				value: 'оплата труда',
 				isCorrect: true,
 			},
 			{
@@ -2948,12 +2948,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'режим рабочего времени',
+				value: 'размер заработной платы',
 				isCorrect: true,
 			},
 			{
 				id: 4,
-				value: 'размер заработной платы',
+				value: 'гарантии',
 				isCorrect: true,
 			},
 		],
@@ -2967,12 +2967,12 @@ export const common_2025_Questions: Question[] = [
 			{
 				id: 0,
 				value: 'да',
-				isCorrect: false,
+				isCorrect: true,
 			},
 			{
 				id: 1,
 				value: 'нет',
-				isCorrect: true,
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -3005,11 +3005,11 @@ export const common_2025_Questions: Question[] = [
 			{
 				id: 0,
 				value: '3 месяца',
-				isCorrect: false,
+				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: '1 месяц',
+				value: '2 месяца',
 				isCorrect: false,
 			},
 			{
@@ -3019,7 +3019,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: '2 месяца',
+				value: '1 месяц',
 				isCorrect: false,
 			},
 		],
@@ -3029,17 +3029,17 @@ export const common_2025_Questions: Question[] = [
 	},
 	{
 		id: 103,
-		question: 'Можно ли уволить работника за отсутствия на работе более трех часов в течение рабочего дня?',
+		question: 'Можно ли уволить работника за отсутствие на работе более трех часов в течение рабочего дня?',
 		answers: [
 			{
 				id: 0,
-				value: 'можно',
-				isCorrect: true,
+				value: 'нельзя',
+				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'нельзя',
-				isCorrect: false,
+				value: 'можно',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -3112,13 +3112,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Законом «О здравоохранении»',
-				isCorrect: false,
+				value: 'Конституцией Республики Беларусь',
+				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'Конституцией Республики Беларусь',
-				isCorrect: true,
+				value: 'Законом «О здравоохранении»',
+				isCorrect: false,
 			},
 			{
 				id: 2,
@@ -3153,7 +3153,7 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Возвращение дееспособности',
+				value: 'Уравнивание прав женщин и мужчин',
 				isCorrect: false,
 			},
 			{
@@ -3163,7 +3163,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Уравнивание прав женщин и мужчин',
+				value: 'Возвращение дееспособности',
 				isCorrect: false,
 			},
 		],
@@ -3195,13 +3195,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Социальное государство',
-				isCorrect: true,
+				value: 'Социально-ориентированное государство',
+				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'Социально-ориентированное государство',
-				isCorrect: false,
+				value: 'Социальное государство',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -3214,22 +3214,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Законом',
+				value: 'постановлением Минздрава',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'постановлением Совмина',
-				isCorrect: true,
+				value: 'Законом',
+				isCorrect: false,
 			},
 			{
 				id: 2,
 				value: 'постановлением Минфина',
-				isCorrect: true,
+				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: 'постановлением Минздрава',
+				value: 'постановлением Совмина',
 				isCorrect: true,
 			},
 		],
@@ -3247,17 +3247,17 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'медицинская профилактика',
-				isCorrect: false,
-			},
-			{
-				id: 2,
-				value: 'обеспечение санитарно-эпидемиологического благополучия',
+				value: 'проведение медицинской экспертизы',
 				isCorrect: true,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'лечение',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'медицинская профилактика',
 				isCorrect: false,
 			},
 			{
@@ -3267,7 +3267,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 5,
-				value: 'проведение медицинской экспертизы',
+				value: 'обеспечение санитарно-эпидемиологического благополучия',
 				isCorrect: true,
 			},
 		],
@@ -3286,52 +3286,52 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'клинико-фармакологическая экспертиза',
-				isCorrect: false,
-			},
-			{
-				id: 2,
-				value: 'медико-социальная экспертиза',
-				isCorrect: true,
-			},
-			{
-				id: 3,
-				value: 'экспертиза качества медицинской помощи',
-				isCorrect: true,
-			},
-			{
-				id: 4,
-				value: 'экспертиза временной нетрудоспособности',
-				isCorrect: true,
-			},
-			{
-				id: 5,
-				value: 'экспертиза инвалидности',
-				isCorrect: false,
-			},
-			{
-				id: 6,
-				value: 'независимая медицинская экспертиза',
-				isCorrect: true,
-			},
-			{
-				id: 7,
-				value: 'военно-врачебная экспертиза',
-				isCorrect: true,
-			},
-			{
-				id: 8,
 				value: 'экспертиза профессионального характера заболевания',
 				isCorrect: true,
 			},
 			{
-				id: 9,
+				id: 2,
+				value: 'экспертиза инвалидности',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'медико-социальная экспертиза',
+				isCorrect: true,
+			},
+			{
+				id: 4,
+				value: 'медицинское освидетельствование',
+				isCorrect: true,
+			},
+			{
+				id: 5,
+				value: 'военно-врачебная экспертиза',
+				isCorrect: true,
+			},
+			{
+				id: 6,
 				value: 'иные виды медицинских экспертиз, проводимые в соответствии с законодательством',
 				isCorrect: true,
 			},
 			{
+				id: 7,
+				value: 'экспертиза качества медицинской помощи',
+				isCorrect: true,
+			},
+			{
+				id: 8,
+				value: 'клинико-фармакологическая экспертиза',
+				isCorrect: false,
+			},
+			{
+				id: 9,
+				value: 'независимая медицинская экспертиза',
+				isCorrect: true,
+			},
+			{
 				id: 10,
-				value: 'медицинское освидетельствование',
+				value: 'экспертиза временной нетрудоспособности',
 				isCorrect: true,
 			},
 		],
@@ -3345,8 +3345,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'пола будущих детей',
-				isCorrect: false,
+				value: 'интервалов между рождением детей',
+				isCorrect: true,
 			},
 			{
 				id: 1,
@@ -3365,8 +3365,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 4,
-				value: 'интервалов между рождением детей',
-				isCorrect: true,
+				value: 'пола будущих детей',
+				isCorrect: false,
 			},
 		],
 		isMultiple: true,
@@ -3379,13 +3379,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Указом Президента Республики Беларусь',
-				isCorrect: true,
+				value: 'Конституцией',
+				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'Законом Республики Беларусь',
-				isCorrect: false,
+				value: 'Указом Президента Республики Беларусь',
+				isCorrect: true,
 			},
 			{
 				id: 2,
@@ -3394,7 +3394,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Конституцией',
+				value: 'Законом Республики Беларусь',
 				isCorrect: false,
 			},
 		],
@@ -3426,23 +3426,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'правила поведения медицинских и фармацевтических работников при общении друг с другом',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'совокупность принципов, норм и правил поведения медицинских, фармацевтических работников при выполнении ими должностных обязанностей',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'правила поведения медицинских и фармацевтических работников при общении с пациентом и его родственниками',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
+				value: 'правила поведения медицинских и фармацевтических работников при общении друг с другом',
+				isCorrect: false,
+			},
+			{
+				id: 2,
 				value: 'раздел профессиональной этики, рассматривающий этику долга медицинских работников',
 				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'совокупность принципов, норм и правил поведения медицинских, фармацевтических работников при выполнении ими должностных обязанностей',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -3455,23 +3455,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'не навреди',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'не убий',
+				value: 'делай добро',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'не выходи за границы жизни и смерти',
 				isCorrect: false,
 			},
 			{
-				id: 3,
-				value: 'делай добро',
+				id: 2,
+				value: 'не убий',
 				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'не навреди',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -3484,22 +3484,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
+				value: 'в доступной для понимания форме',
+				isCorrect: true,
+			},
+			{
+				id: 1,
 				value: 'устно, в упрощенном виде',
 				isCorrect: false,
 			},
 			{
-				id: 1,
+				id: 2,
 				value: 'информация о предстоящих манипуляциях не должна разглашаться',
 				isCorrect: false,
 			},
 			{
-				id: 2,
-				value: 'информация о предстоящих сложных медицинских вмешательствах излагается в информированном согласии и разъясняется врачом',
-				isCorrect: true,
-			},
-			{
 				id: 3,
-				value: 'в доступной для понимания форме',
+				value: 'информация о предстоящих сложных медицинских вмешательствах излагается в информированном согласии и разъясняется врачом',
 				isCorrect: true,
 			},
 			{
@@ -3519,23 +3519,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'имеет место спешка и требование немедленного подписания ИС',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'ИС подготовлено в соответствии с утвержденной формой и подробно разъяснено врачом',
 				isCorrect: true,
 			},
 			{
+				id: 1,
+				value: 'текст ИС разъяснен, прописан достаточно подробно, врач ответил на все поставленные вопросы',
+				isCorrect: true,
+			},
+			{
 				id: 2,
-				value: 'ИС содержит только указание на вид вмешательства',
+				value: 'имеет место спешка и требование немедленного подписания ИС',
 				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: 'текст ИС разъяснен, прописан достаточно подробно, врач ответил на все поставленные вопросы',
-				isCorrect: true,
+				value: 'ИС содержит только указание на вид вмешательства',
+				isCorrect: false,
 			},
 		],
 		isMultiple: true,
@@ -3548,23 +3548,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'сочувствие, сопереживание',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'самопрезентация',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'способность медицинского работника «поговорить по душам» с пациентом',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
 				value: 'деятельное участие/сопереживание',
 				isCorrect: true,
+			},
+			{
+				id: 2,
+				value: 'сочувствие, сопереживание',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'самопрезентация',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -3576,13 +3576,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'на основании медицинских показаний',
+				value: 'в исключительных случаях на основании медицинских показаний и по решению родственников пациента',
 				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'в исключительных случаях на основании медицинских показаний и по решению родственников пациента',
-				isCorrect: true,
+				value: 'по требованию родственников',
+				isCorrect: false,
 			},
 			{
 				id: 2,
@@ -3591,8 +3591,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'по требованию родственников',
-				isCorrect: false,
+				value: 'на основании медицинских показаний',
+				isCorrect: true,
 			},
 		],
 		isMultiple: true,
@@ -3605,13 +3605,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'сохранение тайны о состоянии его здоровья',
-				isCorrect: true,
+				value: 'непредоставление информации о пациенте по официальному запросу Министерства здравоохранения',
+				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'непредоставление информации о пациенте по официальному запросу Министерства здравоохранения',
-				isCorrect: false,
+				value: 'сохранение тайны о состоянии его здоровья',
+				isCorrect: true,
 			},
 			{
 				id: 2,
@@ -3634,27 +3634,27 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'инженерная (технологическая)',
+				value: 'коллегиальная',
 				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'патерналистская',
-				isCorrect: true,
-			},
-			{
-				id: 2,
-				value: 'контрактная',
-				isCorrect: true,
-			},
-			{
-				id: 3,
 				value: 'автономная',
 				isCorrect: false,
 			},
 			{
+				id: 2,
+				value: 'инженерная (технологическая)',
+				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'контрактная',
+				isCorrect: true,
+			},
+			{
 				id: 4,
-				value: 'коллегиальная',
+				value: 'патерналистская',
 				isCorrect: true,
 			},
 		],
@@ -3667,23 +3667,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'обсуждение возможных рисков вмешательства',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'обсуждение возможных альтернатив',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'изучение перечня сложных медицинских вмешательств',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
 				value: 'предоставление номера государственной регистрации учреждения',
 				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'обсуждение возможных рисков вмешательства',
+				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'обсуждение возможных альтернатив',
+				isCorrect: true,
 			},
 			{
 				id: 4,
@@ -3700,17 +3700,17 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'в форме максимально краткого разговора',
+				value: 'с участием психолога (согласно Закону о здравоохранении)',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'в форме дискуссии',
+				value: 'коллективно, с участием близких родственников пациента',
 				isCorrect: false,
 			},
 			{
 				id: 2,
-				value: 'с участием психолога (согласно Закону о здравоохранении)',
+				value: 'в форме дискуссии',
 				isCorrect: false,
 			},
 			{
@@ -3720,7 +3720,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 4,
-				value: 'коллективно, с участием близких родственников пациента',
+				value: 'в форме максимально краткого разговора',
 				isCorrect: false,
 			},
 		],
@@ -3733,22 +3733,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'как составить шаблон информированного согласия',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'как установить терапевтический контакт',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'как сообщать плохие новости пациентам',
 				isCorrect: true,
 			},
 			{
-				id: 3,
+				id: 1,
 				value: 'какие правила медицинской этики должен соблюдать врач',
+				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'как установить терапевтический контакт',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'как составить шаблон информированного согласия',
 				isCorrect: false,
 			},
 		],
@@ -3766,13 +3766,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'гнев',
-				isCorrect: true,
+				value: 'отказ от помощи',
+				isCorrect: false,
 			},
 			{
 				id: 2,
-				value: 'отказ от помощи',
-				isCorrect: false,
+				value: 'гнев',
+				isCorrect: true,
 			},
 			{
 				id: 3,
@@ -3781,17 +3781,17 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 4,
-				value: 'принятие',
+				value: 'торг',
 				isCorrect: true,
 			},
 			{
 				id: 5,
-				value: 'депрессию',
+				value: 'принятие',
 				isCorrect: true,
 			},
 			{
 				id: 6,
-				value: 'торг',
+				value: 'депрессию',
 				isCorrect: true,
 			},
 		],
@@ -3814,13 +3814,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'выбрать ординаторскую, независимо от того, присутствуют ли другие врачи',
-				isCorrect: false,
+				value: 'выбрать тихое уединенное место (при возможности)',
+				isCorrect: true,
 			},
 			{
 				id: 3,
-				value: 'выбрать тихое уединенное место (при возможности)',
-				isCorrect: true,
+				value: 'выбрать ординаторскую, независимо от того, присутствуют ли другие врачи',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -3832,8 +3832,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'методические указания психологу лечебного учреждения',
-				isCorrect: false,
+				value: 'рекомендации врачам как сообщить плохие новости и защитить себя эмоционально',
+				isCorrect: true,
 			},
 			{
 				id: 1,
@@ -3842,12 +3842,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'рекомендации врачам как сообщить плохие новости и защитить себя эмоционально',
-				isCorrect: true,
+				value: 'протокол сохранения в тайне от пациента его диагноза',
+				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: 'протокол сохранения в тайне от пациента его диагноза',
+				value: 'методические указания психологу лечебного учреждения',
 				isCorrect: false,
 			},
 		],
@@ -3861,18 +3861,18 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Законом Республики Беларусь «О здравоохранении»',
+				value: 'Комитетом по биоэтике Республики Беларусь',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'постановлением Министерства здравоохранения',
-				isCorrect: true,
+				value: 'Законом Республики Беларусь «О здравоохранении»',
+				isCorrect: false,
 			},
 			{
 				id: 2,
-				value: 'Комитетом по биоэтике Республики Беларусь',
-				isCorrect: false,
+				value: 'постановлением Министерства здравоохранения',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -3884,12 +3884,12 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'профессионализма',
+				value: 'конфиденциальности',
 				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'конфиденциальности',
+				value: 'милосердия',
 				isCorrect: true,
 			},
 			{
@@ -3899,18 +3899,18 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'толерантности',
-				isCorrect: true,
+				value: 'медицинской этики',
+				isCorrect: false,
 			},
 			{
 				id: 4,
-				value: 'милосердия',
-				isCorrect: true,
+				value: 'медицинской солидарности',
+				isCorrect: false,
 			},
 			{
 				id: 5,
-				value: 'медицинской этики',
-				isCorrect: false,
+				value: 'толерантности',
+				isCorrect: true,
 			},
 			{
 				id: 6,
@@ -3919,8 +3919,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 7,
-				value: 'медицинской солидарности',
-				isCorrect: false,
+				value: 'профессионализма',
+				isCorrect: true,
 			},
 		],
 		isMultiple: true,
@@ -3932,17 +3932,17 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'вежливости',
+				value: 'сострадания',
 				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'сдержанности',
-				isCorrect: false,
+				value: 'сочувствия',
+				isCorrect: true,
 			},
 			{
 				id: 2,
-				value: 'сострадания',
+				value: 'доверия',
 				isCorrect: true,
 			},
 			{
@@ -3952,12 +3952,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 4,
-				value: 'доверия',
+				value: 'проявления эмпатии во взаимоотношениях с пациентами, коллегами и иными лицами',
 				isCorrect: true,
 			},
 			{
 				id: 5,
-				value: 'проявления эмпатии во взаимоотношениях с пациентами, коллегами и иными лицами',
+				value: 'вежливости',
 				isCorrect: true,
 			},
 			{
@@ -3967,8 +3967,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 7,
-				value: 'сочувствия',
-				isCorrect: true,
+				value: 'сдержанности',
+				isCorrect: false,
 			},
 		],
 		isMultiple: true,
@@ -3981,42 +3981,42 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Компетентность',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'Проявление эмпатиии к пациентам м коллегам',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'Гуманизм',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
 				value: 'Качественное и оперативное выполнение должностных обязанностей',
 				isCorrect: true,
 			},
 			{
-				id: 4,
-				value: 'Стремление к совершенствованию',
+				id: 2,
+				value: 'Компетентность',
 				isCorrect: true,
 			},
 			{
-				id: 5,
+				id: 3,
+				value: 'Дисциплинированность',
+				isCorrect: true,
+			},
+			{
+				id: 4,
 				value: 'Вежливость',
 				isCorrect: false,
 			},
 			{
-				id: 6,
-				value: 'Исполнительность',
+				id: 5,
+				value: 'Стремление к совершенствованию',
 				isCorrect: true,
 			},
 			{
+				id: 6,
+				value: 'Проявление эмпатиии к пациентам м коллегам',
+				isCorrect: false,
+			},
+			{
 				id: 7,
-				value: 'Дисциплинированность',
+				value: 'Исполнительность',
 				isCorrect: true,
 			},
 		],
@@ -4058,13 +4058,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Обеспечение проходимости дыхательных путей',
-				isCorrect: false,
+				value: 'Восстановление жизненно важных функций организма при остановке кровообращения и дыхания',
+				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'Восстановление жизненно важных функций организма при остановке кровообращения и дыхания',
-				isCorrect: true,
+				value: 'Обеспечение проходимости дыхательных путей',
+				isCorrect: false,
 			},
 			{
 				id: 2,
@@ -4096,13 +4096,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'От рождения до 16 лет, от 16 до 45 лет и старше 45 лет',
-				isCorrect: false,
+				value: 'От рождения до года от года до начала полового созревания, взрослые',
+				isCorrect: true,
 			},
 			{
 				id: 3,
-				value: 'От рождения до года от года до начала полового созревания, взрослые',
-				isCorrect: true,
+				value: 'От рождения до 16 лет, от 16 до 45 лет и старше 45 лет',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -4119,13 +4119,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'Обеспечение личной безопасности и безопасности пострадавшего, извлечение из труднодоступных мест, обработка ран, наложение шин и согревание',
-				isCorrect: false,
+				value: 'Обеспечение личной безопасности и безопасности пострадавшего, определение наличия сознания, дыхания, кровообращения, выявление и остановка кровотечения',
+				isCorrect: true,
 			},
 			{
 				id: 2,
-				value: 'Обеспечение личной безопасности и безопасности пострадавшего, определение наличия сознания, дыхания, кровообращения, выявление и остановка кровотечения',
-				isCorrect: true,
+				value: 'Обеспечение личной безопасности и безопасности пострадавшего, извлечение из труднодоступных мест, обработка ран, наложение шин и согревание',
+				isCorrect: false,
 			},
 			{
 				id: 3,
@@ -4148,13 +4148,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'Отсутствие сознания, дыхания, кровообращения (пульса)',
-				isCorrect: true,
+				value: 'Неподвижность пострадавшего, расширенные зрачки, бледность кожных покровов',
+				isCorrect: false,
 			},
 			{
 				id: 2,
-				value: 'Неподвижность пострадавшего, расширенные зрачки, бледность кожных покровов',
-				isCorrect: false,
+				value: 'Отсутствие сознания, дыхания, кровообращения (пульса)',
+				isCorrect: true,
 			},
 			{
 				id: 3,
@@ -4171,12 +4171,12 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Спросить у пострадавшего, все ли с ним в порядке, аккуратно встряхнуть за плечо, применить нашатырный спирт',
+				value: 'Спросить у пострадавшего, все ли с ним в порядке, облить лицо холодной водой',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'Спросить у пострадавшего, все ли с ним в порядке, облить лицо холодной водой',
+				value: 'Спросить у пострадавшего, все ли с ним в порядке, аккуратно встряхнуть за плечо, применить нашатырный спирт',
 				isCorrect: false,
 			},
 			{
@@ -4205,17 +4205,17 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
+				value: 'Прослушать дыхание, прижав ухо к грудной клетке',
+				isCorrect: false,
+			},
+			{
+				id: 2,
 				value: 'Зрительно наблюдать за дыхательными движениями грудной клетки, ухом прослушать, а ладонью ощутить дыхание у рта пострадавшего',
 				isCorrect: true,
 			},
 			{
-				id: 2,
-				value: 'Зрительно наблюдать за дыхательными движениями грудной клетки, поднести зеркало ко рту пострадавшего',
-				isCorrect: false,
-			},
-			{
 				id: 3,
-				value: 'Прослушать дыхание, прижав ухо к грудной клетке',
+				value: 'Зрительно наблюдать за дыхательными движениями грудной клетки, поднести зеркало ко рту пострадавшего',
 				isCorrect: false,
 			},
 		],
@@ -4230,8 +4230,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '6–8 раз в минуту',
-				isCorrect: false,
+				value: '8–12 раз в минуту',
+				isCorrect: true,
 			},
 			{
 				id: 1,
@@ -4240,8 +4240,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: '8–12 раз в минуту',
-				isCorrect: true,
+				value: '6–8 раз в минуту',
+				isCorrect: false,
 			},
 			{
 				id: 3,
@@ -4258,13 +4258,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Только после того, как будет собран полный анамнез пациента для определения истинной причины смерти',
-				isCorrect: false,
+				value: 'Начинается немедленно после установления диагноза «клиническая смерть»',
+				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'Начинается немедленно после установления диагноза «клиническая смерть»',
-				isCorrect: true,
+				value: 'Только после того, как удастся удалить с места происшествия родственников и окружающих',
+				isCorrect: false,
 			},
 			{
 				id: 2,
@@ -4273,7 +4273,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Только после того, как удастся удалить с места происшествия родственников и окружающих',
+				value: 'Только после того, как будет собран полный анамнез пациента для определения истинной причины смерти',
 				isCorrect: false,
 			},
 		],
@@ -4287,8 +4287,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '2:30',
-				isCorrect: true,
+				value: '2:15',
+				isCorrect: false,
 			},
 			{
 				id: 1,
@@ -4302,8 +4302,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: '2:15',
-				isCorrect: false,
+				value: '2:30',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -4350,13 +4350,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: '100-120',
-				isCorrect: true,
+				value: '80-100',
+				isCorrect: false,
 			},
 			{
 				id: 2,
-				value: '80-100',
-				isCorrect: false,
+				value: '100-120',
+				isCorrect: true,
 			},
 			{
 				id: 3,
@@ -4374,8 +4374,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Жесткой (твердой)',
-				isCorrect: true,
+				value: 'Наклонной',
+				isCorrect: false,
 			},
 			{
 				id: 1,
@@ -4389,8 +4389,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Наклонной',
-				isCorrect: false,
+				value: 'Жесткой (твердой)',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -4403,13 +4403,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '10-20 секунд',
-				isCorrect: false,
+				value: '5-10 секунд',
+				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: '5-10 секунд',
-				isCorrect: true,
+				value: '10-20 секунд',
+				isCorrect: false,
 			},
 			{
 				id: 2,
@@ -4431,22 +4431,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'В верхней части',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'Визуальная середина грудной клетки',
 				isCorrect: true,
 			},
 			{
+				id: 1,
+				value: 'В верхней части',
+				isCorrect: false,
+			},
+			{
 				id: 2,
-				value: 'Не имеет значения',
+				value: 'В нижней части',
 				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: 'В нижней части',
+				value: 'Не имеет значения',
 				isCorrect: false,
 			},
 		],
@@ -4460,22 +4460,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Клиническая или биологическая смерть',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'Синкопальное состояние',
+				value: 'Острый инфаркт миокарда, кардиогенный шок',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'Острая дыхательная недостаточность',
 				isCorrect: false,
 			},
 			{
+				id: 2,
+				value: 'Клиническая или биологическая смерть',
+				isCorrect: true,
+			},
+			{
 				id: 3,
-				value: 'Острый инфаркт миокарда, кардиогенный шок',
+				value: 'Синкопальное состояние',
 				isCorrect: false,
 			},
 		],
@@ -4489,22 +4489,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Да, так как ФЖ/ЖТ являются самыми частыми видами остановки сердца',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'Нет',
 				isCorrect: true,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'Можно проводить только медикаментозную',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'Можно проводить только механическую',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Да, так как ФЖ/ЖТ являются самыми частыми видами остановки сердца',
 				isCorrect: false,
 			},
 		],
@@ -4547,17 +4547,17 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Коникотомия или трахеостомия',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'Тройной прием Сафара',
 				isCorrect: true,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'Прием Хеймлика',
+				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'Коникотомия или трахеостомия',
 				isCorrect: false,
 			},
 			{
@@ -4585,13 +4585,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Интубационная трубка',
-				isCorrect: false,
+				value: 'Воздуховод',
+				isCorrect: true,
 			},
 			{
 				id: 3,
-				value: 'Воздуховод',
-				isCorrect: true,
+				value: 'Интубационная трубка',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -4604,8 +4604,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Охватить ребенка руками вокруг талии, надавить на живот и произвести до 5 резких толчков вверх. Проверить наличие куска пищи в ротовой полости и удалить его',
-				isCorrect: false,
+				value: 'Ребенка положить животиком на предплечье левой руки лицом вниз и нанести ребром ладони правой руки 5 коротких ударов между лопатками. Проверить наличие куска пищи в ротовой полости и удалить его',
+				isCorrect: true,
 			},
 			{
 				id: 1,
@@ -4614,8 +4614,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Ребенка положить животиком на предплечье левой руки лицом вниз и нанести ребром ладони правой руки 5 коротких ударов между лопатками. Проверить наличие куска пищи в ротовой полости и удалить его',
-				isCorrect: true,
+				value: 'Охватить ребенка руками вокруг талии, надавить на живот и произвести до 5 резких толчков вверх. Проверить наличие куска пищи в ротовой полости и удалить его',
+				isCorrect: false,
 			},
 			{
 				id: 3,
@@ -4634,8 +4634,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Нанести 5 резких ударов основанием своей ладони между лопатками пострадавшего, при неэффективности: провести прием Хеймлика. Проверить наличие куска пищи в ротовой полости и удалить его',
-				isCorrect: true,
+				value: 'Провести прием Хеймлика. Проверить наличие куска пищи в ротовой полости и удалить его',
+				isCorrect: false,
 			},
 			{
 				id: 1,
@@ -4644,12 +4644,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Ребенка положить животом на стол лицом вниз и нанести ребром ладони правой руки 5 коротких ударов между лопатками. Проверить наличие куска пищи в ротовой полости и удалить его',
-				isCorrect: false,
+				value: 'Нанести 5 резких ударов основанием своей ладони между лопатками пострадавшего, при неэффективности: провести прием Хеймлика. Проверить наличие куска пищи в ротовой полости и удалить его',
+				isCorrect: true,
 			},
 			{
 				id: 3,
-				value: 'Провести прием Хеймлика. Проверить наличие куска пищи в ротовой полости и удалить его',
+				value: 'Ребенка положить животом на стол лицом вниз и нанести ребром ладони правой руки 5 коротких ударов между лопатками. Проверить наличие куска пищи в ротовой полости и удалить его',
 				isCorrect: false,
 			},
 		],
@@ -4669,13 +4669,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'Нанести 5 резких ударов основанием своей ладони между лопатками пострадавшего, при неэффективности: провести прием Хеймлика. Проверить наличие куска пищи в ротовой полости и удалить его',
-				isCorrect: true,
+				value: 'Положить животом на свое колено, опустить вниз головой и нанести ребром ладони правой руки 5 коротких ударов между лопатками. Проверить наличие куска пищи в ротовой полости и удалить его',
+				isCorrect: false,
 			},
 			{
 				id: 2,
-				value: 'Положить животом на свое колено, опустить вниз головой и нанести ребром ладони правой руки 5 коротких ударов между лопатками. Проверить наличие куска пищи в ротовой полости и удалить его',
-				isCorrect: false,
+				value: 'Нанести 5 резких ударов основанием своей ладони между лопатками пострадавшего, при неэффективности: провести прием Хеймлика. Проверить наличие куска пищи в ротовой полости и удалить его',
+				isCorrect: true,
 			},
 			{
 				id: 3,
@@ -4699,18 +4699,18 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'Нанести 5 резких ударов основанием своей ладони между лопатками пострадавшего, при неэффективности: охватить мужчину руками вокруг грудной клетки, надавить на нее и произвести до 5 резких толчков вверх и на себя. Проверить наличие куска пищи в ротовой полости и удалить его',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'Мужчину положить животом на стол лицом вниз и нанести ребром ладони правой руки 5 коротких ударов между лопатками. Проверить наличие куска пищи в ротовой полости и удалить его',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'Положить животом на свое колено, опустить вниз головой и нанести ребром ладони правой руки 5 коротких ударов между лопатками. Проверить наличие куска пищи в ротовой полости и удалить его',
 				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Нанести 5 резких ударов основанием своей ладони между лопатками пострадавшего, при неэффективности: охватить мужчину руками вокруг грудной клетки, надавить на нее и произвести до 5 резких толчков вверх и на себя. Проверить наличие куска пищи в ротовой полости и удалить его',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -4724,23 +4724,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Положить животом на свое колено, опустить вниз головой и нанести ребром ладони правой руки 5 коротких ударов между лопатками. Проверить наличие куска пищи в ротовой полости и удалить его',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'Женщину положить животом на стол лицом вниз и нанести ребром ладони правой руки 5 коротких ударов между лопатками. Проверить наличие куска пищи в ротовой полости и удалить его',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'Охватить женщину руками вокруг талии, надавить на живот и произвести до 5 резких толчков вверх и на себя. Проверить наличие куска пищи в ротовой полости и удалить его',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
 				value: 'Нанести 5 резких ударов основанием своей ладони между лопатками пострадавшей, при неэффективности: охватить женщину руками вокруг грудной клетки, надавить на нее и произвести до 5 резких толчков вверх и на себя. Проверить наличие куска пищи в ротовой полости и удалить его',
 				isCorrect: true,
+			},
+			{
+				id: 2,
+				value: 'Положить животом на свое колено, опустить вниз головой и нанести ребром ладони правой руки 5 коротких ударов между лопатками. Проверить наличие куска пищи в ротовой полости и удалить его',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Женщину положить животом на стол лицом вниз и нанести ребром ладони правой руки 5 коротких ударов между лопатками. Проверить наличие куска пищи в ротовой полости и удалить его',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -4754,23 +4754,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Охватить мужчину руками вокруг грудной клетки, надавить на нее и произвести до 5 резких толчков вверх. Проверить наличие куска пищи в ротовой полости и удалить его',
+				value: 'Положить животом на свое колено, опустить вниз головой и нанести ребром ладони правой руки 5 коротких ударов между лопатками. Проверить наличие куска пищи в ротовой полости и удалить его',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'Мужчину положить животом на стол лицом вниз и нанести ребром ладони правой руки 5 коротких ударов между лопатками. Проверить наличие куска пищи в ротовой полости и удалить его',
+				value: 'Охватить мужчину руками вокруг грудной клетки, надавить на нее и произвести до 5 резких толчков вверх. Проверить наличие куска пищи в ротовой полости и удалить его',
 				isCorrect: false,
 			},
 			{
 				id: 2,
-				value: 'Уложить на спину, извлечь кусок пищи вручную, произвести 2 вдоха пострадавшему, при отсутствии подъема грудной клетки - произвести до 5 резких толчков на живот пострадавшего по средней линии между мечевидным отростком и пупком. Проверить наличие куска пищи в ротовой полости и удалить его',
-				isCorrect: true,
+				value: 'Мужчину положить животом на стол лицом вниз и нанести ребром ладони правой руки 5 коротких ударов между лопатками. Проверить наличие куска пищи в ротовой полости и удалить его',
+				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: 'Положить животом на свое колено, опустить вниз головой и нанести ребром ладони правой руки 5 коротких ударов между лопатками. Проверить наличие куска пищи в ротовой полости и удалить его',
-				isCorrect: false,
+				value: 'Уложить на спину, извлечь кусок пищи вручную, произвести 2 вдоха пострадавшему, при отсутствии подъема грудной клетки - произвести до 5 резких толчков на живот пострадавшего по средней линии между мечевидным отростком и пупком. Проверить наличие куска пищи в ротовой полости и удалить его',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -4783,22 +4783,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Звуки похрустывания в грудной клетке пациента',
+				value: 'Начало подъема эпигастральной области, свидетельствующее о заполнении легких и поступлении избытков воздуха в желудок',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'Ощущение сопротивления вдоху за счет полного заполнения легких пациента',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'Начало подъема грудной клетки, свидетельствующее о достаточном заполнении и расправлении легких',
 				isCorrect: true,
 			},
 			{
+				id: 2,
+				value: 'Звуки похрустывания в грудной клетке пациента',
+				isCorrect: false,
+			},
+			{
 				id: 3,
-				value: 'Начало подъема эпигастральной области, свидетельствующее о заполнении легких и поступлении избытков воздуха в желудок',
+				value: 'Ощущение сопротивления вдоху за счет полного заполнения легких пациента',
 				isCorrect: false,
 			},
 		],
@@ -4811,23 +4811,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Перед интубацией трахеи',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'Всегда, когда таковая имеется',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'После восстановления спонтанного дыхания',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
+				value: 'Перед интубацией трахеи',
+				isCorrect: false,
+			},
+			{
+				id: 2,
 				value: 'Когда не удается восстановить нарушенную проходимость дыхательных путей, запрокинув голову и выдвинув нижнюю челюсть',
 				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'Всегда, когда таковая имеется',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -4840,7 +4840,7 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Проведение туалета трахеи и бронхов',
+				value: 'Проведения ИВЛ',
 				isCorrect: true,
 			},
 			{
@@ -4850,12 +4850,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Высокий риск аспирации',
+				value: 'Проведение туалета трахеи и бронхов',
 				isCorrect: true,
 			},
 			{
 				id: 3,
-				value: 'Проведения ИВЛ',
+				value: 'Высокий риск аспирации',
 				isCorrect: true,
 			},
 		],
@@ -4902,7 +4902,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'Остановки дыхания при утоплении',
+				value: 'Остановки дыхания вследствие ЧМТ',
 				isCorrect: false,
 			},
 			{
@@ -4912,7 +4912,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Остановки дыхания вследствие ЧМТ',
+				value: 'Остановки дыхания при утоплении',
 				isCorrect: false,
 			},
 		],
@@ -4930,17 +4930,17 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
+				value: '7-10 минут',
+				isCorrect: false,
+			},
+			{
+				id: 2,
 				value: '3-5 минут',
 				isCorrect: true,
 			},
 			{
-				id: 2,
-				value: '10 минут',
-				isCorrect: false,
-			},
-			{
 				id: 3,
-				value: '7-10 минут',
+				value: '10 минут',
 				isCorrect: false,
 			},
 		],
@@ -4954,23 +4954,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Разрешение на применение вазопрессина при асистолии и ЭМД',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'Удаление атропина из алгоритма «продвинутой» СЛР',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'Значительно более широкое применение ларингеальной маски с уменьшением частоты неудачных интубаций при проблемах с вентиляцией',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
 				value: 'Предельно четкое исполнение базовой СЛР и минимизация вынужденных перерывов в массаже сердца выполнении необходимых манипуляциях',
 				isCorrect: true,
+			},
+			{
+				id: 2,
+				value: 'Удаление атропина из алгоритма «продвинутой» СЛР',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Разрешение на применение вазопрессина при асистолии и ЭМД',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -4984,8 +4984,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '30 минут',
-				isCorrect: true,
+				value: '10 минут',
+				isCorrect: false,
 			},
 			{
 				id: 1,
@@ -4999,8 +4999,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: '10 минут',
-				isCorrect: false,
+				value: '30 минут',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -5017,18 +5017,18 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
+				value: 'ФЖ/ЖТ, электромеханическая диссоциация, асистолия',
+				isCorrect: true,
+			},
+			{
+				id: 2,
 				value: 'ФЖ/ЖТ, электромеханическая диссоциация, синдром слабости синусового узла',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 3,
 				value: 'ФЖ/ЖТ, полная атриовентрикулярная блокада, асистолия',
 				isCorrect: false,
-			},
-			{
-				id: 3,
-				value: 'ФЖ/ЖТ, электромеханическая диссоциация, асистолия',
-				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -5040,22 +5040,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '1:1,3',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: '1:2,2',
+				value: '2:1,5',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: '1:0,7',
 				isCorrect: false,
 			},
 			{
+				id: 2,
+				value: '1:1,3',
+				isCorrect: true,
+			},
+			{
 				id: 3,
-				value: '2:1,5',
+				value: '1:2,2',
 				isCorrect: false,
 			},
 		],
@@ -5068,8 +5068,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Создание венозного доступа и введение 300 мг амиодарона',
-				isCorrect: false,
+				value: 'Первичная электрическая дефибрилляция',
+				isCorrect: true,
 			},
 			{
 				id: 1,
@@ -5078,13 +5078,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Интубация трахеи и санация трахеобронхиального дерева',
+				value: 'Создание венозного доступа и введение 300 мг амиодарона',
 				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: 'Первичная электрическая дефибрилляция',
-				isCorrect: true,
+				value: 'Интубация трахеи и санация трахеобронхиального дерева',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -5097,7 +5097,7 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'В/в, в/м, в/сердечный',
+				value: 'Эндотрахеальный, в/в, в/м',
 				isCorrect: false,
 			},
 			{
@@ -5107,7 +5107,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Эндотрахеальный, в/в, в/м',
+				value: 'В/в, в/м, в/сердечный',
 				isCorrect: false,
 			},
 			{
@@ -5130,7 +5130,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'Отношение ЧСС к диастолическому АД',
+				value: 'Соотношение МОК и ОПС',
 				isCorrect: false,
 			},
 			{
@@ -5140,7 +5140,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Соотношение МОК и ОПС',
+				value: 'Отношение ЧСС к диастолическому АД',
 				isCorrect: false,
 			},
 		],
@@ -5153,13 +5153,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '1.5',
-				isCorrect: false,
+				value: '0.5',
+				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: '0.5',
-				isCorrect: true,
+				value: '1.5',
+				isCorrect: false,
 			},
 			{
 				id: 2,
@@ -5181,17 +5181,17 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Снижением парциального напряжения кислорода во вдыхаемом воздухе',
+				value: 'Увеличением частоты сердечных сокращений',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'Уменьшением жизненной емкости легких',
+				value: 'Снижением парциального напряжения кислорода во вдыхаемом воздухе',
 				isCorrect: false,
 			},
 			{
 				id: 2,
-				value: 'Увеличением частоты сердечных сокращений',
+				value: 'Уменьшением жизненной емкости легких',
 				isCorrect: false,
 			},
 			{
@@ -5209,13 +5209,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '80-90 мм рт.ст.',
+				value: 'ниже 60 мм рт.ст.',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'В пределах нормы',
-				isCorrect: true,
+				value: '80-90 мм рт.ст.',
+				isCorrect: false,
 			},
 			{
 				id: 2,
@@ -5224,8 +5224,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'ниже 60 мм рт.ст.',
-				isCorrect: false,
+				value: 'В пределах нормы',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -5237,22 +5237,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '90-100 мм рт.ст.',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'Ниже 60 мм рт.ст.',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: '60-80 мм рт.ст.',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
+				value: '90-100 мм рт.ст.',
+				isCorrect: true,
+			},
+			{
+				id: 2,
 				value: '100-120 мм рт.ст.',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Ниже 60 мм рт.ст.',
 				isCorrect: false,
 			},
 		],
@@ -5265,8 +5265,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '60-80 мм рт.ст.',
-				isCorrect: false,
+				value: 'Ниже 60 мм рт.ст.',
+				isCorrect: true,
 			},
 			{
 				id: 1,
@@ -5275,12 +5275,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Ниже 60 мм рт.ст.',
-				isCorrect: true,
+				value: '100-120 мм рт.ст.',
+				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: '100-120 мм рт.ст.',
+				value: '60-80 мм рт.ст.',
 				isCorrect: false,
 			},
 		],
@@ -5293,22 +5293,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Дегидратацию',
+				value: 'Снижение болевой импульсации',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'Улучшение сократительной способности миокарда',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'Восстановление ОЦК',
 				isCorrect: true,
 			},
 			{
+				id: 2,
+				value: 'Дегидратацию',
+				isCorrect: false,
+			},
+			{
 				id: 3,
-				value: 'Снижение болевой импульсации',
+				value: 'Улучшение сократительной способности миокарда',
 				isCorrect: false,
 			},
 		],
@@ -5321,7 +5321,7 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Скоростью и степенью кровопотери',
+				value: 'Исходным уровнем артериального давления',
 				isCorrect: true,
 			},
 			{
@@ -5336,7 +5336,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Исходным уровнем артериального давления',
+				value: 'Скоростью и степенью кровопотери',
 				isCorrect: true,
 			},
 		],
@@ -5350,22 +5350,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'прекращение поступления предполагаемого аллергена в организм, введение эпинефрина, кортикостероидов, антигистаминных средств',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'прекращение поступления предполагаемого аллергена в организм, проведение первичного осмотра, введение эпинефрина',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'прекращение поступления предполагаемого аллергена в организм, введение эпинефрина, кортикостероидов и инфузия раствора хлорида натрия',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
 				value: 'прекращение поступления предполагаемого аллергена в организм, введение эпинефрина, и кортикостероидов',
+				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'прекращение поступления предполагаемого аллергена в организм, проведение первичного осмотра, введение эпинефрина',
+				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'прекращение поступления предполагаемого аллергена в организм, введение эпинефрина, кортикостероидов, антигистаминных средств',
 				isCorrect: false,
 			},
 		],
@@ -5380,22 +5380,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Первичный осмотр, введение эпинефрина и антигистаминных лекарственных средств',
+				value: 'СЛР, введение эпинефрина, кортикостероидов',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'Введение кортикостероидов и ингаляция беродуала',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'Введение кортикостероидов, β2-агонистов и антигистаминных лекарственных средств',
 				isCorrect: true,
 			},
 			{
+				id: 2,
+				value: 'Первичный осмотр, введение эпинефрина и антигистаминных лекарственных средств',
+				isCorrect: false,
+			},
+			{
 				id: 3,
-				value: 'СЛР, введение эпинефрина, кортикостероидов',
+				value: 'Введение кортикостероидов и ингаляция беродуала',
 				isCorrect: false,
 			},
 		],
@@ -5418,13 +5418,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Агональным дыханием, резким падением артериального давления, развитием симптомов острого неэффективного сердца в течение 2-3 минут',
-				isCorrect: true,
+				value: 'Крапивницей, отеком Квинке, кожным зудом',
+				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: 'Крапивницей, отеком Квинке, кожным зудом',
-				isCorrect: false,
+				value: 'Агональным дыханием, резким падением артериального давления, развитием симптомов острого неэффективного сердца в течение 2-3 минут',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -5438,23 +5438,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Полная атриовентрикулярная блокада',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'Желудочковая тахикардия и желудочковая брадикардия',
 				isCorrect: false,
 			},
 			{
+				id: 1,
+				value: 'Фибрилляция желудочков',
+				isCorrect: true,
+			},
+			{
 				id: 2,
-				value: 'Мерцание предсердий',
+				value: 'Полная атриовентрикулярная блокада',
 				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: 'Фибрилляция желудочков',
-				isCorrect: true,
+				value: 'Мерцание предсердий',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -5466,22 +5466,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '10-12 мл/кг',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: '6-8 мл/кг',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: '8-10 мл/кг',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
 				value: '4-6 мл/кг',
+				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: '6-8 мл/кг',
+				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: '10-12 мл/кг',
 				isCorrect: false,
 			},
 		],
@@ -5494,23 +5494,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'проведение компрессий грудной клетки, обеспечение проходимости дыхательных путей, обеспечение сосудистого доступа, ведение эпинефрина, атропина и амиодарона',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'обеспечение проходимости дыхательных путей, электрическая дефибрилляция, введение амиодарона, эпинефрина, проведение компрессий грудной клетки',
 				isCorrect: false,
 			},
 			{
+				id: 1,
+				value: 'проведение компрессий грудной клетки, обеспечение проходимости дыхательных путей, обеспечение сосудистого доступа, ведение эпинефрина',
+				isCorrect: true,
+			},
+			{
 				id: 2,
-				value: 'проведение компрессий грудной клетки, обеспечение сосудистого доступа, электрическая дефибрилляция, введение эпинефрина',
+				value: 'проведение компрессий грудной клетки, обеспечение проходимости дыхательных путей, обеспечение сосудистого доступа, ведение эпинефрина, атропина и амиодарона',
 				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: 'проведение компрессий грудной клетки, обеспечение проходимости дыхательных путей, обеспечение сосудистого доступа, ведение эпинефрина',
-				isCorrect: true,
+				value: 'проведение компрессий грудной клетки, обеспечение сосудистого доступа, электрическая дефибрилляция, введение эпинефрина',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -5523,23 +5523,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Первичной остановки сердца (кровообращения)',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'Первичного ларингоспазма',
+				value: 'Первичным переломом шейного отдела позвоночника',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'Первичной остановки дыхания',
 				isCorrect: false,
 			},
 			{
-				id: 3,
-				value: 'Первичным переломом шейного отдела позвоночника',
+				id: 2,
+				value: 'Первичного ларингоспазма',
 				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Первичной остановки сердца (кровообращения)',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -5551,22 +5551,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Внутривенно капельно 40% глюкозы',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'Внутривенно струйно 40% глюкозы',
 				isCorrect: true,
 			},
 			{
+				id: 1,
+				value: 'Внутривенно 40% глюкозы + 6-8 ЕД инсулина',
+				isCorrect: false,
+			},
+			{
 				id: 2,
-				value: 'Внутривенно капельно 5% глюкозы',
+				value: 'Внутривенно капельно 40% глюкозы',
 				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: 'Внутривенно 40% глюкозы + 6-8 ЕД инсулина',
+				value: 'Внутривенно капельно 5% глюкозы',
 				isCorrect: false,
 			},
 		],
@@ -5579,22 +5579,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Обычное дыхание',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'Дыхание Куссмауля',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'Дыхание Чейн-Стокса',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
 				value: 'Дыхание Биота',
+				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'Дыхание Куссмауля',
+				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'Обычное дыхание',
 				isCorrect: false,
 			},
 		],
@@ -5617,12 +5617,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Электромеханическая диссоциация',
+				value: 'АВ блокада',
 				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: 'АВ блокада',
+				value: 'Электромеханическая диссоциация',
 				isCorrect: false,
 			},
 		],
@@ -5641,18 +5641,18 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
+				value: 'Провести дефибрилляцию разрядом 200 Дж',
+				isCorrect: true,
+			},
+			{
+				id: 2,
 				value: 'Ввести 1 мг адреналина внутривенно',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 3,
 				value: 'Внутривенно ввести амиодарон 300 мг',
 				isCorrect: false,
-			},
-			{
-				id: 3,
-				value: 'Провести дефибрилляцию разрядом 200 Дж',
-				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -5665,17 +5665,17 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Нет, так как первым шагом следует считать необходимым установку ларингеальной маски',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'Да, это верно',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'Да, если реанимацию проводит один реаниматор',
+				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'Нет, так как первым шагом следует считать необходимым установку ларингеальной маски',
 				isCorrect: false,
 			},
 			{
@@ -5693,12 +5693,12 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Болевой реакцией',
+				value: 'Пневмотораксом',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'Пневмотораксом',
+				value: 'Угнетением дыхательного центра',
 				isCorrect: false,
 			},
 			{
@@ -5708,7 +5708,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Угнетением дыхательного центра',
+				value: 'Болевой реакцией',
 				isCorrect: false,
 			},
 		],
@@ -5721,8 +5721,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Дегидратация',
-				isCorrect: false,
+				value: 'Судороги',
+				isCorrect: true,
 			},
 			{
 				id: 1,
@@ -5731,12 +5731,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Судороги',
-				isCorrect: true,
+				value: 'Сниженные сухожильные рефлексы',
+				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: 'Сниженные сухожильные рефлексы',
+				value: 'Дегидратация',
 				isCorrect: false,
 			},
 		],
@@ -5754,18 +5754,18 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'Угарным газом',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'Камфорой',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'Дихлофосом',
 				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'Угарным газом',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -5777,22 +5777,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'При приступе сердечной астмы',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'При ларингоспазме',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'При резвившейся рвоте',
 				isCorrect: true,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'При приступе бронхиальной астмы',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'При приступе сердечной астмы',
 				isCorrect: false,
 			},
 		],
@@ -5805,7 +5805,7 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '0,15 мл 0,18% раствора',
+				value: '0,25 мл 0,18% раствора',
 				isCorrect: false,
 			},
 			{
@@ -5815,12 +5815,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: '0,25 мл 0,18% раствора',
+				value: '1,5 мл 0,18% раствора',
 				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: '1,5 мл 0,18% раствора',
+				value: '0,15 мл 0,18% раствора',
 				isCorrect: false,
 			},
 		],
@@ -5833,12 +5833,12 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'адреналина',
+				value: 'хлоропирамина',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'хлоропирамина',
+				value: 'адреналина',
 				isCorrect: false,
 			},
 			{
@@ -5861,23 +5861,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'начало реанимационных мероприятий при неэффективности кровообращения',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'начало терапии с введения адреналина',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'быстрое обеспечение проходимости дыхательных путей',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
 				value: 'начало терапии с введения антигистаминных средств',
 				isCorrect: true,
+			},
+			{
+				id: 2,
+				value: 'начало реанимационных мероприятий при неэффективности кровообращения',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'начало терапии с введения адреналина',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -5890,23 +5890,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '1 минуту',
-				isCorrect: false,
+				value: '5 минут',
+				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: '2-3 минуты',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: '30 минут',
 				isCorrect: false,
 			},
 			{
+				id: 2,
+				value: '2-3 минуты',
+				isCorrect: false,
+			},
+			{
 				id: 3,
-				value: '5 минут',
-				isCorrect: true,
+				value: '1 минуту',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -5918,12 +5918,12 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'внутриартериально или внутривенно',
+				value: 'внутримышечно или подкожно',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'внутримышечно или подкожно',
+				value: 'внутриартериально или внутривенно',
 				isCorrect: false,
 			},
 			{
@@ -5946,23 +5946,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '0,5 мл 0,18% раствора',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: '0,15 мл 0,18% раствора',
 				isCorrect: false,
 			},
 			{
+				id: 1,
+				value: '0,5 мл 0,18% раствора',
+				isCorrect: false,
+			},
+			{
 				id: 2,
-				value: '0,3 мл 0,18% раствора',
-				isCorrect: true,
+				value: '0,1 мл 0,18% раствора',
+				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: '0,1 мл 0,18% раствора',
-				isCorrect: false,
+				value: '0,3 мл 0,18% раствора',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -5974,13 +5974,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '0,3 мл 0,18% раствора',
+				value: '0,1 мл 0,18% раствора',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: '0,1 мл 0,18% раствора',
-				isCorrect: false,
+				value: '0,15 мл 0,18% раствора',
+				isCorrect: true,
 			},
 			{
 				id: 2,
@@ -5989,8 +5989,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: '0,15 мл 0,18% раствора',
-				isCorrect: true,
+				value: '0,3 мл 0,18% раствора',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -6030,23 +6030,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'практически ясное сознание',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'сопор',
 				isCorrect: false,
 			},
 			{
+				id: 1,
+				value: 'кома',
+				isCorrect: false,
+			},
+			{
 				id: 2,
-				value: 'оглушение',
-				isCorrect: true,
+				value: 'практически ясное сознание',
+				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: 'кома',
-				isCorrect: false,
+				value: 'оглушение',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -6058,18 +6058,18 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'практически ясное сознание',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'сопор',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'кома',
 				isCorrect: true,
+			},
+			{
+				id: 2,
+				value: 'практически ясное сознание',
+				isCorrect: false,
 			},
 			{
 				id: 3,
@@ -6114,23 +6114,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'эпистатуса',
+				value: 'ишемического инсульта',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'тяжёлых форм кровоизлияний в головной мозг',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'тяжёлых форм нейроинфекции',
 				isCorrect: false,
 			},
 			{
-				id: 3,
-				value: 'ишемического инсульта',
+				id: 2,
+				value: 'эпистатуса',
 				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'тяжёлых форм кровоизлияний в головной мозг',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -6171,22 +6171,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'внезапная резкая головная боль, не редко на фоне высокого АД, повторная рвота, отсутствие очаговой симптоматики, выявление менингеального синдрома к концу первых суток от начала заболевания',
-				isCorrect: true,
-			},
-			{
-				id: 1,
 				value: 'нарастающая головная боль, повторная рвота, менингеальный симптомокомплекс',
 				isCorrect: false,
 			},
 			{
-				id: 2,
-				value: 'резкая головная боль, рвота, высокое АД, очаговая симптоматика',
+				id: 1,
+				value: 'быстро нарастающая головная боль, рвота, светобоязнь, легкая очаговая симптоматика',
 				isCorrect: false,
 			},
 			{
+				id: 2,
+				value: 'внезапная резкая головная боль, не редко на фоне высокого АД, повторная рвота, отсутствие очаговой симптоматики, выявление менингеального синдрома к концу первых суток от начала заболевания',
+				isCorrect: true,
+			},
+			{
 				id: 3,
-				value: 'быстро нарастающая головная боль, рвота, светобоязнь, легкая очаговая симптоматика',
+				value: 'резкая головная боль, рвота, высокое АД, очаговая симптоматика',
 				isCorrect: false,
 			},
 		],
@@ -6205,13 +6205,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'сильная головная боль, тошнота, ломота в суставах, высокая температура тела',
-				isCorrect: false,
+				value: 'постепенное нарастание головной боли, на фоне повышения температуры тела, повторная рвота, менингеальный синдром',
+				isCorrect: true,
 			},
 			{
 				id: 2,
-				value: 'постепенное нарастание головной боли, на фоне повышения температуры тела, повторная рвота, менингеальный синдром',
-				isCorrect: true,
+				value: 'сильная головная боль, тошнота, ломота в суставах, высокая температура тела',
+				isCorrect: false,
 			},
 			{
 				id: 3,
@@ -6234,17 +6234,17 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'кратковременная потеря сознания, судороги',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'длительная потеря сознания, судороги',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'анизокория, головные боли, судороги',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'кратковременная потеря сознания, судороги',
 				isCorrect: false,
 			},
 		],
@@ -6262,18 +6262,18 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
+				value: 'ФОС',
+				isCorrect: true,
+			},
+			{
+				id: 2,
 				value: 'Инсулином',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 3,
 				value: 'Амитриптилином',
 				isCorrect: false,
-			},
-			{
-				id: 3,
-				value: 'ФОС',
-				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -6285,17 +6285,17 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
+				value: 'Солями тяжелых металлов',
+				isCorrect: false,
+			},
+			{
+				id: 1,
 				value: 'Этиленгликолем, метиловым спиртом',
 				isCorrect: true,
 			},
 			{
-				id: 1,
-				value: 'Амитриптилином',
-				isCorrect: false,
-			},
-			{
 				id: 2,
-				value: 'Солями тяжелых металлов',
+				value: 'Амитриптилином',
 				isCorrect: false,
 			},
 			{
@@ -6313,12 +6313,12 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Инсулином',
-				isCorrect: true,
+				value: 'ФОС',
+				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'ФОС',
+				value: 'Этиленгликолем, метиловым спиртом',
 				isCorrect: false,
 			},
 			{
@@ -6328,8 +6328,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Этиленгликолем, метиловым спиртом',
-				isCorrect: false,
+				value: 'Инсулином',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -6346,8 +6346,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'Слабый раствор кислоты при отравлении щелочами',
-				isCorrect: false,
+				value: 'Вода комнатной температуры',
+				isCorrect: true,
 			},
 			{
 				id: 2,
@@ -6356,8 +6356,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Вода комнатной температуры',
-				isCorrect: true,
+				value: 'Слабый раствор кислоты при отравлении щелочами',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -6369,22 +6369,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Потеря сознания, миоз, миофибрилляции, гиперсаливация, гипертонус сгибательной мускулатуры, тахикардия, непроизвольное мочеиспускание и дефекация',
-				isCorrect: true,
-			},
-			{
-				id: 1,
 				value: 'Потеря сознания, анизокория, брадикардия, односторонняя арефлексия и атония сгибательной мускулатуры',
 				isCorrect: false,
 			},
 			{
-				id: 2,
-				value: 'Потеря сознания, миоз, миофибрилляции, брадикардия, гиперсаливация, бронхорея, гипертонус разгибательной мускулатуры, гипертермия',
+				id: 1,
+				value: 'Потеря сознания, гиперемия лица, сухость слизистых и кожных покровов, мидриаз, тахикардия',
 				isCorrect: false,
 			},
 			{
+				id: 2,
+				value: 'Потеря сознания, миоз, миофибрилляции, гиперсаливация, гипертонус сгибательной мускулатуры, тахикардия, непроизвольное мочеиспускание и дефекация',
+				isCorrect: true,
+			},
+			{
 				id: 3,
-				value: 'Потеря сознания, гиперемия лица, сухость слизистых и кожных покровов, мидриаз, тахикардия',
+				value: 'Потеря сознания, миоз, миофибрилляции, брадикардия, гиперсаливация, бронхорея, гипертонус разгибательной мускулатуры, гипертермия',
 				isCorrect: false,
 			},
 		],
@@ -6398,22 +6398,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Депрессии дыхания, тахикардии, гипертензии, метгемоглобинемии',
+				value: 'Гемолиза, токсической нефропатии, ДВС-синдрома',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'Двигательного возбуждения, галлюцинаций, угнетения дыхания, потери сознания, амнезии после выхода из комы',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'Цианоза, брадикардии, судорог, комы, анизокории, гемиплегии',
 				isCorrect: false,
 			},
 			{
+				id: 2,
+				value: 'Двигательного возбуждения, галлюцинаций, угнетения дыхания, потери сознания, амнезии после выхода из комы',
+				isCorrect: true,
+			},
+			{
 				id: 3,
-				value: 'Гемолиза, токсической нефропатии, ДВС-синдрома',
+				value: 'Депрессии дыхания, тахикардии, гипертензии, метгемоглобинемии',
 				isCorrect: false,
 			},
 		],
@@ -6427,23 +6427,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Возбуждение, потливость, миофибрилляции, бронхорея, брадикардия, рвота, сужение зрачков',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'Возбуждение, рвота, саливация, боли в животе, гемоглобинурия',
+				value: 'Судороги эпилептиформные, тахикардия, расширение зрачков',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'Возбуждение, сухость кожных покровов, гиперкинезы хореоидного типа, тахикардия, расширение зрачков',
 				isCorrect: false,
 			},
 			{
-				id: 3,
-				value: 'Судороги эпилептиформные, тахикардия, расширение зрачков',
+				id: 2,
+				value: 'Возбуждение, рвота, саливация, боли в животе, гемоглобинурия',
 				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Возбуждение, потливость, миофибрилляции, бронхорея, брадикардия, рвота, сужение зрачков',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -6460,13 +6460,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'Отсутствие сознания (кома), угнетение дыхания',
-				isCorrect: true,
+				value: 'Кома, тахипноэ, гипертензия, гипертермия',
+				isCorrect: false,
 			},
 			{
 				id: 2,
-				value: 'Кома, тахипноэ, гипертензия, гипертермия',
-				isCorrect: false,
+				value: 'Отсутствие сознания (кома), угнетение дыхания',
+				isCorrect: true,
 			},
 			{
 				id: 3,
@@ -6483,18 +6483,18 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Психоз, гипергидроз, тахикардия, гипотензия',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'Кома, бледность кожного покрова, брадикардия, гипотензия',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'Психомоторное возбуждение, галлюцинации, мидриаз, сухость кожных покровов, тахикардия',
 				isCorrect: true,
+			},
+			{
+				id: 2,
+				value: 'Психоз, гипергидроз, тахикардия, гипотензия',
+				isCorrect: false,
 			},
 			{
 				id: 3,
@@ -6511,7 +6511,7 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Отек тканей, тошнота, рвота, диарея, почечно-печеночная недостаточность',
+				value: 'Паралич мышц, нарушение дыхания, асфиксия',
 				isCorrect: false,
 			},
 			{
@@ -6521,12 +6521,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Паралич мышц, нарушение дыхания, асфиксия',
+				value: 'Кома, гипотензия, брадиаритмия, быстрое развитие сердечно-сосудистой недостаточности',
 				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: 'Кома, гипотензия, брадиаритмия, быстрое развитие сердечно-сосудистой недостаточности',
+				value: 'Отек тканей, тошнота, рвота, диарея, почечно-печеночная недостаточность',
 				isCorrect: false,
 			},
 		],
@@ -6539,13 +6539,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Наложить жгут (если возможно), разрезать кожу в месте укуса, транспортировать в стационар',
-				isCorrect: false,
+				value: 'Эластичное бинтование, иммобилизация, транспортировка в стационар',
+				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'Эластичное бинтование, иммобилизация, транспортировка в стационар',
-				isCorrect: true,
+				value: 'Немедленное введение поливалентной или специфической противозмеиной сыворотки',
+				isCorrect: false,
 			},
 			{
 				id: 2,
@@ -6554,7 +6554,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Немедленное введение поливалентной или специфической противозмеиной сыворотки',
+				value: 'Наложить жгут (если возможно), разрезать кожу в месте укуса, транспортировать в стационар',
 				isCorrect: false,
 			},
 		],
@@ -6572,18 +6572,18 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
+				value: 'Налоксона',
+				isCorrect: true,
+			},
+			{
+				id: 2,
 				value: 'Бикарбоната натрия',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 3,
 				value: 'Кофеина',
 				isCorrect: false,
-			},
-			{
-				id: 3,
-				value: 'Налоксона',
-				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -6595,17 +6595,17 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
+				value: 'Заторможенность, тошнота, рвота, гипотензия, брадикардия.',
+				isCorrect: false,
+			},
+			{
+				id: 1,
 				value: 'Заторможенность, бледность кожных покровов, гипотензия, брадикардия',
 				isCorrect: true,
 			},
 			{
-				id: 1,
-				value: 'Психоз, гиперемия кожного покрова, гипертензия, тахикардия',
-				isCorrect: false,
-			},
-			{
 				id: 2,
-				value: 'Заторможенность, тошнота, рвота, гипотензия, брадикардия.',
+				value: 'Психоз, гиперемия кожного покрова, гипертензия, тахикардия',
 				isCorrect: false,
 			},
 			{
@@ -6623,22 +6623,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Печеночная недостаточность',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'Нарушения зрения',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'Почечная недостаточность',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
+				value: 'Печеночная недостаточность',
+				isCorrect: true,
+			},
+			{
+				id: 2,
 				value: 'Метаболический ацидоз',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Нарушения зрения',
 				isCorrect: false,
 			},
 		],
@@ -6651,22 +6651,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Мидриаз, угнетение дыхания, многократная рвота, диарея',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'Миоз, угнетение дыхания, угнетение перистальтики, спазм гладкой мускулатуры',
 				isCorrect: true,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'Миоз, гипергидроз, брадикардия, снижение активности холинэстеразы',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'Миоз, одышка, гипергидроз, почечная недостаточность, спазм гладкой мускулатуры',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Мидриаз, угнетение дыхания, многократная рвота, диарея',
 				isCorrect: false,
 			},
 		],
@@ -6679,23 +6679,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Введение налоксона',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'Респираторная поддержка',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'Гемодинамическая поддержка',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
 				value: 'Форсированный диурез',
 				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'Введение налоксона',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Респираторная поддержка',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -6707,23 +6707,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Отравлении парацетамолом',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'Отравлении барбитуратами',
 				isCorrect: false,
 			},
 			{
-				id: 2,
-				value: 'Отравлении нейролептиками',
+				id: 1,
+				value: 'Отравлении парацетамолом',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'Отравлении алкоголем',
 				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'Отравлении нейролептиками',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -6735,7 +6735,7 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Психоз, гипотензия, гемолиз, ОПН',
+				value: 'Кома, миоз, брадикардия, гипотензия',
 				isCorrect: false,
 			},
 			{
@@ -6750,7 +6750,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Кома, миоз, брадикардия, гипотензия',
+				value: 'Психоз, гипотензия, гемолиз, ОПН',
 				isCorrect: false,
 			},
 		],
@@ -6768,18 +6768,18 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'РДСВ-синдром',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'Почечно-печеночная недостаточность',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'Нарушения свертываемости крови',
 				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'РДСВ-синдром',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -6792,23 +6792,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
+				value: 'Для предупреждения его набухания',
+				isCorrect: true,
+			},
+			{
+				id: 1,
 				value: 'С целью вымывания инородного тела',
 				isCorrect: false,
 			},
 			{
-				id: 1,
+				id: 2,
 				value: 'Все ответы правильные',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 3,
 				value: 'Для предупреждения инфицирования',
 				isCorrect: false,
-			},
-			{
-				id: 3,
-				value: 'Для предупреждения его набухания',
-				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -6820,23 +6820,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Норадреналина',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'Изотонического раствора хлорида натрия и инсулина',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'Солей кальция',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
+				value: 'Норадреналина',
+				isCorrect: false,
+			},
+			{
+				id: 2,
 				value: 'Строфантина',
 				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Изотонического раствора хлорида натрия и инсулина',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -6848,22 +6848,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Гипертермический синдром',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'Обезвоживание',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'Острая дыхательная недостаточность',
 				isCorrect: true,
 			},
 			{
-				id: 3,
+				id: 1,
 				value: 'Острая левожелудочковая недостаточность',
+				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'Гипертермический синдром',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Обезвоживание',
 				isCorrect: false,
 			},
 		],
@@ -6876,23 +6876,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Парез мягкого неба',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'Диплопия, птоз',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'Гипертермия',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
+				value: 'Парез мягкого неба',
+				isCorrect: false,
+			},
+			{
+				id: 2,
 				value: 'Лихорадка, понос',
 				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Диплопия, птоз',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -6904,18 +6904,18 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
+				value: 'система обеспечения безопасности жизни и здоровья работающих в процессе трудовой деятельности, включающая правовые, социально-экономические, организационные, технические, психофизиологические, санитарно-противоэпидемические, лечебно-профилактические, реабилитационные и иные мероприятия и средства',
+				isCorrect: true,
+			},
+			{
+				id: 1,
 				value: 'законодательный акт, основное содержание которого посвящено организации безопасного труда',
 				isCorrect: false,
 			},
 			{
-				id: 1,
+				id: 2,
 				value: 'комплекс правовых норм, непосредственно направленных на обеспечение безопасных и здоровых условий труда',
 				isCorrect: false,
-			},
-			{
-				id: 2,
-				value: 'система обеспечения безопасности жизни и здоровья работающих в процессе трудовой деятельности, включающая правовые, социально-экономические, организационные, технические, психофизиологические, санитарно-противоэпидемические, лечебно-профилактические, реабилитационные и иные мероприятия и средства',
-				isCorrect: true,
 			},
 			{
 				id: 3,
@@ -6933,28 +6933,28 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Правительство Республики Беларусь',
-				isCorrect: true,
-			},
-			{
-				id: 1,
 				value: 'республиканские органы государственного управления и иные государственные организации, подчиненные Правительству Республики Беларусь',
 				isCorrect: true,
 			},
 			{
-				id: 2,
-				value: 'Президент Республики Беларусь',
-				isCorrect: true,
-			},
-			{
-				id: 3,
+				id: 1,
 				value: 'местные исполнительные и распорядительные органы',
 				isCorrect: true,
 			},
 			{
-				id: 4,
+				id: 2,
+				value: 'Правительство Республики Беларусь',
+				isCorrect: true,
+			},
+			{
+				id: 3,
 				value: 'профсоюзы',
 				isCorrect: false,
+			},
+			{
+				id: 4,
+				value: 'Президент Республики Беларусь',
+				isCorrect: true,
 			},
 		],
 		isMultiple: true,
@@ -6967,12 +6967,12 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Закон Республики Беларусь «Об охране труда»',
-				isCorrect: true,
+				value: 'Закон Республики Беларусь «О техническом нормировании и стандартизации»',
+				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'Закон Республики Беларусь «О техническом нормировании и стандартизации»',
+				value: 'Закон Республики Беларусь «Об охране окружающей среды»',
 				isCorrect: false,
 			},
 			{
@@ -6982,8 +6982,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Закон Республики Беларусь «Об охране окружающей среды»',
-				isCorrect: false,
+				value: 'Закон Республики Беларусь «Об охране труда»',
+				isCorrect: true,
 			},
 		],
 		isMultiple: true,
@@ -6995,22 +6995,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'весенний, летний, зимний, осенний',
+				value: 'обязательный и необязательный',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'первичный на рабочем месте и периодический',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'вводный, первичный на рабочем месте, повторный, внеплановый, целевой',
 				isCorrect: true,
 			},
 			{
+				id: 2,
+				value: 'первичный на рабочем месте и периодический',
+				isCorrect: false,
+			},
+			{
 				id: 3,
-				value: 'обязательный и необязательный',
+				value: 'весенний, летний, зимний, осенний',
 				isCorrect: false,
 			},
 		],
@@ -7024,12 +7024,12 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '8 рабочих дней',
+				value: '7 рабочих дней',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: '7 рабочих дней',
+				value: '8 рабочих дней',
 				isCorrect: false,
 			},
 			{
@@ -7057,18 +7057,18 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'при проведении экскурсий в организации',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'при ликвидации последствий аварий, стихийных бедствий и катастроф',
 				isCorrect: true,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'при перерыве в работе более 30 дней',
 				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'при проведении экскурсий в организации',
+				isCorrect: true,
 			},
 		],
 		isMultiple: true,
@@ -7081,8 +7081,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Руководителями структурных подразделений организации с участием профсоюзов',
-				isCorrect: true,
+				value: 'Руководителем организации',
+				isCorrect: false,
 			},
 			{
 				id: 1,
@@ -7091,13 +7091,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Руководителем организации',
+				value: 'Комиссиями по охране труда',
 				isCorrect: false,
 			},
 			{
 				id: 3,
-				value: 'Комиссиями по охране труда',
-				isCorrect: false,
+				value: 'Руководителями структурных подразделений организации с участием профсоюзов',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -7110,8 +7110,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'одного раза в 5 лет',
-				isCorrect: true,
+				value: 'инструкции по охране труда не пересматриваются',
+				isCorrect: false,
 			},
 			{
 				id: 1,
@@ -7125,8 +7125,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'инструкции по охране труда не пересматриваются',
-				isCorrect: false,
+				value: 'одного раза в 5 лет',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -7139,18 +7139,18 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
+				value: 'не реже одного раза в 3 год',
+				isCorrect: true,
+			},
+			{
+				id: 1,
 				value: 'не проходят',
 				isCorrect: false,
 			},
 			{
-				id: 1,
+				id: 2,
 				value: 'на усмотрение руководителя организации',
 				isCorrect: false,
-			},
-			{
-				id: 2,
-				value: 'не реже одного раза в 3 год',
-				isCorrect: true,
 			},
 			{
 				id: 3,
@@ -7172,17 +7172,17 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'вводный инструктаж',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'внеплановый инструктаж',
 				isCorrect: true,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'первичный инструктаж на рабочем месте',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'вводный инструктаж',
 				isCorrect: false,
 			},
 		],
@@ -7196,22 +7196,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'вводный инструктаж',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'первичный инструктаж на рабочем месте',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'целевой инструктаж',
 				isCorrect: true,
 			},
 			{
-				id: 3,
+				id: 1,
+				value: 'вводный инструктаж',
+				isCorrect: false,
+			},
+			{
+				id: 2,
 				value: 'внеплановый инструктаж',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'первичный инструктаж на рабочем месте',
 				isCorrect: false,
 			},
 		],
@@ -7224,23 +7224,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'При замене оборудования на более совершенное',
+				value: 'При изменении технологии производства работ',
 				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'Наниматель обязан включать в нормы организации все СИЗ, предусмотренные в типовых нормах',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'При снижении уровня вредных и (или) опасных производственных факторов',
 				isCorrect: true,
 			},
 			{
-				id: 3,
-				value: 'При изменении технологии производства работ',
+				id: 2,
+				value: 'При замене оборудования на более совершенное',
 				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'Наниматель обязан включать в нормы организации все СИЗ, предусмотренные в типовых нормах',
+				isCorrect: false,
 			},
 		],
 		isMultiple: true,
@@ -7253,12 +7253,12 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Не допускается',
-				isCorrect: false,
+				value: 'Допускается',
+				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'Допускается',
+				value: 'Допускается после стирки, химчистки, дезинфекции и ремонта',
 				isCorrect: true,
 			},
 			{
@@ -7268,8 +7268,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Допускается после стирки, химчистки, дезинфекции и ремонта',
-				isCorrect: true,
+				value: 'Не допускается',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -7281,8 +7281,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'В личной карточке учета СИЗ',
-				isCorrect: true,
+				value: 'В акте-допуске для производства работ',
+				isCorrect: false,
 			},
 			{
 				id: 1,
@@ -7296,8 +7296,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'В акте-допуске для производства работ',
-				isCorrect: false,
+				value: 'В личной карточке учета СИЗ',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -7314,17 +7314,17 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'Не более 2 месяцев',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'Не более 3 рабочих дней',
 				isCorrect: true,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'Не более 1 месяца',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Не более 2 месяцев',
 				isCorrect: false,
 			},
 		],
@@ -7337,23 +7337,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '1',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: '4',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: '3',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
 				value: '2',
 				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: '1',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: '4',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -7366,17 +7366,17 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '6 рабочих дней',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: '5 рабочих дней',
 				isCorrect: true,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: '3 рабочих дня',
+				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: '6 рабочих дней',
 				isCorrect: false,
 			},
 			{
@@ -7395,23 +7395,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'при принятии НПА, ТНПА, ЛПА, содержащих требования охраны труда, соблюдение которых входит в их должностные обязанности',
+				value: 'по требованию контролирующих (надзорных) органов при выявлении нарушений требований нормативных правовых актов',
 				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'при перерыве в работе в данной должности более шести месяцев - в течение месяца после выхода на работу',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'при переводе на другое место или назначении на должность, где требуются дополнительные знания по охране труда',
 				isCorrect: true,
 			},
 			{
-				id: 3,
-				value: 'по требованию контролирующих (надзорных) органов при выявлении нарушений требований нормативных правовых актов',
+				id: 2,
+				value: 'при принятии НПА, ТНПА, ЛПА, содержащих требования охраны труда, соблюдение которых входит в их должностные обязанности',
 				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'при перерыве в работе в данной должности более шести месяцев - в течение месяца после выхода на работу',
+				isCorrect: false,
 			},
 		],
 		isMultiple: true,
@@ -7425,23 +7425,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'требования пожарной безопасности для нанимателей и работников субъектов хозяйствования всех отраслей и видов деятельности',
-				isCorrect: true,
+				value: 'требования пожарной безопасности для физических лиц',
+				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'общие требования пожарной безопасности к содержанию и эксплуатации капитальных строений (зданий, сооружений), изолированных помещений и иных объектов, принадлежащих субъектам хозяйствования',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'типовые требования пожарной безопасности, на основании которых на каждом объекте должны разрабатываться локальные нормативные правовые акты, учитывающие его специфику',
 				isCorrect: false,
 			},
 			{
+				id: 2,
+				value: 'требования пожарной безопасности для нанимателей и работников субъектов хозяйствования всех отраслей и видов деятельности',
+				isCorrect: true,
+			},
+			{
 				id: 3,
-				value: 'требования пожарной безопасности для физических лиц',
-				isCorrect: false,
+				value: 'общие требования пожарной безопасности к содержанию и эксплуатации капитальных строений (зданий, сооружений), изолированных помещений и иных объектов, принадлежащих субъектам хозяйствования',
+				isCorrect: true,
 			},
 		],
 		isMultiple: true,
@@ -7454,12 +7454,12 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'в случае проведения массового мероприятия организовать до начала его проведения осмотр помещений на предмет соблюдения требований пожарной безопасности, а также назначить лиц, ответственных за пожарную безопасность, и обеспечить их дежурство',
+				value: 'обеспечить соблюдение и контроль выполнения требований пожарной безопасности на объекте',
 				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'обеспечить соблюдение и контроль выполнения требований пожарной безопасности на объекте',
+				value: 'в случае проведения массового мероприятия организовать до начала его проведения осмотр помещений на предмет соблюдения требований пожарной безопасности, а также назначить лиц, ответственных за пожарную безопасность, и обеспечить их дежурство',
 				isCorrect: true,
 			},
 			{
@@ -7483,7 +7483,7 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'наличие на объекте противопожарной сигнализации',
+				value: 'правила, которые нужно соблюдать в случае возникновения пожара',
 				isCorrect: false,
 			},
 			{
@@ -7498,7 +7498,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'правила, которые нужно соблюдать в случае возникновения пожара',
+				value: 'наличие на объекте противопожарной сигнализации',
 				isCorrect: false,
 			},
 		],
@@ -7512,22 +7512,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'емкости с запасом воды',
+				value: 'огнетушители',
 				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'любые предметы, которые можно использовать для тушения пожара',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'немеханизированный ручной пожарный инструмент',
 				isCorrect: true,
 			},
 			{
+				id: 2,
+				value: 'любые предметы, которые можно использовать для тушения пожара',
+				isCorrect: false,
+			},
+			{
 				id: 3,
-				value: 'огнетушители',
+				value: 'емкости с запасом воды',
 				isCorrect: true,
 			},
 			{
@@ -7546,22 +7546,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'допускается только в специально отведенных местах, определенных инструкциями по пожарной безопасности, оборудованных и обозначенных указателями «Место для курения»',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'допускается только на территории субъекта хозяйствования вдали от зданий',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'не допускается',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
 				value: 'допускается только в специально отведенных местах, определенных устным распоряжением субъекта хозяйствования',
+				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'допускается только в специально отведенных местах, определенных инструкциями по пожарной безопасности, оборудованных и обозначенных указателями «Место для курения»',
+				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'допускается только на территории субъекта хозяйствования вдали от зданий',
 				isCorrect: false,
 			},
 		],
@@ -7580,18 +7580,18 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'четырем классам опасности',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'семи классам опасности',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'пяти классам опасности',
 				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'четырем классам опасности',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -7604,8 +7604,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'не менее 20 м',
-				isCorrect: true,
+				value: 'не менее 30 м',
+				isCorrect: false,
 			},
 			{
 				id: 1,
@@ -7614,12 +7614,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'не менее 35 м',
-				isCorrect: false,
+				value: 'не менее 20 м',
+				isCorrect: true,
 			},
 			{
 				id: 3,
-				value: 'не менее 30 м',
+				value: 'не менее 35 м',
 				isCorrect: false,
 			},
 		],
@@ -7633,23 +7633,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Устранение опасности, меры административного контроля, средства индивидуальной защиты, контроль инженерно-технических систем',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'Меры административного контроля, средства индивидуальной защиты, контроль инженерно-технических систем, устранение опасности',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'Меры административного контроля, устранение опасности, средства индивидуальной защиты, контроль инженерно-технических систем',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'Устранение опасности, контроль инженерно-технических систем, меры административного контроля, надлежащее применение средств индивидуальной защиты',
 				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'Устранение опасности, меры административного контроля, средства индивидуальной защиты, контроль инженерно-технических систем',
+				isCorrect: false,
 			},
 			{
 				id: 4,
@@ -7668,23 +7668,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Работа с отходами',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'Предоставление телемедицинских услуг',
 				isCorrect: true,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'Изменение вентиляционных потоков',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'Коллективная вакцинация медицинских работников и персонала против COVID-19',
 				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'Работа с отходами',
+				isCorrect: false,
 			},
 			{
 				id: 4,
@@ -7703,12 +7703,12 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Работа с отходами',
-				isCorrect: false,
+				value: 'Составление рабочих расписаний таким образом, чтобы избегать перехода работников из зон с более высоким уровнем передачи инфекции в зоны с более низким уровнем',
+				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'Привлечение резервного персонала для компенсации возросшей рабочей нагрузки',
+				value: 'Проведение учебной подготовки персонала по практическим аспектам программы профилактики инфекций и инфекционного контроля',
 				isCorrect: true,
 			},
 			{
@@ -7718,28 +7718,28 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Составление рабочих расписаний таким образом, чтобы избегать перехода работников из зон с более высоким уровнем передачи инфекции в зоны с более низким уровнем',
-				isCorrect: true,
+				value: 'Использование средств индивидуальной защиты и их утилизация',
+				isCorrect: false,
 			},
 			{
 				id: 4,
-				value: 'Предоставление доступа на рабочие места для работников со специальной подготовкой и навыками применения средств и методов индивидуальной защиты',
+				value: 'Привлечение резервного персонала для компенсации возросшей рабочей нагрузки',
 				isCorrect: true,
 			},
 			{
 				id: 5,
-				value: 'Проведение учебной подготовки персонала по практическим аспектам программы профилактики инфекций и инфекционного контроля',
+				value: 'Предоставление доступа на рабочие места для работников со специальной подготовкой и навыками применения средств и методов индивидуальной защиты',
 				isCorrect: true,
 			},
 			{
 				id: 6,
-				value: 'Соблюдение рациональной длительности рабочих смен',
-				isCorrect: true,
+				value: 'Работа с отходами',
+				isCorrect: false,
 			},
 			{
 				id: 7,
-				value: 'Использование средств индивидуальной защиты и их утилизация',
-				isCorrect: false,
+				value: 'Соблюдение рациональной длительности рабочих смен',
+				isCorrect: true,
 			},
 		],
 		isMultiple: true,
@@ -7753,23 +7753,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Высокий и низкий',
+				value: 'Чрезвычайно высокий, высокий, средний',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'Пониженный, средний, высокий, чрезвычайно высокий',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'Такой классификации нет',
 				isCorrect: false,
 			},
 			{
-				id: 3,
-				value: 'Чрезвычайно высокий, высокий, средний',
+				id: 2,
+				value: 'Высокий и низкий',
 				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Пониженный, средний, высокий, чрезвычайно высокий',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -7782,23 +7782,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Применение медицинским работником респиратор класса FFP3 недопустимо, так как для аэрозольобразующих процедур рекомендовано применение респиратора класса FFP1 или FFP2. Применение хирургической маски для данной ситуации допустимо',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'Применение медицинским работником респиратор класса FFP3, а также хирургической маски для данной ситуации недопустимо',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'При выполнении аэрозольобразующих процедур для защиты органов дыхания рекомендовано использовать как респираторы любого класса защиты и модификации, так и хирургическую маску',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'Выбор медицинским работником респиратора соответствующего класса защиты – правильный; применение хирургической маски для данной ситуации недопустимо',
 				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'Применение медицинским работником респиратор класса FFP3 недопустимо, так как для аэрозольобразующих процедур рекомендовано применение респиратора класса FFP1 или FFP2. Применение хирургической маски для данной ситуации допустимо',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -7812,27 +7812,27 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Применение небулайзера и ингалятора',
+				value: 'Сердечно-легочная реанимация',
 				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'Перевязка раны',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'Интубация трахеи, ларингоскопия, бронхоскопия',
 				isCorrect: true,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'Внутримышечная инъекция, внутривенная инъекция',
 				isCorrect: false,
 			},
 			{
+				id: 3,
+				value: 'Перевязка раны',
+				isCorrect: false,
+			},
+			{
 				id: 4,
-				value: 'Сердечно-легочная реанимация',
+				value: 'Применение небулайзера и ингалятора',
 				isCorrect: true,
 			},
 		],
@@ -7846,12 +7846,12 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Респиратор с клапаном выдоха обеспечивает пользователю более низкий уровень защиты, по сравнению с респиратором без клапана выдоха',
-				isCorrect: false,
+				value: 'Респиратор с клапаном выдоха не следует применять в ситуациях, когда необходимо поддерживать стерильное поле во время проведения медицинских вмешательств, так как из клапана выдоха поступает нефильтрованный воздух',
+				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'Респиратор с клапаном выдоха не следует применять в ситуациях, когда необходимо поддерживать стерильное поле во время проведения медицинских вмешательств, так как из клапана выдоха поступает нефильтрованный воздух',
+				value: 'Существенным преимуществом респираторов с клапаном выдоха, в сравнении с бесклапанными аналогами, является также их более комфортная эксплуатация, в связи с наименьшим сопротивлением дыханию',
 				isCorrect: true,
 			},
 			{
@@ -7861,8 +7861,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Существенным преимуществом респираторов с клапаном выдоха, в сравнении с бесклапанными аналогами, является также их более комфортная эксплуатация, в связи с наименьшим сопротивлением дыханию',
-				isCorrect: true,
+				value: 'Респиратор с клапаном выдоха обеспечивает пользователю более низкий уровень защиты, по сравнению с респиратором без клапана выдоха',
+				isCorrect: false,
 			},
 		],
 		isMultiple: true,
@@ -7886,17 +7886,17 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
+				value: 'При затруднении дыхания через респиратор',
+				isCorrect: true,
+			},
+			{
+				id: 3,
 				value: 'В любом случае не позднее 2-х часов эксплуатации',
 				isCorrect: false,
 			},
 			{
-				id: 3,
-				value: 'При появлении избыточной влажности фильтрующего материала респиратора',
-				isCorrect: true,
-			},
-			{
 				id: 4,
-				value: 'При затруднении дыхания через респиратор',
+				value: 'При появлении избыточной влажности фильтрующего материала респиратора',
 				isCorrect: true,
 			},
 		],
@@ -7911,12 +7911,12 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Если процедура проводится аккуратно, то никаких мер предосторожности не требуется',
-				isCorrect: false,
+				value: 'Контактные меры предосторожности',
+				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'Контактные меры предосторожности',
+				value: 'Меры предосторожности против передачи капельным путем',
 				isCorrect: true,
 			},
 			{
@@ -7926,8 +7926,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Меры предосторожности против передачи капельным путем',
-				isCorrect: true,
+				value: 'Если процедура проводится аккуратно, то никаких мер предосторожности не требуется',
+				isCorrect: false,
 			},
 		],
 		isMultiple: true,
@@ -7946,13 +7946,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'Носят постоянно, так как она не требует замены',
+				value: 'Повторно применяют после снятия',
 				isCorrect: false,
 			},
 			{
 				id: 2,
-				value: 'Не поправляют и не снимают без необходимости при правильном расположении на лице пользователя',
-				isCorrect: true,
+				value: 'Носят постоянно, так как она не требует замены',
+				isCorrect: false,
 			},
 			{
 				id: 3,
@@ -7961,8 +7961,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 4,
-				value: 'Повторно применяют после снятия',
-				isCorrect: false,
+				value: 'Не поправляют и не снимают без необходимости при правильном расположении на лице пользователя',
+				isCorrect: true,
 			},
 		],
 		isMultiple: true,
@@ -7976,7 +7976,7 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Инфекционное или соматическое заболевание, приобретенное пациентом при оказании ему медицинской помощи в организации здравоохранения, при оказании скорой (неотложной) медицинской помощи или медицинской помощи медицинскими работниками на дому',
+				value: 'Инфекционное заболевание, проявившееся или выявленное у пациента в организации здравоохранения, приобретенное пациентом до обращения за медицинской помощью',
 				isCorrect: false,
 			},
 			{
@@ -7991,7 +7991,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Инфекционное заболевание, проявившееся или выявленное у пациента в организации здравоохранения, приобретенное пациентом до обращения за медицинской помощью',
+				value: 'Инфекционное или соматическое заболевание, приобретенное пациентом при оказании ему медицинской помощи в организации здравоохранения, при оказании скорой (неотложной) медицинской помощи или медицинской помощи медицинскими работниками на дому',
 				isCorrect: false,
 			},
 		],
@@ -8034,22 +8034,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Риск и опасность являются полностью тождественными понятиями',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'Риск – сочетание вероятности и последствий наступления неблагоприятных событий',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'При проведении эпидемиологического наблюдения за инфекциями, связанными с оказанием медицинской (ИСМП), необходимо применять стандартные эпидемиологические определения случая ИСМП',
 				isCorrect: true,
 			},
 			{
-				id: 3,
+				id: 1,
+				value: 'Риск и опасность являются полностью тождественными понятиями',
+				isCorrect: false,
+			},
+			{
+				id: 2,
 				value: 'При расчетах стратифицированных показателей знаменатель отражает популяцию риска и (или) время риска развития ИСМП',
+				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'Риск – сочетание вероятности и последствий наступления неблагоприятных событий',
 				isCorrect: true,
 			},
 		],
@@ -8063,22 +8063,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Основываются исключительно на микробиологических результатах исследования',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'Не предназначены для клинической диагностики и выбора лечения',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'Представляют собой набор стандартных критериев (комбинация клинических признаков и результатов лабораторных и других видов диагностических исследований)',
 				isCorrect: true,
 			},
 			{
-				id: 3,
+				id: 1,
 				value: 'Предназначены для клинической диагностики и выбора лечения',
+				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'Не предназначены для клинической диагностики и выбора лечения',
+				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'Основываются исключительно на микробиологических результатах исследования',
 				isCorrect: false,
 			},
 		],
@@ -8092,13 +8092,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Эффективность эпидемиологического наблюдения за инфекциями, связанными с оказанием медицинской (ИСМП) можно оценить по его способности обеспечить информацией, необходимой и достаточной для принятия рациональных управленческих решений и их оптимальной реализации',
-				isCorrect: true,
+				value: 'Все вышеперечисленные утверждения не являются правильными',
+				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'Все вышеперечисленные утверждения не являются правильными',
-				isCorrect: false,
+				value: 'В ходе эпидемиологического наблюдения данные часто приходится собирать с помощью специально разработанных форм (карт, анкет), использование которых обеспечивает высокую степень стандартизации сбора данных',
+				isCorrect: true,
 			},
 			{
 				id: 2,
@@ -8107,7 +8107,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'В ходе эпидемиологического наблюдения данные часто приходится собирать с помощью специально разработанных форм (карт, анкет), использование которых обеспечивает высокую степень стандартизации сбора данных',
+				value: 'Эффективность эпидемиологического наблюдения за инфекциями, связанными с оказанием медицинской (ИСМП) можно оценить по его способности обеспечить информацией, необходимой и достаточной для принятия рациональных управленческих решений и их оптимальной реализации',
 				isCorrect: true,
 			},
 		],
@@ -8121,18 +8121,18 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
+				value: 'Отражает риск возникновения заболеваний с учетом разной силы действия факторов риска (разная длительность воздействия – экспозиция) и применяется в случае продленной экспозиции',
+				isCorrect: true,
+			},
+			{
+				id: 1,
 				value: 'Отражает встречаемость заболевания (насколько заболевание распространено в изучаемой группе)',
 				isCorrect: false,
 			},
 			{
-				id: 1,
+				id: 2,
 				value: 'Отражает риск заболеть (риск возникновения заболевания)',
 				isCorrect: false,
-			},
-			{
-				id: 2,
-				value: 'Отражает риск возникновения заболеваний с учетом разной силы действия факторов риска (разная длительность воздействия – экспозиция) и применяется в случае продленной экспозиции',
-				isCorrect: true,
 			},
 			{
 				id: 3,
@@ -8150,22 +8150,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Использование одного шприца и разных игл для нескольких пациентов',
+				value: 'Использование для проведения инъекции ампул или флаконов с нарушением их целостности',
 				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'Заблаговременное помещение дозы лекарственного препарата в шприц с последующим хранением при комнатной температуре или в условиях холодильника до введения пациенту',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'Использование одного и того же шприца и иглы для нескольких пациентов',
 				isCorrect: true,
 			},
 			{
+				id: 2,
+				value: 'Заблаговременное помещение дозы лекарственного препарата в шприц с последующим хранением при комнатной температуре или в условиях холодильника до введения пациенту',
+				isCorrect: true,
+			},
+			{
 				id: 3,
-				value: 'Использование для проведения инъекции ампул или флаконов с нарушением их целостности',
+				value: 'Использование одного шприца и разных игл для нескольких пациентов',
 				isCorrect: true,
 			},
 			{
@@ -8213,13 +8213,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '7,0%',
+				value: '0,3%',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: '30%',
-				isCorrect: true,
+				value: '7,0%',
+				isCorrect: false,
 			},
 			{
 				id: 2,
@@ -8228,8 +8228,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: '0,3%',
-				isCorrect: false,
+				value: '30%',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -8242,12 +8242,12 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: '1 неделя',
+				value: '3 дня',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: '3 дня',
+				value: '1 неделя',
 				isCorrect: false,
 			},
 			{
@@ -8270,18 +8270,18 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Чистое рабочее место; стерильное безопасное устройство; стерильный флакон с лекарством и разбавитель; гигиена рук; обеззараживание кожи; надлежащая утилизация острых предметов; управление отходами',
+				value: 'Чистое рабочее место; обеззараживание кожи; стерильное безопасное устройство; стерильный флакон с лекарством и разбавитель; гигиена рук; надлежащая утилизация острых предметов; управление отходами',
 				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'Чистое рабочее место; гигиена рук; стерильное безопасное устройство; стерильный флакон с лекарством и разбавитель; обеззараживание кожи; надлежащая утилизация острых предметов; управление отходами',
-				isCorrect: true,
+				value: 'Чистое рабочее место; стерильное безопасное устройство; стерильный флакон с лекарством и разбавитель; гигиена рук; обеззараживание кожи; надлежащая утилизация острых предметов; управление отходами',
+				isCorrect: false,
 			},
 			{
 				id: 2,
-				value: 'Чистое рабочее место; обеззараживание кожи; стерильное безопасное устройство; стерильный флакон с лекарством и разбавитель; гигиена рук; надлежащая утилизация острых предметов; управление отходами',
-				isCorrect: false,
+				value: 'Чистое рабочее место; гигиена рук; стерильное безопасное устройство; стерильный флакон с лекарством и разбавитель; обеззараживание кожи; надлежащая утилизация острых предметов; управление отходами',
+				isCorrect: true,
 			},
 			{
 				id: 3,
@@ -8300,13 +8300,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Сбрасывание иглы в специальную емкость для отработанных игл через иглоотсекатель после проведения инъекции',
-				isCorrect: false,
+				value: 'Практика повторного применения игл после инъекции',
+				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'Перемещение жидкости между емкостями с помощью шприца и иглы',
-				isCorrect: true,
+				value: 'Сбрасывание иглы в специальную емкость для отработанных игл через иглоотсекатель после проведения инъекции',
+				isCorrect: false,
 			},
 			{
 				id: 2,
@@ -8315,7 +8315,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Практика повторного применения игл после инъекции',
+				value: 'Перемещение жидкости между емкостями с помощью шприца и иглы',
 				isCorrect: true,
 			},
 		],
@@ -8330,28 +8330,28 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Немедленно проинформируйте руководителя медицинского работника',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'Проверьте медицинского работника на ВИЧ и гепатиты B и C',
 				isCorrect: false,
 			},
 			{
-				id: 2,
-				value: 'Попросите медицинского работника воздержаться от половых контактов в течение 4-6 месяцев после аварии',
-				isCorrect: true,
+				id: 1,
+				value: 'Попытайтесь идентифицировать пациента-источника',
+				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'Попросите медицинского работника промыть рану водой',
 				isCorrect: false,
 			},
 			{
-				id: 4,
-				value: 'Попытайтесь идентифицировать пациента-источника',
+				id: 3,
+				value: 'Немедленно проинформируйте руководителя медицинского работника',
 				isCorrect: false,
+			},
+			{
+				id: 4,
+				value: 'Попросите медицинского работника воздержаться от половых контактов в течение 4-6 месяцев после аварии',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -8365,7 +8365,7 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Описать ситуацию, в которой произошел инцидент',
+				value: 'Провести оценку рисков',
 				isCorrect: true,
 			},
 			{
@@ -8375,12 +8375,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Сделать запрос о статусе источника ВИЧ, гепатита B и C',
+				value: 'Описать ситуацию, в которой произошел инцидент',
 				isCorrect: true,
 			},
 			{
 				id: 3,
-				value: 'Провести оценку рисков',
+				value: 'Сделать запрос о статусе источника ВИЧ, гепатита B и C',
 				isCorrect: true,
 			},
 		],
@@ -8395,7 +8395,7 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Завершить все дозы вакцинации, даже если источник заражения отрицательный на гепатит B',
+				value: 'Ввести специфический иммуноглобулин',
 				isCorrect: true,
 			},
 			{
@@ -8410,13 +8410,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Обратиться к специалисту для лечения',
-				isCorrect: false,
+				value: 'Завершить все дозы вакцинации, даже если источник заражения отрицательный на гепатит B',
+				isCorrect: true,
 			},
 			{
 				id: 4,
-				value: 'Ввести специфический иммуноглобулин',
-				isCorrect: true,
+				value: 'Обратиться к специалисту для лечения',
+				isCorrect: false,
 			},
 		],
 		isMultiple: true,
@@ -8430,28 +8430,28 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'При положительном результате тестирования обратиться к специалисту за лечением',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'Завершить все дозы вакцинации, даже если источник заражения отрицательный на гепатит С',
-				isCorrect: false,
-			},
-			{
-				id: 2,
-				value: 'Получить первую дозу вакцины сразу после заражения',
-				isCorrect: false,
-			},
-			{
-				id: 3,
 				value: 'Продезинфицировать место укола сразу после аварии',
 				isCorrect: true,
 			},
 			{
-				id: 4,
+				id: 1,
 				value: 'Выполнить базовое тестирование на антитела к ВГС и сделать анализ крови на АЛТ',
 				isCorrect: true,
+			},
+			{
+				id: 2,
+				value: 'Завершить все дозы вакцинации, даже если источник заражения отрицательный на гепатит С',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'При положительном результате тестирования обратиться к специалисту за лечением',
+				isCorrect: true,
+			},
+			{
+				id: 4,
+				value: 'Получить первую дозу вакцины сразу после заражения',
+				isCorrect: false,
 			},
 		],
 		isMultiple: true,
@@ -8465,8 +8465,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Источник заражения – ВИЧ-положительный, или его статус неизвестен',
-				isCorrect: true,
+				value: 'Медицинский работник уже ВИЧ-положительный',
+				isCorrect: false,
 			},
 			{
 				id: 1,
@@ -8475,12 +8475,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Кожа цела (нет видимых царапин и проколов)',
-				isCorrect: false,
+				value: 'Источник заражения – ВИЧ-положительный, или его статус неизвестен',
+				isCorrect: true,
 			},
 			{
 				id: 3,
-				value: 'Медицинский работник уже ВИЧ-положительный',
+				value: 'Кожа цела (нет видимых царапин и проколов)',
 				isCorrect: false,
 			},
 		],
@@ -8494,28 +8494,28 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Санитарные нормы и правила, гигиенические нормативы являются частью законодательства в области санитарно-эпидемиологического благополучия населения',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'Гигиенические нормативы утверждаются Министерством здравоохранения',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'Обязательные для соблюдения гигиенические нормативы и специфические санитарно-эпидемиологические требования определяются Советом Министров Республики Беларусь',
 				isCorrect: true,
 			},
 			{
-				id: 3,
+				id: 1,
+				value: 'Санитарные нормы и правила, гигиенические нормативы являются частью законодательства в области санитарно-эпидемиологического благополучия населения',
+				isCorrect: true,
+			},
+			{
+				id: 2,
 				value: 'Общие санитарно-эпидемиологические требования утверждаются Министерством здравоохранения',
 				isCorrect: false,
 			},
 			{
-				id: 4,
+				id: 3,
 				value: 'Санитарные нормы и правила утверждаются Министерством здравоохранения',
 				isCorrect: true,
+			},
+			{
+				id: 4,
+				value: 'Гигиенические нормативы утверждаются Министерством здравоохранения',
+				isCorrect: false,
 			},
 			{
 				id: 5,
@@ -8534,27 +8534,27 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Геморрагические лихорадки Ласса, Марбург, Эбола',
-				isCorrect: true,
+				value: 'Натуральная оспа',
+				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'Человеческий грипп (вызванный новым подтипом)',
+				value: 'Тяжёлый острый респираторный синдром',
 				isCorrect: false,
 			},
 			{
 				id: 2,
-				value: 'ВИЧ-инфекция',
-				isCorrect: false,
-			},
-			{
-				id: 3,
 				value: 'Полиомиелит (вызванный диким полиовирусом)',
 				isCorrect: false,
 			},
 			{
+				id: 3,
+				value: 'Геморрагические лихорадки Ласса, Марбург, Эбола',
+				isCorrect: true,
+			},
+			{
 				id: 4,
-				value: 'Натуральная оспа',
+				value: 'ВИЧ-инфекция',
 				isCorrect: false,
 			},
 			{
@@ -8564,7 +8564,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 6,
-				value: 'Тяжёлый острый респираторный синдром',
+				value: 'Человеческий грипп (вызванный новым подтипом)',
 				isCorrect: false,
 			},
 		],
@@ -8583,28 +8583,28 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
+				value: 'Брюшной тиф',
+				isCorrect: false,
+			},
+			{
+				id: 2,
 				value: 'Сибирская язва',
 				isCorrect: true,
 			},
 			{
-				id: 2,
-				value: 'Чума',
-				isCorrect: true,
-			},
-			{
 				id: 3,
-				value: 'Холера',
-				isCorrect: true,
-			},
-			{
-				id: 4,
 				value: 'Менингококковая инфекция',
 				isCorrect: false,
 			},
 			{
+				id: 4,
+				value: 'Холера',
+				isCorrect: true,
+			},
+			{
 				id: 5,
-				value: 'Брюшной тиф',
-				isCorrect: false,
+				value: 'Чума',
+				isCorrect: true,
 			},
 			{
 				id: 6,
@@ -8622,27 +8622,27 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Мероприятия, направленные на уничтожение переносчиков возбудителей инфекционных заболеваний',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'Мероприятия по борьбе или уничтожению инфекционных агентов на поверхности тела человека или животного, или же в багаже, грузах, контейнерах, перевозочных средствах, товарах и почтовых посылках посредством прямого воздействия химических или физических агентов',
-				isCorrect: false,
-			},
-			{
-				id: 2,
-				value: 'Мероприятия, направленные на уничтожение или сокращение численности возбудителей и переносчиков инфекционных заболеваний',
-				isCorrect: true,
-			},
-			{
-				id: 3,
 				value: 'Мероприятия, направленные на уничтожение вегетативных форм микроорганизмов',
 				isCorrect: false,
 			},
 			{
-				id: 4,
+				id: 1,
+				value: 'Мероприятия, направленные на уничтожение или сокращение численности возбудителей и переносчиков инфекционных заболеваний',
+				isCorrect: true,
+			},
+			{
+				id: 2,
+				value: 'Мероприятия по борьбе или уничтожению инфекционных агентов на поверхности тела человека или животного, или же в багаже, грузах, контейнерах, перевозочных средствах, товарах и почтовых посылках посредством прямого воздействия химических или физических агентов',
+				isCorrect: false,
+			},
+			{
+				id: 3,
 				value: 'Мероприятия, направленные на уничтожение споровых форм микроорганизмов и вирусов',
+				isCorrect: false,
+			},
+			{
+				id: 4,
+				value: 'Мероприятия, направленные на уничтожение переносчиков возбудителей инфекционных заболеваний',
 				isCorrect: false,
 			},
 		],
@@ -8657,28 +8657,28 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Дезинфекционные и стерилизационные мероприятия в организациях здравоохранения',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'Мероприятия по дезинсекции',
-				isCorrect: false,
-			},
-			{
-				id: 2,
-				value: 'Мероприятия по дератизации и дезинсекции',
-				isCorrect: false,
-			},
-			{
-				id: 3,
 				value: 'Мероприятия по дератизации',
 				isCorrect: false,
 			},
 			{
-				id: 4,
+				id: 1,
+				value: 'Мероприятия по дератизации и дезинсекции',
+				isCorrect: false,
+			},
+			{
+				id: 2,
 				value: 'Дезинфекционные, дезинсекционные и дератизационные мероприятия',
 				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'Мероприятия по дезинсекции',
+				isCorrect: false,
+			},
+			{
+				id: 4,
+				value: 'Дезинфекционные и стерилизационные мероприятия в организациях здравоохранения',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -8690,8 +8690,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Восприимчивых контингентов',
-				isCorrect: false,
+				value: 'Механизма передачи',
+				isCorrect: true,
 			},
 			{
 				id: 1,
@@ -8700,8 +8700,8 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Механизма передачи',
-				isCorrect: true,
+				value: 'Восприимчивых контингентов',
+				isCorrect: false,
 			},
 			{
 				id: 3,
@@ -8718,23 +8718,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Механизма передачи',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'Источника инфекции',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'Живых переносчиков возбудителей',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
 				value: 'Восприимчивых контингентов',
 				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'Механизма передачи',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Источника инфекции',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -8751,13 +8751,13 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'Источника инфекции',
-				isCorrect: false,
+				value: 'Механизма передачи',
+				isCorrect: true,
 			},
 			{
 				id: 2,
-				value: 'Механизма передачи',
-				isCorrect: true,
+				value: 'Источника инфекции',
+				isCorrect: false,
 			},
 			{
 				id: 3,
@@ -8774,28 +8774,28 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Должны обладать бактерицидным и (или) вирулицидным, фунгицидным, спороцидным действием. Не допускается применение средств дезинфекции, обладающих останавливающим размножение (статическим) действием',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'Должны обладать бактерицидным или фунгицидным действием. Допускается применение средств дезинфекции, обладающих останавливающим размножение (статическим) действием',
-				isCorrect: false,
-			},
-			{
-				id: 2,
-				value: 'Должны обладать вирулицидным и (или) бактерицидным, фунгицидным действием. Не допускается применение средств дезинфекции, обладающих останавливающим размножение (статическим) действием',
-				isCorrect: false,
-			},
-			{
-				id: 3,
 				value: 'Должны обладать бактерицидным и спороцидным действием. Допускается применение средств дезинфекции, обладающих останавливающим размножение (статическим) действием',
 				isCorrect: false,
 			},
 			{
-				id: 4,
+				id: 1,
+				value: 'Должны обладать вирулицидным и (или) бактерицидным, фунгицидным действием. Не допускается применение средств дезинфекции, обладающих останавливающим размножение (статическим) действием',
+				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'Должны обладать бактерицидным или фунгицидным действием. Допускается применение средств дезинфекции, обладающих останавливающим размножение (статическим) действием',
+				isCorrect: false,
+			},
+			{
+				id: 3,
 				value: 'Должны обладать бактерицидным или вирулицидным. Допускается применение средств дезинфекции, обладающих останавливающим размножение (статическим) действием',
 				isCorrect: false,
+			},
+			{
+				id: 4,
+				value: 'Должны обладать бактерицидным и (или) вирулицидным, фунгицидным, спороцидным действием. Не допускается применение средств дезинфекции, обладающих останавливающим размножение (статическим) действием',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -8808,22 +8808,22 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Профилактическую и очаговую',
-				isCorrect: true,
-			},
-			{
-				id: 1,
-				value: 'Профилактическую и текущую',
+				value: 'Профилактическую и заключительную',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'Очаговую и заключительную',
 				isCorrect: false,
 			},
 			{
+				id: 2,
+				value: 'Профилактическую и очаговую',
+				isCorrect: true,
+			},
+			{
 				id: 3,
-				value: 'Профилактическую и заключительную',
+				value: 'Профилактическую и текущую',
 				isCorrect: false,
 			},
 		],
@@ -8836,13 +8836,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Целью заключительной дезинфекции является уничтожение возбудителей инфекционных (паразитарных) заболеваний сразу после их выведения из организма источника в течение всего периода, пока больной или носитель является источником возбудителя инфекции',
-				isCorrect: false,
+				value: 'Целью заключительной дезинфекции является уничтожение возбудителей инфекционных (паразитарных), оставшихся в очаге в жизнеспособном состоянии на различных предметах после удаления источника (госпитализации, выздоровления или смерти больного)',
+				isCorrect: true,
 			},
 			{
 				id: 1,
-				value: 'Профилактическая дезинфекция проводится при отсутствии обнаруженного источника возбудителя, но предполагается возможность его наличия',
-				isCorrect: true,
+				value: 'Целью заключительной дезинфекции является уничтожение возбудителей инфекционных (паразитарных) заболеваний сразу после их выведения из организма источника в течение всего периода, пока больной или носитель является источником возбудителя инфекции',
+				isCorrect: false,
 			},
 			{
 				id: 2,
@@ -8856,7 +8856,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 4,
-				value: 'Целью заключительной дезинфекции является уничтожение возбудителей инфекционных (паразитарных), оставшихся в очаге в жизнеспособном состоянии на различных предметах после удаления источника (госпитализации, выздоровления или смерти больного)',
+				value: 'Профилактическая дезинфекция проводится при отсутствии обнаруженного источника возбудителя, но предполагается возможность его наличия',
 				isCorrect: true,
 			},
 		],
@@ -8870,23 +8870,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Означают процедуру, в соответствии с которой принимаются медико-санитарные меры с целью устранить инфекционный или токсичный агент на поверхности тела человека или животного, в продукте или на продукте, приготовленном для потребления, или на других неодушевленных предметах, включая перевозочные средства, который может представлять риск для здоровья населения',
-				isCorrect: false,
-			},
-			{
-				id: 1,
-				value: 'Проводятся в очагах инфекционных заболеваний и подразделяются на текущие ДМ (проводятся в присутствии источника инфекционного заболевания) и заключительные ДМ (проводятся после удаления источника инфекционного заболеваниями)',
-				isCorrect: true,
-			},
-			{
-				id: 2,
 				value: 'Включают плановые ДМ вне эпидемических очагов, в местах вероятного скопления возбудителей и переносчиков инфекционных заболеваний',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 1,
 				value: 'Проводятся в очагах инфекционных заболеваний, а также включают плановые ДМ вне эпидемических очагов, в местах вероятного скопления возбудителей и переносчиков инфекционных заболеваний',
 				isCorrect: false,
+			},
+			{
+				id: 2,
+				value: 'Означают процедуру, в соответствии с которой принимаются медико-санитарные меры с целью устранить инфекционный или токсичный агент на поверхности тела человека или животного, в продукте или на продукте, приготовленном для потребления, или на других неодушевленных предметах, включая перевозочные средства, который может представлять риск для здоровья населения',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Проводятся в очагах инфекционных заболеваний и подразделяются на текущие ДМ (проводятся в присутствии источника инфекционного заболевания) и заключительные ДМ (проводятся после удаления источника инфекционного заболеваниями)',
+				isCorrect: true,
 			},
 		],
 		isMultiple: false,
@@ -8900,13 +8900,13 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Антисептикой',
-				isCorrect: true,
+				value: 'Стерилизацией',
+				isCorrect: false,
 			},
 			{
 				id: 1,
-				value: 'Дезинфекцией',
-				isCorrect: false,
+				value: 'Антисептикой',
+				isCorrect: true,
 			},
 			{
 				id: 2,
@@ -8915,7 +8915,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Стерилизацией',
+				value: 'Дезинфекцией',
 				isCorrect: false,
 			},
 		],
@@ -8933,17 +8933,17 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'Дезинфекцией',
-				isCorrect: false,
-			},
-			{
-				id: 2,
 				value: 'Асептикой',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'Антисептикой',
+				isCorrect: false,
+			},
+			{
+				id: 3,
+				value: 'Дезинфекцией',
 				isCorrect: false,
 			},
 		],
@@ -8956,23 +8956,23 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Текущие и истребительные дезинсекционные мероприятия',
-				isCorrect: false,
-			},
-			{
-				id: 1,
 				value: 'Истребительные и заключительные дезинсекционные мероприятия',
 				isCorrect: false,
 			},
 			{
-				id: 2,
+				id: 1,
 				value: 'Мероприятия по защите от нападения членистоногих, имеющих эпидемиологическое и санитарно-гигиеническое значение',
 				isCorrect: false,
 			},
 			{
-				id: 3,
+				id: 2,
 				value: 'Истребительные дезинсекционные мероприятия и мероприятия по защите от нападения членистоногих, имеющих эпидемиологическое и санитарно-гигиеническое значение',
 				isCorrect: true,
+			},
+			{
+				id: 3,
+				value: 'Текущие и истребительные дезинсекционные мероприятия',
+				isCorrect: false,
 			},
 		],
 		isMultiple: false,
@@ -8985,8 +8985,8 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'Невыполнение адекватной гигиены рук медицинскими работниками и персоналом расценивается как основная причина распространения инфекций, связанных с оказанием медицинской помощи и полирезистентных микроорганизмов',
-				isCorrect: true,
+				value: 'Мыло и спиртсодержащий антисептик для гигиены рук должны использоваться одномоментно',
+				isCorrect: false,
 			},
 			{
 				id: 1,
@@ -8995,18 +8995,18 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 2,
-				value: 'Частое мытьё рук с мылом сразу перед или после использования спиртсодержащего антисептика не только не является необходимостью, но может привести к дерматиту',
-				isCorrect: true,
-			},
-			{
-				id: 3,
 				value: 'Несоблюдение техники по гигиене рук, например, недостаточное количество наносимого средства и (или) недостаточное время процедуры, не влияют на необходимую деконтаминацию рук',
 				isCorrect: false,
 			},
 			{
+				id: 3,
+				value: 'Частое мытьё рук с мылом сразу перед или после использования спиртсодержащего антисептика не только не является необходимостью, но может привести к дерматиту',
+				isCorrect: true,
+			},
+			{
 				id: 4,
-				value: 'Мыло и спиртсодержащий антисептик для гигиены рук должны использоваться одномоментно',
-				isCorrect: false,
+				value: 'Невыполнение адекватной гигиены рук медицинскими работниками и персоналом расценивается как основная причина распространения инфекций, связанных с оказанием медицинской помощи и полирезистентных микроорганизмов',
+				isCorrect: true,
 			},
 		],
 		isMultiple: true,
@@ -9025,7 +9025,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 1,
-				value: 'Использование перчаток не отменяет необходимость в гигиене рук посредством антисептики или мытья рук',
+				value: 'Во время ухода за одним пациентом или его окружением медицинский работник должен заменить перчатки, если осуществляется переход от контаминированного участка тела к другому участку, включая контаминированную кожу, слизистые оболочки или медицинские приборы',
 				isCorrect: true,
 			},
 			{
@@ -9035,12 +9035,12 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Во время ухода за одним пациентом или его окружением медицинский работник должен заменить перчатки, если осуществляется переход от контаминированного участка тела к другому участку, включая контаминированную кожу, слизистые оболочки или медицинские приборы',
+				value: 'Использование перчаток должно осуществляться при малейшей возможности контакта с кровью, другими потенциально инфекционными материалами, слизистыми оболочками или поврежденными участками кожи',
 				isCorrect: true,
 			},
 			{
 				id: 4,
-				value: 'Использование перчаток должно осуществляться при малейшей возможности контакта с кровью, другими потенциально инфекционными материалами, слизистыми оболочками или поврежденными участками кожи',
+				value: 'Использование перчаток не отменяет необходимость в гигиене рук посредством антисептики или мытья рук',
 				isCorrect: true,
 			},
 		],
@@ -9055,7 +9055,7 @@ export const common_2025_Questions: Question[] = [
 		answers: [
 			{
 				id: 0,
-				value: 'До и после контакта с пациентом',
+				value: 'Прежде, чем дотронуться до инвазивного устройства для ухода за пациентом, независимо от того, используются перчатки или нет',
 				isCorrect: true,
 			},
 			{
@@ -9070,7 +9070,7 @@ export const common_2025_Questions: Question[] = [
 			},
 			{
 				id: 3,
-				value: 'Прежде, чем дотронуться до инвазивного устройства для ухода за пациентом, независимо от того, используются перчатки или нет',
+				value: 'До и после контакта с пациентом',
 				isCorrect: true,
 			},
 			{

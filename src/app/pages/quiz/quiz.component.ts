@@ -1,10 +1,9 @@
 import type { ElementRef } from '@angular/core';
 import { ChangeDetectionStrategy, Component, computed, inject, viewChild } from '@angular/core';
-import { toSignal } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
 import { QuestionComponent } from '@shared/components/question/question.component';
 import { ROUTER_LINKS } from '@shared/entities/shared.constants';
-import type { MappedQuestion, TestResult } from '@shared/entities/shared.types';
+import type { MappedQuestion } from '@shared/entities/shared.types';
 import { IsHaveAnswerPipe } from '@shared/pipes/is-have-answer.pipe';
 import { StoreService } from '@shared/services/store.service';
 import { NzButtonModule } from 'ng-zorro-antd/button';
@@ -24,15 +23,10 @@ export default class QuizPageComponent {
 	private readonly router = inject(Router);
 	private readonly nzModalService = inject(NzModalService);
 
-	protected readonly selectedTestOption = toSignal(this.storeService.selectedTest$, { initialValue: null });
-	protected readonly testQuestions = toSignal(this.storeService.testQuestions$, { initialValue: null });
-	protected readonly userAnswers = toSignal(this.storeService.testResults$, {
-		initialValue: new Map<number, TestResult>(),
-	});
-
-	protected readonly currentQuestionIndex = toSignal(this.storeService.currentQuestionIndex$, {
-		initialValue: 0,
-	});
+	protected readonly selectedTestOption = this.storeService.selectedTest;
+	protected readonly testQuestions = this.storeService.testQuestions;
+	protected readonly userAnswers = this.storeService.testResults;
+	protected readonly currentQuestionIndex = this.storeService.currentQuestionIndex;
 
 	private readonly quizContainerElement = viewChild<ElementRef<HTMLDivElement>>('quizContainer');
 

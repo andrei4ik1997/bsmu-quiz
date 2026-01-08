@@ -1,5 +1,4 @@
-import { DOCUMENT } from '@angular/common';
-import { inject, Injectable } from '@angular/core';
+import { DOCUMENT, inject, Injectable } from '@angular/core';
 import { LOCAL_STORAGE_KEYS } from '@shared/entities/shared.constants';
 import type { LocalStorageKeys } from '@shared/entities/shared.types';
 

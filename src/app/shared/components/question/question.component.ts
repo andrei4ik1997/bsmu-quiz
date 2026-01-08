@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, effect, inject, input, signal } from '@angular/core';
-import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import type { MappedQuestion, TestResult } from '@shared/entities/shared.types';
 import { IsDisabledPipe } from '@shared/pipes/is-disabled.pipe';
@@ -32,11 +32,9 @@ export class QuestionComponent {
 
 	public readonly questionId = input.required<number>();
 
-	protected readonly selectedTestOption = toSignal(this.storeService.selectedTest$, { initialValue: null });
-	protected readonly testQuestions = toSignal(this.storeService.testQuestions$, { initialValue: null });
-	private readonly userAnswers = toSignal(this.storeService.testResults$, {
-		initialValue: new Map<number, TestResult>(),
-	});
+	protected readonly selectedTestOption = this.storeService.selectedTest;
+	protected readonly testQuestions = this.storeService.testQuestions;
+	private readonly userAnswers = this.storeService.testResults;
 
 	protected readonly isAnswerVisible = signal(false);
 

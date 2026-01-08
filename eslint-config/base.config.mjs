@@ -1,5 +1,6 @@
 import eslintJs from '@eslint/js';
 import tsParser from '@typescript-eslint/parser';
+
 import globals from 'globals';
 import eslintTs from 'typescript-eslint';
 
@@ -8,8 +9,6 @@ import stylistic from '@stylistic/eslint-plugin';
 import angular from 'angular-eslint';
 import eslintPluginPrettier from 'eslint-plugin-prettier';
 import pluginPromise from 'eslint-plugin-promise';
-import rxjsAngular from 'eslint-plugin-rxjs-angular-updated';
-import rxjsX from 'eslint-plugin-rxjs-x';
 import simpleImportSortPlugin from 'eslint-plugin-simple-import-sort';
 import sonarjsPlugin from 'eslint-plugin-sonarjs';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
@@ -18,13 +17,11 @@ import { angularRules } from './rules/angular-rules.mjs';
 import { eslintRules } from './rules/eslint-rules.mjs';
 import { miscellaneousRules } from './rules/miscellaneous-rules.mjs';
 import { namingRules } from './rules/naming-rules.mjs';
-import { rxjsAngularRules } from './rules/rxjs-angular-rules.mjs';
-import { rxjsRules } from './rules/rxjs-rules.mjs';
+import { promiseRules } from './rules/promise-rules.mjs';
 import { stylisticRules } from './rules/stylistic-rules.mjs';
-import { testsRules } from './rules/tests-rules.mjs';
 import { typescriptRules } from './rules/typescript-rules.mjs';
 
-export const baseConfig = eslintTs.config(
+export const baseConfig = [
 	{
 		name: 'general-configuration',
 		languageOptions: {
@@ -46,7 +43,6 @@ export const baseConfig = eslintTs.config(
 		plugins: {
 			'simple-import-sort': simpleImportSortPlugin,
 			unicorn: eslintPluginUnicorn,
-			'rxjs-angular': rxjsAngular,
 			'@stylistic': stylistic,
 		},
 	},
@@ -96,7 +92,6 @@ export const baseConfig = eslintTs.config(
 			...eslintTs.configs.strictTypeChecked,
 			...angular.configs.tsRecommended,
 			pluginPromise.configs['flat/recommended'],
-			rxjsX.configs.recommended,
 			sonarjsPlugin.configs.recommended,
 		],
 		processor: angular.processInlineTemplates,
@@ -105,11 +100,10 @@ export const baseConfig = eslintTs.config(
 			...eslintRules,
 			...namingRules,
 			...miscellaneousRules,
-			...rxjsRules,
-			...rxjsAngularRules,
 			...angularRules.classFiles,
 			...stylisticRules,
 			...typescriptRules,
+			...promiseRules,
 		},
 	},
 	{
@@ -119,11 +113,6 @@ export const baseConfig = eslintTs.config(
 		rules: {
 			...angularRules.templates,
 		},
-	},
-	{
-		name: 'tests',
-		files: ['**/*.spec.ts', '**/*.mock.ts'],
-		rules: { ...testsRules, ...angularRules.tests },
 	},
 	{
 		name: 'disable-ts-for-js',
@@ -138,5 +127,5 @@ export const baseConfig = eslintTs.config(
 		rules: {
 			'prettier/prettier': 'error',
 		},
-	}
-);
+	},
+];

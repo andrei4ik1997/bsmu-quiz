@@ -1,10 +1,9 @@
-import { inject, Injectable } from '@angular/core';
-import { common_07_01_2026_Questions } from '@shared/db/common_07_01_2026.questions';
-import { common_2025_Questions } from '@shared/db/common_2025.questions';
+import { inject, Injectable, signal } from '@angular/core';
+import { COMMON_07_01_2026_QUESTIONS } from '@shared/db/common-07-01-2026.questions';
+import { COMMON_2025_QUESTIONS } from '@shared/db/common-2025.questions';
 import { nurseAnesthetistQuestions } from '@shared/db/nurse-anesthetist.questions';
 import { LOCAL_STORAGE_KEYS } from '@shared/entities/shared.constants';
 import type { MappedQuestion, Question, TestOption, TestResult } from '@shared/entities/shared.types';
-import { BehaviorSubject } from 'rxjs';
 
 import { LocalStorageService } from './local-storage.service';
 
@@ -12,58 +11,55 @@ import { LocalStorageService } from './local-storage.service';
 export class StoreService {
 	private readonly localStorageService = inject(LocalStorageService);
 
-	private readonly selectedTestSubject$ = new BehaviorSubject<TestOption | null>(null);
-	private readonly testQuestionsSubject$ = new BehaviorSubject<MappedQuestion[] | null>(null);
-	private readonly testResultsSubject$ = new BehaviorSubject(new Map<number, TestResult>());
-	private readonly currentQuestionIndexSubject$ = new BehaviorSubject(0);
+	private readonly selectedTestStore = signal<TestOption | null>(null);
+	private readonly testQuestionsStore = signal<MappedQuestion[] | null>(null);
+	private readonly testResultsStore = signal(new Map<number, TestResult>());
+	private readonly currentQuestionIndexStore = signal(0);
 
-	public readonly selectedTest$ = this.selectedTestSubject$.asObservable();
-	public readonly testQuestions$ = this.testQuestionsSubject$.asObservable();
-	public readonly testResults$ = this.testResultsSubject$.asObservable();
-	public readonly currentQuestionIndex$ = this.currentQuestionIndexSubject$.asObservable();
+	public readonly selectedTest = this.selectedTestStore.asReadonly();
+	public readonly testQuestions = this.testQuestionsStore.asReadonly();
+	public readonly testResults = this.testResultsStore.asReadonly();
+	public readonly currentQuestionIndex = this.currentQuestionIndexStore.asReadonly();
 
 	public setSelectedTest(test: TestOption | null): void {
-		this.selectedTestSubject$.next(test);
-		this.localStorageService.set(LOCAL_STORAGE_KEYS.selectedTest, this.selectedTestSubject$.value);
+		this.selectedTestStore.set(test);
+		this.localStorageService.set(LOCAL_STORAGE_KEYS.selectedTest, this.selectedTestStore());
 
 		this.setTestQuestions(test);
 	}
 
 	public setTestResult(questionId: number, testResult: TestResult): void {
-		const testResults = this.testResultsSubject$.value;
+		const testResults = this.testResultsStore();
 
 		testResults.set(questionId, {
 			userAnswers: testResult.userAnswers,
 			answers: testResult.answers,
 		});
 
-		this.testResultsSubject$.next(testResults);
-		this.localStorageService.set(LOCAL_STORAGE_KEYS.testResults, this.testResultsSubject$.value);
+		this.testResultsStore.set(testResults);
+		this.localStorageService.set(LOCAL_STORAGE_KEYS.testResults, this.testResultsStore());
 	}
 
 	public clearTestResults(): void {
-		this.testResultsSubject$.next(new Map<number, TestResult>());
-		this.localStorageService.set(LOCAL_STORAGE_KEYS.testResults, this.testResultsSubject$.value);
+		this.testResultsStore.set(new Map<number, TestResult>());
+		this.localStorageService.set(LOCAL_STORAGE_KEYS.testResults, this.testResultsStore());
 	}
 
 	private setTestQuestions(test: TestOption | null): void {
 		if (test === null) {
-			this.testQuestionsSubject$.next(null);
+			this.testQuestionsStore.set(null);
 		} else {
 			switch (test.value) {
 				case 'common_2025':
-					this.testQuestionsSubject$.next(this.randomizeQuestions(common_2025_Questions));
-
+					this.testQuestionsStore.set(this.randomizeQuestions(COMMON_2025_QUESTIONS));
 					break;
 
 				case 'common_07_01_2026':
-					this.testQuestionsSubject$.next(this.randomizeQuestions(common_07_01_2026_Questions));
-
+					this.testQuestionsStore.set(this.randomizeQuestions(COMMON_07_01_2026_QUESTIONS));
 					break;
 
 				case 'nurseAnesthetist':
-					this.testQuestionsSubject$.next(this.randomizeQuestions(nurseAnesthetistQuestions));
-
+					this.testQuestionsStore.set(this.randomizeQuestions(nurseAnesthetistQuestions));
 					break;
 
 				default:
@@ -71,7 +67,7 @@ export class StoreService {
 			}
 		}
 
-		this.localStorageService.set(LOCAL_STORAGE_KEYS.testQuestions, this.testQuestionsSubject$.value);
+		this.localStorageService.set(LOCAL_STORAGE_KEYS.testQuestions, this.testQuestionsStore());
 	}
 
 	private randomizeQuestions(questions: Question[]): MappedQuestion[] {
@@ -106,19 +102,19 @@ export class StoreService {
 		const currentQuestionIndex = this.localStorageService.get<number>(LOCAL_STORAGE_KEYS.currentQuestionIndex);
 
 		if (selectedTest !== null) {
-			this.selectedTestSubject$.next(selectedTest);
+			this.selectedTestStore.set(selectedTest);
 		}
 
 		if (testQuestions !== null) {
-			this.testQuestionsSubject$.next(testQuestions);
+			this.testQuestionsStore.set(testQuestions);
 		}
 
 		if (testResults !== null) {
-			this.testResultsSubject$.next(testResults);
+			this.testResultsStore.set(testResults);
 		}
 
 		if (currentQuestionIndex !== null) {
-			this.currentQuestionIndexSubject$.next(currentQuestionIndex);
+			this.currentQuestionIndexStore.set(currentQuestionIndex);
 		}
 	}
 
@@ -129,7 +125,7 @@ export class StoreService {
 	}
 
 	public setCurrentQuestionIndex(index: number): void {
-		this.currentQuestionIndexSubject$.next(index);
-		this.localStorageService.set(LOCAL_STORAGE_KEYS.currentQuestionIndex, this.currentQuestionIndexSubject$.value);
+		this.currentQuestionIndexStore.set(index);
+		this.localStorageService.set(LOCAL_STORAGE_KEYS.currentQuestionIndex, this.currentQuestionIndexStore());
 	}
 }

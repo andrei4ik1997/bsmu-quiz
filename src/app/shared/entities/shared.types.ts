@@ -13,7 +13,7 @@ export type AppRouterLink = (typeof ROUTER_LINKS)[keyof typeof ROUTER_LINKS];
 export type LocalStorageKeys = (typeof LOCAL_STORAGE_KEYS)[keyof typeof LOCAL_STORAGE_KEYS];
 
 export type TestOption = {
-	value: 'common_2025' | 'common_07_01_2026' | 'nurseAnesthetist';
+	value: 'common_07_01_2026' | 'common_2025' | 'nurseAnesthetist';
 	label: string;
 };
 
@@ -41,7 +41,7 @@ export type ModalQuestionData = {
 export type TableConfig<T> = {
 	name: string;
 	dataProperty?: keyof T;
-	width?: string;
+	width?: number;
 	showSort?: boolean;
 	sortPriority?: number | false;
 	sortDirections?: NzTableSortOrder[];

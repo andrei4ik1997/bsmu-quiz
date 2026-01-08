@@ -12,7 +12,6 @@ export const stylisticRules = {
 	'@stylistic/computed-property-spacing': 'off',
 	'@stylistic/dot-location': 'off',
 	'@stylistic/eol-last': 'error',
-	'@stylistic/func-call-spacing': 'error',
 	'@stylistic/function-call-argument-newline': 'off',
 	'@stylistic/function-call-spacing': 'off',
 	'@stylistic/function-paren-newline': 'off',

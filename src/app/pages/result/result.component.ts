@@ -1,6 +1,5 @@
 import { DecimalPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
-import { toSignal } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
 import { ROUTER_LINKS } from '@shared/entities/shared.constants';
 import type { MappedQuestion, ModalQuestionData, TableConfig, TestResult } from '@shared/entities/shared.types';
@@ -29,17 +28,9 @@ export default class ResultPageComponent {
 	private readonly nzModalService = inject(NzModalService);
 	private readonly storeService = inject(StoreService);
 
-	protected readonly userAnswers = toSignal(this.storeService.testResults$, {
-		initialValue: null,
-	});
-
-	private readonly testQuestions = toSignal(this.storeService.testQuestions$, {
-		initialValue: null,
-	});
-
-	private readonly selectedTest = toSignal(this.storeService.selectedTest$, {
-		initialValue: null,
-	});
+	protected readonly userAnswers = this.storeService.testResults;
+	private readonly testQuestions = this.storeService.testQuestions;
+	private readonly selectedTest = this.storeService.selectedTest;
 
 	protected readonly testName = computed(() => {
 		return this.selectedTest()?.label ?? '-';
@@ -51,10 +42,6 @@ export default class ResultPageComponent {
 
 	protected readonly userCountAnswers = computed(() => {
 		const userAnswers = this.userAnswers();
-
-		if (userAnswers === null) {
-			return 0;
-		}
 
 		const answers: number[] = [];
 
@@ -72,14 +59,6 @@ export default class ResultPageComponent {
 		const userAnswers = this.userAnswers();
 
 		const mappedResult = questions.map<TableData>((question) => {
-			if (userAnswers === null) {
-				return {
-					...question,
-					status: '-',
-					score: null,
-				};
-			}
-
 			const userResult = userAnswers.get(question.id) ?? null;
 
 			if (userResult === null || userResult.answers.length === 0) {
@@ -142,7 +121,7 @@ export default class ResultPageComponent {
 			sortFn: (a, b) => {
 				return a.index - b.index;
 			},
-			width: '100px',
+			width: 100,
 			customFormatter: (row) => {
 				return String(row.index + 1);
 			},
@@ -172,25 +151,27 @@ export default class ResultPageComponent {
 		{
 			name: 'Балл',
 			dataProperty: 'score',
-			width: '70px',
+			width: 70,
 			align: 'center',
 		},
 		{
 			name: '',
 			cellType: 'action',
 			align: 'center',
-			width: '0',
+			width: 200,
 		},
 	];
 
+	protected readonly tableWidth = computed(() => {
+		const defaultWidth = 300;
+
+		return this.tableConfig.reduce((acc, column) => {
+			return acc + (column.width ?? defaultWidth);
+		}, 0);
+	});
+
 	protected showQuestion(question: MappedQuestion): void {
-		const userAnswers = this.userAnswers();
-
-		let questionUserAnswer: TestResult | null = null;
-
-		if (userAnswers !== null) {
-			questionUserAnswer = userAnswers.get(question.id) ?? null;
-		}
+		const questionUserAnswer = this.userAnswers().get(question.id) ?? null;
 
 		this.nzModalService.create<QuestionModalComponent, ModalQuestionData, void>({
 			nzTitle: `№${question.index + 1} ${question.question}`,

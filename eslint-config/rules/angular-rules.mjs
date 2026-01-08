@@ -83,9 +83,4 @@ export const angularRules = {
 		'@angular-eslint/template/no-call-expression': 'off',
 		'@angular-eslint/template/interactive-supports-focus': 'off',
 	},
-	tests: {
-		'@angular-eslint/prefer-on-push-component-change-detection': 'off',
-		'@angular-eslint/component-max-inline-declarations': 'off',
-		'@angular-eslint/use-component-selector': 'off',
-	},
 };

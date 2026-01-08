@@ -50,6 +50,7 @@
 				grid-template-columns: repeat(auto-fit, minmax(var(--fast-navigation-column-width), 1fr));
 				gap: 0.5rem;
 				width: 100%;
+				overflow: auto;
 
 				&-question {
 					@include mixins.flex-column();

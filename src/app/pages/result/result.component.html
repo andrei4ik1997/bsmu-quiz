@@ -18,9 +18,7 @@
 		<span>({{ (myScore() / questionsCount) * 100 | number }}%)</span>
 	</div>
 
-	<button class="result-toQuiz-button" nz-button nzType="primary" type="button" (click)="toQuiz()">
-		К тестировнию
-	</button>
+	<button class="result-toQuiz-button" nz-button type="button" (click)="toQuiz()">К тестировнию</button>
 
 	<button class="result-finish-button" nz-button nzType="primary" type="button" (click)="finishQuiz()">
 		Завершить тестирование
@@ -42,7 +40,7 @@
 				<tr>
 					@for (column of tableConfig; track column) {
 						<th
-							[nzWidth]="column.width ?? null"
+							[nzWidth]="column.width ? column.width + 'px' : null"
 							[nzColumnKey]="column.dataProperty"
 							[nzShowSort]="column.showSort ?? false"
 							[nzSortPriority]="column.sortPriority ?? false"
