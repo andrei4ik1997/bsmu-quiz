@@ -69,7 +69,7 @@ export function provideNgZorro(): EnvironmentProviders {
 
 export function provideNgswWorker(): EnvironmentProviders {
 	return makeEnvironmentProviders([
-		provideServiceWorker('ngsw-worker.js', {
+		provideServiceWorker('./service-worker.js', {
 			updateViaCache: 'all',
 			enabled: !isDevMode(),
 			registrationStrategy: 'registerWhenStable:30000',

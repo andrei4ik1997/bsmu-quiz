@@ -18,7 +18,7 @@ const config = {
 	bracketSpacing: true,
 	arrowParens: 'always',
 	trailingComma: 'es5',
-	endOfLine: 'auto',
+	endOfLine: 'lf',
 	plugins: ['prettier-plugin-organize-attributes'],
 	attributeGroups: [
 		'$ANGULAR_STRUCTURAL_DIRECTIVE',

@@ -7,7 +7,7 @@
 		"start-production": "ng serve --configuration='production'",
 		"build-develop": "ng build --configuration='development'",
 		"build-production": "ng build --configuration='production'",
-		"prettier": "cd src && npx prettier . --write",
+		"prettier": "npx prettier . --write",
 		"lint": "ng lint --fix",
 		"find-circular-dependencies": "npx madge -c --extensions ts ./",
 		"deploy": "ng deploy"
