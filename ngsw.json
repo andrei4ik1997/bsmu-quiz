@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1767870883846,
+  "timestamp": 1767872448368,
   "index": "https://andrei4ik1997.github.io/bsmu-quiz/index.html",
   "assetGroups": [
     {
@@ -31,8 +31,9 @@
         "https://andrei4ik1997.github.io/bsmu-quiz/chunk-XOYTKC4X.js",
         "https://andrei4ik1997.github.io/bsmu-quiz/favicon.ico",
         "https://andrei4ik1997.github.io/bsmu-quiz/index.html",
-        "https://andrei4ik1997.github.io/bsmu-quiz/main-OC5YCYQQ.js",
+        "https://andrei4ik1997.github.io/bsmu-quiz/main-LG3NPZWU.js",
         "https://andrei4ik1997.github.io/bsmu-quiz/manifest.webmanifest",
+        "https://andrei4ik1997.github.io/bsmu-quiz/service-worker.js",
         "https://andrei4ik1997.github.io/bsmu-quiz/styles-K24NNJLG.css"
       ],
       "patterns": []
@@ -1750,9 +1751,10 @@
     "https://andrei4ik1997.github.io/bsmu-quiz/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "https://andrei4ik1997.github.io/bsmu-quiz/icons/icon-72x72.png": "4d597580aaf5019bb38533d90d07df4096512e5e",
     "https://andrei4ik1997.github.io/bsmu-quiz/icons/icon-96x96.png": "d2bd7707faf9927f854db6859beb8e80d0267053",
-    "https://andrei4ik1997.github.io/bsmu-quiz/index.html": "c726697fca9b95e8f8a829dae32bedac43c91781",
-    "https://andrei4ik1997.github.io/bsmu-quiz/main-OC5YCYQQ.js": "90c8a30ca0324ff6e6965f55bd88880323f949f8",
+    "https://andrei4ik1997.github.io/bsmu-quiz/index.html": "a9bc891cb4b9ef56bc8711282c77164fd7a48acb",
+    "https://andrei4ik1997.github.io/bsmu-quiz/main-LG3NPZWU.js": "ad9a74b97c68ec8bc610525ec049aa85e05f47e5",
     "https://andrei4ik1997.github.io/bsmu-quiz/manifest.webmanifest": "642527e09e3933b8a2ebea872f7b9c47643019f2",
+    "https://andrei4ik1997.github.io/bsmu-quiz/service-worker.js": "e68c5de2f4ff85615bf20f1e2cfa543748d99fc2",
     "https://andrei4ik1997.github.io/bsmu-quiz/styles-K24NNJLG.css": "db4825dcb9d6ec6b84f98431c96a2b22eed55608"
   },
   "navigationUrls": [
