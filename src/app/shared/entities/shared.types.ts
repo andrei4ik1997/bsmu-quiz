@@ -8,6 +8,10 @@ import type {
 
 import type { LOCAL_STORAGE_KEYS, ROUTER_LINKS } from './shared.constants';
 
+export type Nil = null | undefined;
+export type Nulled<T> = T | null;
+export type Nullable<T> = Nil | T;
+
 export type AppRouterLink = (typeof ROUTER_LINKS)[keyof typeof ROUTER_LINKS];
 
 export type LocalStorageKeys = (typeof LOCAL_STORAGE_KEYS)[keyof typeof LOCAL_STORAGE_KEYS];

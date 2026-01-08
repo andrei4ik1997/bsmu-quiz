@@ -5,7 +5,9 @@ import { QuestionComponent } from '@shared/components/question/question.componen
 import { ROUTER_LINKS } from '@shared/entities/shared.constants';
 import type { MappedQuestion } from '@shared/entities/shared.types';
 import { IsHaveAnswerPipe } from '@shared/pipes/is-have-answer.pipe';
+import { AdaptiveService } from '@shared/services/adaptive.service';
 import { StoreService } from '@shared/services/store.service';
+import { isDefined } from '@shared/utils/shared.utils';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzEmptyModule } from 'ng-zorro-antd/empty';
 import { NzIconModule } from 'ng-zorro-antd/icon';
@@ -22,16 +24,18 @@ export default class QuizPageComponent {
 	private readonly storeService = inject(StoreService);
 	private readonly router = inject(Router);
 	private readonly nzModalService = inject(NzModalService);
+	private readonly adaptiveService = inject(AdaptiveService);
 
 	protected readonly selectedTestOption = this.storeService.selectedTest;
 	protected readonly testQuestions = this.storeService.testQuestions;
 	protected readonly userAnswers = this.storeService.testResults;
 	protected readonly currentQuestionIndex = this.storeService.currentQuestionIndex;
+	protected readonly isTablet = this.adaptiveService.isTablet;
 
 	private readonly quizContainerElement = viewChild<ElementRef<HTMLDivElement>>('quizContainer');
 
 	protected readonly question = computed(() => {
-		const questions = this.testQuestions() ?? [];
+		const questions = this.testQuestions();
 		const question = questions.find((q) => {
 			return q.index === this.currentQuestionIndex();
 		});
@@ -72,7 +76,7 @@ export default class QuizPageComponent {
 	private scroll(): void {
 		const quizContainerElement = this.quizContainerElement() ?? null;
 
-		if (quizContainerElement !== null) {
+		if (isDefined(quizContainerElement)) {
 			quizContainerElement.nativeElement.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 		}
 	}

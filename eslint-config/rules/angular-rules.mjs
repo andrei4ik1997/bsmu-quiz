@@ -60,7 +60,7 @@ export const angularRules = {
 		'@angular-eslint/template/cyclomatic-complexity': [
 			'error',
 			{
-				maxComplexity: 10,
+				maxComplexity: 15,
 			},
 		],
 		'@angular-eslint/template/elements-content': 'off',

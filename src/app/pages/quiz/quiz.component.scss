@@ -51,6 +51,7 @@
 				gap: 0.5rem;
 				width: 100%;
 				overflow: auto;
+				padding-top: 0.75rem;
 
 				&-question {
 					@include mixins.flex-column();
@@ -105,21 +106,5 @@
 
 	.quiz-title {
 		font-size: 1.5rem;
-	}
-}
-
-@media screen and (max-width: 500px) {
-	.quiz-navigation {
-		.ant-btn {
-			&::ng-deep {
-				span {
-					display: none;
-				}
-
-				.anticon {
-					margin: 0;
-				}
-			}
-		}
 	}
 }

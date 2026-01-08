@@ -3,7 +3,8 @@ import { COMMON_07_01_2026_QUESTIONS } from '@shared/db/common-07-01-2026.questi
 import { COMMON_2025_QUESTIONS } from '@shared/db/common-2025.questions';
 import { nurseAnesthetistQuestions } from '@shared/db/nurse-anesthetist.questions';
 import { LOCAL_STORAGE_KEYS } from '@shared/entities/shared.constants';
-import type { MappedQuestion, Question, TestOption, TestResult } from '@shared/entities/shared.types';
+import type { MappedQuestion, Nulled, Question, TestOption, TestResult } from '@shared/entities/shared.types';
+import { isDefined, isNil } from '@shared/utils/shared.utils';
 
 import { LocalStorageService } from './local-storage.service';
 
@@ -11,8 +12,8 @@ import { LocalStorageService } from './local-storage.service';
 export class StoreService {
 	private readonly localStorageService = inject(LocalStorageService);
 
-	private readonly selectedTestStore = signal<TestOption | null>(null);
-	private readonly testQuestionsStore = signal<MappedQuestion[] | null>(null);
+	private readonly selectedTestStore = signal<Nulled<TestOption>>(null);
+	private readonly testQuestionsStore = signal<MappedQuestion[]>([]);
 	private readonly testResultsStore = signal(new Map<number, TestResult>());
 	private readonly currentQuestionIndexStore = signal(0);
 
@@ -21,7 +22,7 @@ export class StoreService {
 	public readonly testResults = this.testResultsStore.asReadonly();
 	public readonly currentQuestionIndex = this.currentQuestionIndexStore.asReadonly();
 
-	public setSelectedTest(test: TestOption | null): void {
+	public setSelectedTest(test: Nulled<TestOption>): void {
 		this.selectedTestStore.set(test);
 		this.localStorageService.set(LOCAL_STORAGE_KEYS.selectedTest, this.selectedTestStore());
 
@@ -45,9 +46,9 @@ export class StoreService {
 		this.localStorageService.set(LOCAL_STORAGE_KEYS.testResults, this.testResultsStore());
 	}
 
-	private setTestQuestions(test: TestOption | null): void {
-		if (test === null) {
-			this.testQuestionsStore.set(null);
+	private setTestQuestions(test: Nulled<TestOption>): void {
+		if (isNil(test)) {
+			this.testQuestionsStore.set([]);
 		} else {
 			switch (test.value) {
 				case 'common_2025':
@@ -101,19 +102,19 @@ export class StoreService {
 		const testResults = this.localStorageService.get<Map<number, TestResult>>(LOCAL_STORAGE_KEYS.testResults);
 		const currentQuestionIndex = this.localStorageService.get<number>(LOCAL_STORAGE_KEYS.currentQuestionIndex);
 
-		if (selectedTest !== null) {
+		if (isDefined(selectedTest)) {
 			this.selectedTestStore.set(selectedTest);
 		}
 
-		if (testQuestions !== null) {
+		if (isDefined(testQuestions)) {
 			this.testQuestionsStore.set(testQuestions);
 		}
 
-		if (testResults !== null) {
+		if (isDefined(testResults)) {
 			this.testResultsStore.set(testResults);
 		}
 
-		if (currentQuestionIndex !== null) {
+		if (isDefined(currentQuestionIndex)) {
 			this.currentQuestionIndexStore.set(currentQuestionIndex);
 		}
 	}

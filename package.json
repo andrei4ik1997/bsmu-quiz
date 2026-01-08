@@ -1,6 +1,6 @@
 {
 	"name": "bsmu-quiz",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"scripts": {
 		"ng": "ng",
 		"start-develop": "ng serve --configuration='development'",

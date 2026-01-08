@@ -1,5 +1,6 @@
 @let selectedTest = selectedTestOption();
-@let questions = testQuestions() ?? [];
+@let questions = testQuestions();
+@let isTabletScreen = isTablet();
 
 @if (selectedTest && questions.length > 0) {
 	<h1 class="quiz-title">Тест: {{ selectedTest?.label }}</h1>
@@ -18,33 +19,58 @@
 			</div>
 
 			<div class="quiz-navigation">
-				<button
-					nz-button
-					nzType="primary"
-					type="button"
-					[disabled]="questionIndex === questions[0].index"
-					(click)="changeCurrentQuestionIndex(questionIndex - 1)"
-				>
-					<nz-icon nzType="left" />
-					Предыдущий вопрос
-				</button>
+				@if (isTabletScreen) {
+					<button
+						nz-button
+						nzType="primary"
+						type="button"
+						[nzBlock]="true"
+						[disabled]="questionIndex === questions[0].index"
+						(click)="changeCurrentQuestionIndex(questionIndex - 1)"
+					>
+						<nz-icon nzType="left" />
+					</button>
 
-				<button
-					nz-button
-					nzType="primary"
-					type="button"
-					[disabled]="questionIndex === questions[questions.length - 1].index"
-					(click)="changeCurrentQuestionIndex(questionIndex + 1)"
-				>
-					Следующий вопрос
-					<nz-icon nzType="right" />
-				</button>
+					<button
+						nz-button
+						nzType="primary"
+						type="button"
+						[nzBlock]="true"
+						[disabled]="questionIndex === questions[questions.length - 1].index"
+						(click)="changeCurrentQuestionIndex(questionIndex + 1)"
+					>
+						<nz-icon nzType="right" />
+					</button>
+				} @else {
+					<button
+						nz-button
+						nzType="primary"
+						type="button"
+						[disabled]="questionIndex === questions[0].index"
+						(click)="changeCurrentQuestionIndex(questionIndex - 1)"
+					>
+						<nz-icon nzType="left" />
+						Предыдущий вопрос
+					</button>
+
+					<button
+						nz-button
+						nzType="primary"
+						type="button"
+						[disabled]="questionIndex === questions[questions.length - 1].index"
+						(click)="changeCurrentQuestionIndex(questionIndex + 1)"
+					>
+						Следующий вопрос
+						<nz-icon nzType="right" />
+					</button>
+				}
 			</div>
 
 			<button
 				nz-button
 				nzType="primary"
 				type="button"
+				[nzBlock]="isTabletScreen"
 				[disabled]="!currentQuestion"
 				(click)="completeQuiz(questions)"
 			>

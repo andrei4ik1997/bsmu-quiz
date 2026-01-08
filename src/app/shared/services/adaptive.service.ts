@@ -14,6 +14,10 @@ export class AdaptiveService {
 		return this.currentWindowHeightSignal();
 	});
 
+	public readonly isMobile = computed(() => {
+		return this.currentWindowWidthSignal() < BREAKPOINTS.mobileL;
+	});
+
 	public readonly isTablet = computed(() => {
 		return this.currentWindowWidthSignal() < BREAKPOINTS.tablet;
 	});

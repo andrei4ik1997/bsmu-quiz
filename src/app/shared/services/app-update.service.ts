@@ -1,5 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
+import type { Nulled } from '@shared/entities/shared.types';
 import type { Subscription } from 'rxjs';
 import { filter, interval, startWith } from 'rxjs';
 
@@ -8,7 +9,7 @@ export class AppUpdateService {
 	private readonly swUpdate = inject(SwUpdate);
 
 	private readonly intervalSource$ = interval(1 * 60 * 1000);
-	private intervalSubscription: Subscription | null = null;
+	private intervalSubscription: Nulled<Subscription> = null;
 
 	constructor() {
 		this.swUpdate.versionUpdates

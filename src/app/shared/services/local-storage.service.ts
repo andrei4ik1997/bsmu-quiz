@@ -1,15 +1,16 @@
 import { DOCUMENT, inject, Injectable } from '@angular/core';
 import { LOCAL_STORAGE_KEYS } from '@shared/entities/shared.constants';
-import type { LocalStorageKeys } from '@shared/entities/shared.types';
+import type { LocalStorageKeys, Nulled } from '@shared/entities/shared.types';
+import { isNil } from '@shared/utils/shared.utils';
 
 @Injectable()
 export class LocalStorageService {
 	private readonly localStorage = inject(DOCUMENT, { optional: true })?.defaultView?.localStorage;
 
-	public get<T = string>(key: LocalStorageKeys): T | null {
+	public get<T = string>(key: LocalStorageKeys): Nulled<T> {
 		const item = this.localStorage?.getItem(key) ?? null;
 
-		if (item === null) {
+		if (isNil(item)) {
 			return null;
 		}
 

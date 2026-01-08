@@ -18,12 +18,13 @@
 		"paths": {
 			"@pages/*": ["./src/app/pages/*"],
 			"@shared/components/*": ["./src/app/shared/components/*"],
-			"@shared/entities/*": ["./src/app/shared/entities/*"],
 			"@shared/db/*": ["./src/app/shared/db/*"],
-			"@shared/services/*": ["./src/app/shared/services/*"],
-			"@shared/pipes/*": ["./src/app/shared/pipes/*"],
+			"@shared/entities/*": ["./src/app/shared/entities/*"],
 			"@shared/guards/*": ["./src/app/shared/guards/*"],
-			"@shared/modals/*": ["./src/app/shared/modals/*"]
+			"@shared/modals/*": ["./src/app/shared/modals/*"],
+			"@shared/pipes/*": ["./src/app/shared/pipes/*"],
+			"@shared/services/*": ["./src/app/shared/services/*"],
+			"@shared/utils/*": ["./src/app/shared/utils/*"]
 		}
 	},
 	"angularCompilerOptions": {

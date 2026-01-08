@@ -1,7 +1,8 @@
 import type { OnInit } from '@angular/core';
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import type { ModalQuestionData } from '@shared/entities/shared.types';
+import type { ModalQuestionData, Nulled } from '@shared/entities/shared.types';
+import { isDefined, isNil } from '@shared/utils/shared.utils';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NzEmptyModule } from 'ng-zorro-antd/empty';
 import { NzIconModule } from 'ng-zorro-antd/icon';
@@ -20,11 +21,13 @@ export class QuestionModalComponent implements OnInit {
 
 	protected readonly isAnswerVisible = signal(false);
 
-	protected readonly questionFormControl = new FormControl<number[] | number | null>(null);
+	protected readonly questionFormControl = new FormControl<Nulled<number[] | number>>(null);
 
 	public ngOnInit(): void {
-		if (this.nzModalData.question !== null) {
-			this.addInitFormControlValue(this.nzModalData.questionUserAnswer, this.nzModalData.question.isMultiple);
+		const question = this.nzModalData.question;
+
+		if (isDefined(question)) {
+			this.addInitFormControlValue(this.nzModalData.questionUserAnswer, question.isMultiple);
 		}
 	}
 
@@ -36,7 +39,7 @@ export class QuestionModalComponent implements OnInit {
 		questionUserAnswer: ModalQuestionData['questionUserAnswer'],
 		isMultiple: boolean
 	): void {
-		if (questionUserAnswer === null) {
+		if (isNil(questionUserAnswer)) {
 			this.questionFormControl.setValue(null);
 		} else {
 			const answers = questionUserAnswer.answers;

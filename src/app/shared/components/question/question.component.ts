@@ -1,9 +1,11 @@
 import { ChangeDetectionStrategy, Component, computed, effect, inject, input, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import type { MappedQuestion, TestResult } from '@shared/entities/shared.types';
+import type { MappedQuestion, Nulled, TestResult } from '@shared/entities/shared.types';
 import { IsDisabledPipe } from '@shared/pipes/is-disabled.pipe';
+import { AdaptiveService } from '@shared/services/adaptive.service';
 import { StoreService } from '@shared/services/store.service';
+import { isDefined, isNil } from '@shared/utils/shared.utils';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
@@ -29,18 +31,21 @@ import { NzRadioModule } from 'ng-zorro-antd/radio';
 })
 export class QuestionComponent {
 	private readonly storeService = inject(StoreService);
+	private readonly adaptiveService = inject(AdaptiveService);
 
 	public readonly questionId = input.required<number>();
 
 	protected readonly selectedTestOption = this.storeService.selectedTest;
 	protected readonly testQuestions = this.storeService.testQuestions;
 	private readonly userAnswers = this.storeService.testResults;
+	protected readonly isTablet = this.adaptiveService.isTablet;
+	protected readonly isMobile = this.adaptiveService.isMobile;
 
 	protected readonly isAnswerVisible = signal(false);
 
 	protected readonly question = computed(() => {
 		const questionId = this.questionId();
-		const questions = this.testQuestions() ?? [];
+		const questions = this.testQuestions();
 
 		const question = questions.find((q) => {
 			return q.id === questionId;
@@ -49,13 +54,13 @@ export class QuestionComponent {
 		return question ?? null;
 	});
 
-	protected readonly questionFormControl = new FormControl<number[] | number | null>(null);
+	protected readonly questionFormControl = new FormControl<Nulled<number[] | number>>(null);
 
 	constructor() {
 		effect(() => {
 			const question = this.question();
 
-			if (question !== null) {
+			if (isDefined(question)) {
 				this.addInitFormControlValue(question);
 			}
 
@@ -78,7 +83,7 @@ export class QuestionComponent {
 	private addInitFormControlValue(question: MappedQuestion): void {
 		const userAnswers = this.userAnswers().get(question.id) ?? null;
 
-		if (userAnswers === null) {
+		if (isNil(userAnswers)) {
 			this.questionFormControl.setValue(null);
 		} else {
 			const answers = userAnswers.answers;
@@ -96,7 +101,7 @@ export class QuestionComponent {
 		const userAnswers = Array.isArray(formValue) ? formValue : [formValue];
 		const question = this.question();
 
-		if (question !== null) {
+		if (isDefined(question)) {
 			const userAnswer: TestResult = {
 				userAnswers: question.answers.map((answer) => {
 					return {

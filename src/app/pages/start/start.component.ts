@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/cor
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ROUTER_LINKS } from '@shared/entities/shared.constants';
-import type { TestOption } from '@shared/entities/shared.types';
+import type { Nulled, TestOption } from '@shared/entities/shared.types';
 import { StoreService } from '@shared/services/store.service';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzSelectModule } from 'ng-zorro-antd/select';
@@ -34,7 +34,7 @@ export default class StartPageComponent implements OnInit {
 		},
 	];
 
-	protected readonly selectedTest = signal<TestOption | null>(null);
+	protected readonly selectedTest = signal<Nulled<TestOption>>(null);
 	protected readonly testQuestions = this.storeService.testQuestions;
 
 	public ngOnInit(): void {

@@ -45,22 +45,80 @@
 
 	<div class="actions">
 		@let isClearDisabled = questionFormControl.value | isDisabled;
+		@let isTabletScreen = isTablet();
+		@let isMobileScreen = isMobile();
 
-		<button nz-button nzType="primary" type="button" [disabled]="isClearDisabled" (click)="clearAnswers()">
-			<nz-icon nzType="clear" nzTheme="outline" />
-			Очистить ответы
-		</button>
-
-		@if (isAnswerVisible()) {
-			<button nz-button nzType="primary" type="button" (click)="changeAnswerVisibility()">
-				<nz-icon nzType="eye-invisible" nzTheme="outline" />
-				Скрыть ответы
+		@if (isMobileScreen) {
+			<button
+				nz-button
+				nzType="primary"
+				type="button"
+				[nzBlock]="isTabletScreen"
+				[disabled]="isClearDisabled"
+				(click)="clearAnswers()"
+			>
+				<nz-icon nzType="clear" nzTheme="outline" />
 			</button>
 		} @else {
-			<button nz-button nzType="primary" type="button" (click)="changeAnswerVisibility()">
-				<nz-icon nzType="eye" nzTheme="outline" />
-				Показать ответы
+			<button
+				nz-button
+				nzType="primary"
+				type="button"
+				[nzBlock]="isTabletScreen"
+				[disabled]="isClearDisabled"
+				(click)="clearAnswers()"
+			>
+				<nz-icon nzType="clear" nzTheme="outline" />
+				Очистить ответы
 			</button>
+		}
+
+		@if (isAnswerVisible()) {
+			@if (isMobileScreen) {
+				<button
+					nz-button
+					nzType="primary"
+					type="button"
+					[nzBlock]="isTabletScreen"
+					(click)="changeAnswerVisibility()"
+				>
+					<nz-icon nzType="eye-invisible" nzTheme="outline" />
+				</button>
+			} @else {
+				<button
+					nz-button
+					nzType="primary"
+					type="button"
+					[nzBlock]="isTabletScreen"
+					(click)="changeAnswerVisibility()"
+				>
+					<nz-icon nzType="eye-invisible" nzTheme="outline" />
+					Скрыть ответы
+				</button>
+			}
+		} @else {
+			@if (isMobileScreen) {
+				<button
+					nz-button
+					nzType="primary"
+					type="button"
+					[nzBlock]="isTabletScreen"
+					(click)="changeAnswerVisibility()"
+				>
+					<nz-icon nzType="eye" nzTheme="outline" />
+				</button>
+			} @else {
+				<button
+					nz-button
+					nzType="primary"
+					type="button"
+					[nzBlock]="isTabletScreen"
+					(click)="changeAnswerVisibility()"
+				>
+					<nz-icon nzType="eye" nzTheme="outline" />
+					Показать ответы
+				</button>
+			}
 		}
 	</div>
 }

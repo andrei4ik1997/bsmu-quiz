@@ -2,9 +2,11 @@ import { DecimalPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { ROUTER_LINKS } from '@shared/entities/shared.constants';
-import type { MappedQuestion, ModalQuestionData, TableConfig, TestResult } from '@shared/entities/shared.types';
+import type { MappedQuestion, ModalQuestionData, Nulled, TableConfig, TestResult } from '@shared/entities/shared.types';
 import { QuestionModalComponent } from '@shared/modals/question/question.component';
+import { AdaptiveService } from '@shared/services/adaptive.service';
 import { StoreService } from '@shared/services/store.service';
+import { isNil } from '@shared/utils/shared.utils';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzIconModule } from 'ng-zorro-antd/icon';
@@ -13,7 +15,7 @@ import { NzTableModule } from 'ng-zorro-antd/table';
 
 type TableData = MappedQuestion & {
 	status: '-' | 'Без ответа' | 'Верно' | 'Неправильно' | 'Частично верно';
-	score: number | null;
+	score: Nulled<number>;
 };
 
 @Component({
@@ -27,17 +29,19 @@ export default class ResultPageComponent {
 	private readonly router = inject(Router);
 	private readonly nzModalService = inject(NzModalService);
 	private readonly storeService = inject(StoreService);
+	private readonly adaptiveService = inject(AdaptiveService);
 
 	protected readonly userAnswers = this.storeService.testResults;
 	private readonly testQuestions = this.storeService.testQuestions;
 	private readonly selectedTest = this.storeService.selectedTest;
+	protected readonly isTablet = this.adaptiveService.isTablet;
 
 	protected readonly testName = computed(() => {
 		return this.selectedTest()?.label ?? '-';
 	});
 
 	protected readonly questions = computed(() => {
-		return this.testQuestions() ?? [];
+		return this.testQuestions();
 	});
 
 	protected readonly userCountAnswers = computed(() => {
@@ -61,7 +65,7 @@ export default class ResultPageComponent {
 		const mappedResult = questions.map<TableData>((question) => {
 			const userResult = userAnswers.get(question.id) ?? null;
 
-			if (userResult === null || userResult.answers.length === 0) {
+			if (isNil(userResult) || userResult.answers.length === 0) {
 				return {
 					...question,
 					status: 'Без ответа',
@@ -103,7 +107,7 @@ export default class ResultPageComponent {
 		const tableData = this.tableData();
 
 		return tableData.reduce((acc, curr) => {
-			if (curr.score === null) {
+			if (isNil(curr.score)) {
 				return acc;
 			}
 
@@ -111,61 +115,63 @@ export default class ResultPageComponent {
 		}, 0);
 	});
 
-	protected readonly tableConfig: Array<TableConfig<TableData>> = [
-		{
-			name: 'Номер вопроса',
-			dataProperty: 'index',
-			showSort: true,
-			sortDirections: ['ascend', 'descend'],
-			sortOrder: 'ascend',
-			sortFn: (a, b) => {
-				return a.index - b.index;
+	protected readonly tableConfig = computed<Array<TableConfig<TableData>>>(() => {
+		return [
+			{
+				name: 'Номер вопроса',
+				dataProperty: 'index',
+				showSort: true,
+				sortDirections: ['ascend', 'descend'],
+				sortOrder: 'ascend',
+				sortFn: (a, b) => {
+					return a.index - b.index;
+				},
+				width: 100,
+				customFormatter: (row) => {
+					return String(row.index + 1);
+				},
 			},
-			width: 100,
-			customFormatter: (row) => {
-				return String(row.index + 1);
-			},
-		},
-		{
-			name: 'Состояние',
-			dataProperty: 'status',
-			showFilter: true,
-			filterMultiple: true,
-			filters: [
-				{ text: '-', value: '-' },
-				{ text: 'Без ответа', value: 'Без ответа' },
-				{ text: 'Верно', value: 'Верно' },
-				{ text: 'Неправильно', value: 'Неправильно' },
-				{ text: 'Частично верно', value: 'Частично верно' },
-			],
-			filterFn: (status: Array<TableData['status']> | TableData['status'], row) => {
-				if (Array.isArray(status)) {
-					return status.some((s) => {
-						return row.status === s;
-					});
-				}
+			{
+				name: 'Состояние',
+				dataProperty: 'status',
+				showFilter: true,
+				filterMultiple: true,
+				filters: [
+					{ text: '-', value: '-' },
+					{ text: 'Без ответа', value: 'Без ответа' },
+					{ text: 'Верно', value: 'Верно' },
+					{ text: 'Неправильно', value: 'Неправильно' },
+					{ text: 'Частично верно', value: 'Частично верно' },
+				],
+				filterFn: (status: Array<TableData['status']> | TableData['status'], row) => {
+					if (Array.isArray(status)) {
+						return status.some((s) => {
+							return row.status === s;
+						});
+					}
 
-				return row.status === status;
+					return row.status === status;
+				},
 			},
-		},
-		{
-			name: 'Балл',
-			dataProperty: 'score',
-			width: 70,
-			align: 'center',
-		},
-		{
-			name: '',
-			cellType: 'action',
-			align: 'center',
-			width: 200,
-		},
-	];
+			{
+				name: 'Балл',
+				dataProperty: 'score',
+				width: 70,
+				align: 'center',
+			},
+			{
+				name: '',
+				cellType: 'action',
+				align: 'center',
+				width: this.isTablet() ? 50 : 220,
+			},
+		];
+	});
 
 	protected readonly tableWidth = computed(() => {
 		const defaultWidth = 300;
 
-		return this.tableConfig.reduce((acc, column) => {
+		return this.tableConfig().reduce((acc, column) => {
 			return acc + (column.width ?? defaultWidth);
 		}, 0);
 	});

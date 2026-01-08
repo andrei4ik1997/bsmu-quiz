@@ -25,6 +25,8 @@
 	</button>
 
 	<div class="result-table">
+		@let config = tableConfig();
+
 		<nz-table
 			#resultTable
 			nzSize="small"
@@ -38,7 +40,7 @@
 		>
 			<thead>
 				<tr>
-					@for (column of tableConfig; track column) {
+					@for (column of config; track column) {
 						<th
 							[nzWidth]="column.width ? column.width + 'px' : null"
 							[nzColumnKey]="column.dataProperty"
@@ -61,20 +63,32 @@
 			<tbody>
 				@for (data of resultTable.data; track $index) {
 					<tr>
-						@for (column of tableConfig; track column.dataProperty) {
+						@for (column of config; track column.dataProperty) {
 							<td [nzAlign]="column.align ?? 'left'">
 								@switch (column.cellType) {
 									@case ('action') {
-										<button
-											nz-button
-											nzType="primary"
-											nzSize="small"
-											type="button"
-											(click)="showQuestion(data)"
-										>
-											<nz-icon nzType="eye" nzTheme="outline" />
-											Просмотреть вопрос
-										</button>
+										@if (isTablet()) {
+											<button
+												nz-button
+												nzType="primary"
+												nzSize="small"
+												type="button"
+												(click)="showQuestion(data)"
+											>
+												<nz-icon nzType="eye" nzTheme="outline" />
+											</button>
+										} @else {
+											<button
+												nz-button
+												nzType="primary"
+												nzSize="small"
+												type="button"
+												(click)="showQuestion(data)"
+											>
+												<nz-icon nzType="eye" nzTheme="outline" />
+												Просмотреть вопрос
+											</button>
+										}
 									}
 									@default {
 										@if (column.dataProperty) {
