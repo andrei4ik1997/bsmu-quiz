@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1767872638541,
+  "timestamp": 1767873064326,
   "index": "https://andrei4ik1997.github.io/bsmu-quiz/index.html",
   "assetGroups": [
     {
@@ -31,7 +31,7 @@
         "https://andrei4ik1997.github.io/bsmu-quiz/chunk-XOYTKC4X.js",
         "https://andrei4ik1997.github.io/bsmu-quiz/favicon.ico",
         "https://andrei4ik1997.github.io/bsmu-quiz/index.html",
-        "https://andrei4ik1997.github.io/bsmu-quiz/main-PTR7Z536.js",
+        "https://andrei4ik1997.github.io/bsmu-quiz/main-4GRRYIWT.js",
         "https://andrei4ik1997.github.io/bsmu-quiz/manifest.webmanifest",
         "https://andrei4ik1997.github.io/bsmu-quiz/service-worker.js",
         "https://andrei4ik1997.github.io/bsmu-quiz/styles-K24NNJLG.css"
@@ -1751,10 +1751,10 @@
     "https://andrei4ik1997.github.io/bsmu-quiz/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "https://andrei4ik1997.github.io/bsmu-quiz/icons/icon-72x72.png": "4d597580aaf5019bb38533d90d07df4096512e5e",
     "https://andrei4ik1997.github.io/bsmu-quiz/icons/icon-96x96.png": "d2bd7707faf9927f854db6859beb8e80d0267053",
-    "https://andrei4ik1997.github.io/bsmu-quiz/index.html": "e8494af9eb97609aa51b37fe3018d53bffe42162",
-    "https://andrei4ik1997.github.io/bsmu-quiz/main-PTR7Z536.js": "f246bde78c95e12bed19b2542f724906a12c7919",
-    "https://andrei4ik1997.github.io/bsmu-quiz/manifest.webmanifest": "642527e09e3933b8a2ebea872f7b9c47643019f2",
-    "https://andrei4ik1997.github.io/bsmu-quiz/service-worker.js": "e68c5de2f4ff85615bf20f1e2cfa543748d99fc2",
+    "https://andrei4ik1997.github.io/bsmu-quiz/index.html": "c3f431a25225adcfca0af348113e0f409cabd5ea",
+    "https://andrei4ik1997.github.io/bsmu-quiz/main-4GRRYIWT.js": "5046bd464ba756c87b0f1684c83f0374be3dea3f",
+    "https://andrei4ik1997.github.io/bsmu-quiz/manifest.webmanifest": "0c7a86b8e8198b153342cc67b2e066d3b0f46a62",
+    "https://andrei4ik1997.github.io/bsmu-quiz/service-worker.js": "8c6fa9e93d65dbabbe9113aeeee9b92851a24b8c",
     "https://andrei4ik1997.github.io/bsmu-quiz/styles-K24NNJLG.css": "db4825dcb9d6ec6b84f98431c96a2b22eed55608"
   },
   "navigationUrls": [
